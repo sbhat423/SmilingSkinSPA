@@ -18,6 +18,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { HomeComponent } from './home/home.component';
 
+import { OwlModule } from 'ngx-owl-carousel';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -39,6 +41,7 @@ import { HomeComponent } from './home/home.component';
     MatListModule,
     MatStepperModule,
     MatSelectModule,
+    OwlModule
   ],
   providers: [],
   bootstrap: [AppComponent]
