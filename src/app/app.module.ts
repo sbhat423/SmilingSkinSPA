@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCardModule } from '@angular/material/card';
@@ -19,15 +20,19 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { HomeComponent } from './home/home.component';
 
 import { OwlModule } from 'ngx-owl-carousel';
+import { MainNavComponent } from './main-nav/main-nav.component';
+import { LayoutModule } from '@angular/cdk/layout';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutUsComponent,
-    HomeComponent
+    HomeComponent,
+    MainNavComponent
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     MatToolbarModule,
     MatSidenavModule,
@@ -41,7 +46,8 @@ import { OwlModule } from 'ngx-owl-carousel';
     MatListModule,
     MatStepperModule,
     MatSelectModule,
-    OwlModule
+    OwlModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
