@@ -28,6 +28,7 @@
   display: inline;
 }
 
+/* When the screen size is less than or equal to 750px */
 @media (min-width: 750px){
   .sidenav {
     display: none;
