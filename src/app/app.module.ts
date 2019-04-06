@@ -22,13 +22,17 @@ import { HomeComponent } from './home/home.component';
 import { OwlModule } from 'ngx-owl-carousel';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import { NewsComponent } from './news/news.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AboutUsComponent,
     HomeComponent,
-    MainNavComponent
+    MainNavComponent,
+    NewsComponent,
+    ContactUsComponent
   ],
   imports: [
     BrowserModule,
