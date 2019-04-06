@@ -23,6 +23,7 @@ import { OwlModule } from 'ngx-owl-carousel';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { NewsComponent } from './news/news.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { NewsComponent } from './news/news.component';
     MatStepperModule,
     MatSelectModule,
     OwlModule,
-    LayoutModule
+    LayoutModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
