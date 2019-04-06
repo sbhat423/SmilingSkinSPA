@@ -24,6 +24,7 @@ import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { NewsComponent } from './news/news.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     AboutUsComponent,
     HomeComponent,
     MainNavComponent,
-    NewsComponent
+    NewsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
