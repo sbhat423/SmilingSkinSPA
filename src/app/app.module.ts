@@ -23,7 +23,6 @@ import { OwlModule } from 'ngx-owl-carousel';
 import { MainNavComponent } from './main-nav/main-nav.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { NewsComponent } from './news/news.component';
-import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -31,8 +30,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     AboutUsComponent,
     HomeComponent,
     MainNavComponent,
-    NewsComponent,
-    ContactUsComponent
+    NewsComponent
   ],
   imports: [
     BrowserModule,
