@@ -10,9 +10,15 @@ export class HomeComponent implements OnInit {
   myCarouselImages = [1, 2, 3, 4, 5, 6].map((i) => `https://picsum.photos/640/480?image=${i}`);
   mySlideOptions = {items: 1, dots: true, nav: false};
   myCarouselOptions = {items: 3, dots: true, nav: true};
+  isLoading: boolean;
 
-  constructor() { }
+  constructor() {
+    this.isLoading = true;
+  }
 
-  ngOnInit() { }
-
+  ngOnInit() {
+    setTimeout (() => {
+      this.isLoading = false;
+    }, 7000);
+   }
 }

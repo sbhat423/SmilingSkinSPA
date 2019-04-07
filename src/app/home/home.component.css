@@ -13,3 +13,16 @@
     width: 100%;
     height: auto;
 }
+
+iframe {
+    min-height: 1200px;
+    min-width: 1200px;
+}
+
+div {
+    margin: 50px 0px 0px 100px;
+}
+
+mat-progress-bar {
+    height: 15px;
+}
