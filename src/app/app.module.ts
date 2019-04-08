@@ -27,6 +27,7 @@ import { NewsComponent } from './news/news.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FooterComponent } from './footer/footer.component';
 import { SkinCancerComponent } from './skin-cancer/skin-cancer.component';
+import { CompareComponent } from './compare/compare.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { SkinCancerComponent } from './skin-cancer/skin-cancer.component';
     MainNavComponent,
     NewsComponent,
     FooterComponent,
-    SkinCancerComponent
+    SkinCancerComponent,
+    CompareComponent
   ],
   imports: [
     BrowserModule,
