@@ -1,21 +1,31 @@
 <div fxLayout fxLayout.lt-md="column">
-  <div fxFlex=20%>
+  <div class="sub-nav" fxFlex=25%>
+    <mat-card>
+      <a mat-button href="skin-cancer#cancer">Skin cancer</a><br>
+      <a mat-button href="skin-cancer#types">Types</a><br>
+      <a mat-button href="skin-cancer#causes">Causes</a><br>
+      <a mat-button href="skin-cancer#symptoms">Symptoms</a><br>
+      <a mat-button href="skin-cancer#diagnosis">Diagnosis</a><br>
+      <a mat-button href="skin-cancer#treatment">Treatment</a><br>
+      <a mat-button href="skin-cancer#prevention">Prevention</a><br>
+      <a mat-button href="skin-cancer#statistics">Statistics</a><br>
+    </mat-card>
   </div>
-  <div fxFlex=60%>
+  <div fxFlex=70%>
     <mat-card>
       <mat-card-header>
-        <mat-card-title><b>What is skin cancer?</b></mat-card-title>
+        <mat-card-title id="cancer"><b>What is skin cancer?</b></mat-card-title>
       </mat-card-header>
       <mat-card-content>
-        <p>
+        <p id="types">
           Skin cancer occurs in epidermal cells, the top or outer layer of the skin. Ultraviolet (UV)
           radiation penetrates the skin and damages the DNA of skin cells. If the body is unable to repair
           the damage, cells begin to divide and grow uncontrollably. This growth eventually leads to
-          tumours.<br><br>
+          tumours.
         </p>
       </mat-card-content>
       <mat-card-header>
-        <mat-card-title><b>Types of skin cancer</b></mat-card-title>
+        <mat-card-title ><b>Types of skin cancer</b></mat-card-title>
       </mat-card-header>
       <mat-card-content>
         <p>
@@ -27,7 +37,7 @@
           </ul>
       </mat-card-content>
       <mat-card-header>
-        <mat-card-title>1. Non-melanoma </mat-card-title>
+        <mat-card-title>Non-melanoma </mat-card-title>
       </mat-card-header>
       <mat-card-content>
         <p>
@@ -39,10 +49,10 @@
         </p>
       </mat-card-content>
       <mat-card-header>
-        <mat-card-title>2. Melanoma</mat-card-title>
+        <mat-card-title>Melanoma</mat-card-title>
       </mat-card-header>
       <mat-card-content>
-        <p>
+        <p id="causes">
           Melanoma is a cancer that occurs in skin pigmented cells (melanocytes).
           Melanocytes produce melanin, which helps protect the skin from ultraviolet (or sunlight) radiation. When
           melanocytes accumulate in the skin during childhood or adolescence, they form a mole.
@@ -51,11 +61,10 @@
           Melanoma is one of the most serious skin cancers. If untreated, it will grow rapidly. It can spread to the
           lower part of the skin (dermis), into the lymphatic system or blood flow, and then to other parts of the body,
           such as lungs, liver, brain or bone.
-          <br><br>
         </p>
       </mat-card-content>
       <mat-card-header>
-        <mat-card-title><b>Causes of skin cancer</b></mat-card-title>
+        <mat-card-title ><b>Causes of skin cancer</b></mat-card-title>
       </mat-card-header>
       <mat-card-content>
         <p>
@@ -65,7 +74,7 @@
         </p>
       </mat-card-content>
       <mat-card-header>
-        <mat-card-title>1. Sunburn</mat-card-title>
+        <mat-card-title>Sunburn</mat-card-title>
       </mat-card-header>
       <mat-card-content>
         <p>
@@ -82,7 +91,7 @@
         </p>
       </mat-card-content>
       <mat-card-header>
-        <mat-card-title>2. Tanning</mat-card-title>
+        <mat-card-title>Tanning</mat-card-title>
       </mat-card-header>
       <mat-card-content>
         <p>
@@ -100,10 +109,10 @@
         </p>
       </mat-card-content>
       <mat-card-header>
-        <mat-card-title>3. Solariums</mat-card-title>
+        <mat-card-title>Solariums</mat-card-title>
       </mat-card-header>
       <mat-card-content>
-        <p>
+        <p id="symptoms">
           Both ultraviolet A and B radiation are known causes of cancer. The Cancer Committee does not recommend
           sunbathing for cosmetic Tanning under any circumstances.
           As of January 2016, commercial sunbathing was banned in all Australian states. The bill also prohibits
@@ -113,11 +122,10 @@
           family history and sunbathing throughout life, especially in childhood.
           Importantly, melanoma can occur anywhere in the skin, even in places with little or no sunlight, such as the
           mouth or sole of the foot.
-          <br><br>
         </p>
       </mat-card-content>
       <mat-card-header>
-        <mat-card-title><b>Skin cancer symptoms</b></mat-card-title>
+        <mat-card-title ><b>Skin cancer symptoms</b></mat-card-title>
       </mat-card-header>
       <mat-card-content>
         <p>
@@ -128,15 +136,14 @@
             <li>Small red, pale or pearl-colored lumps</li>
             <li> Nevus with new spots, freckles or any pigmentation, thickness or shape that changes in weeks to months.</li>
           </ul>
-          <p><br>
+          <p id="diagnosis"><br>
           The sooner skin cancer is discovered and treated, the more likely you are to avoid surgery, or potential
           disfigurement or death in the case of severe melanoma or other skin cancer.
           It's also a good idea to talk to your doctor about your level of risk and recommendations for early detection.
-          <br><br>
         </p>
       </mat-card-content>
       <mat-card-header>
-        <mat-card-title><b>Diagnosis for skin cancer</b></mat-card-title>
+        <mat-card-title ><b>Diagnosis for skin cancer</b></mat-card-title>
       </mat-card-header>
       <mat-card-content>
         <p>
@@ -154,20 +161,19 @@
           <li>diagnosis and services offered</li>
           <li>follow-up services.</li>
         </ul>
-        <p>
+        <p id="treatment">
           <br>
           Our website does not operate or recommend any specific skin cancer clinic or doctor.
           It's important to check your skin regularly. If you find any changes, consult your GP. If your GP suspects
           that you have skin cancer, they may perform a biopsy (take a small sample of tissue under a microscope for
           examination), or refer you to consult an expert.
-          <br><br>
         </p>
       </mat-card-content>
       <mat-card-header>
-        <mat-card-title><b>Treatment for skin cancer</b></mat-card-title>
+        <mat-card-title ><b>Treatment for skin cancer</b></mat-card-title>
       </mat-card-header>
       <mat-card-content>
-        <p>
+        <p id="prevention">
           The most common treatment for skin cancer is surgical removal of cancer cells (usually under local
           anesthesia). Common skin cancer can be treated with ointment or radiotherapy. Skin cancer can also be removed
           by cryotherapy (using liquid nitrogen to quickly freeze cancer cells), curettage (scraping) or cauterization
@@ -175,11 +181,10 @@
           Skin cancer is almost always removed. In more advanced skin cancers, some surrounding tissues may also be
           removed to ensure that all cancer cells are removed.
           For more detailed information on skin cancer, please call the Cancer Committee at 1311 20 or consult your GP.
-          <br><br>
         </p>
       </mat-card-content>
       <mat-card-header>
-        <mat-card-title><b>Preventing skin cancer</b></mat-card-title>
+        <mat-card-title ><b>Preventing skin cancer</b></mat-card-title>
       </mat-card-header>
       <mat-card-content>
         <p>
@@ -194,7 +199,7 @@
             two
             hours. Sunscreen should not be used to extend your time in the sun.
           </li>
-          <li>Wear a hat to protect your face, head, neck and ears</li>
+          <li id="statistics">Wear a hat to protect your face, head, neck and ears</li>
           <li>Looking for shadows</li>
           <li>Wear Sunglasses - Make sure they meet Australian standards.</li>
         </ul>
@@ -202,11 +207,10 @@
           <br>
           Be extra careful on the day with the highest ultraviolet intensity.
           For more real time protection recommendations, please visit our website on prevention.
-          <br><br>
         </p>
       </mat-card-content>
       <mat-card-header>
-        <mat-card-title><b>Skin cancer facts and statistics</b></mat-card-title>
+        <mat-card-title ><b>Skin cancer facts and statistics</b></mat-card-title>
       </mat-card-header>
       <mat-card-content>
         <p>

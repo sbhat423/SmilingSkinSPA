@@ -4,6 +4,17 @@ mat-card {
     padding: 80px;
 }
 
+.sub-nav mat-card {
+    margin: 20px 40px 40px 30px;
+    text-align: left;
+    padding: 50px;
+    line-height: 16pt;
+}
+
+.sub-nav mat-card a {
+    font-weight: bold;
+}
+
 mat-card p {
     text-align: justify;
     text-justify: inter-word;
@@ -21,4 +32,6 @@ p {
 li {
     font-size: 16px;
     line-height: 18pt;
-  }
+}
+
+
