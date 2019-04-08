@@ -6,15 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  isLoading: boolean;
+  constructor() { }
 
-  constructor() {
-    this.isLoading = true;
-  }
-
-  ngOnInit() {
-    setTimeout (() => {
-      this.isLoading = false;
-    }, 7000);
-   }
+  ngOnInit() { }
 }
