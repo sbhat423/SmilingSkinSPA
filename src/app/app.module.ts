@@ -26,6 +26,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { NewsComponent } from './news/news.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { FooterComponent } from './footer/footer.component';
+import { SkinCancerComponent } from './skin-cancer/skin-cancer.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     MainNavComponent,
     NewsComponent,
-    FooterComponent
+    FooterComponent,
+    SkinCancerComponent
   ],
   imports: [
     BrowserModule,

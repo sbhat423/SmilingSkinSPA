@@ -1,0 +1,14 @@
+mat-card {
+    margin: 20px 40px 40px 10px;
+    text-align: center;
+
+}
+
+mat-card p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+ul li {
+    text-align: justify;
+}
