@@ -23,4 +23,6 @@ li {
     line-height: 18pt;
 }
 
-
+img {
+    max-width: 100%;
+}
