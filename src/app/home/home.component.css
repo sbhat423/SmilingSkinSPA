@@ -110,3 +110,11 @@ div {
 .block3 mat-card {
     padding: 0px;
 }
+
+.up a mat-icon{
+    position: absolute;
+    top: 80%;
+    left: 1%;
+    font: 200%;
+    position: fixed;
+}
