@@ -36,6 +36,7 @@ import { DiagnosisInfoComponent } from './Info-pages/diagnosis-info/diagnosis-in
 import { TreatmentInfoComponent } from './Info-pages/treatment-info/treatment-info.component';
 import { PreventionInfoComponent } from './Info-pages/prevention-info/prevention-info.component';
 import { StatisticsInfoComponent } from './Info-pages/statistics-info/statistics-info.component';
+import { Error404Component } from './error404/error404.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { StatisticsInfoComponent } from './Info-pages/statistics-info/statistics
     DiagnosisInfoComponent,
     TreatmentInfoComponent,
     PreventionInfoComponent,
-    StatisticsInfoComponent
+    StatisticsInfoComponent,
+    Error404Component
   ],
   imports: [
     BrowserModule,

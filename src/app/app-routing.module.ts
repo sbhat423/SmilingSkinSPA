@@ -13,12 +13,18 @@ import { DiagnosisInfoComponent } from './Info-pages/diagnosis-info/diagnosis-in
 import { TreatmentInfoComponent } from './Info-pages/treatment-info/treatment-info.component';
 import { PreventionInfoComponent } from './Info-pages/prevention-info/prevention-info.component';
 import { StatisticsInfoComponent } from './Info-pages/statistics-info/statistics-info.component';
+import { Error404Component } from './error404/error404.component';
 
 const routes: Routes = [
   { path: 'about-us', component: AboutUsComponent},
   { path: 'news', component: NewsComponent},
   { path: 'skin-cancer', component: SkinCancerComponent,
-  children: [             
+  children: [
+    { 
+      path: '', 
+      redirectTo: 'cancer', 
+      pathMatch: 'full'
+    },          
     {
         path:'cancer',
         component: AboutInfoComponent
@@ -32,7 +38,7 @@ const routes: Routes = [
       component:CausesInfoComponent
     },
     {
-      path:'sumptoms',
+      path:'symptoms',
       component:SymptomsInfoComponent
     },
     {
@@ -50,17 +56,13 @@ const routes: Routes = [
     {
       path: 'statistics',
       component:StatisticsInfoComponent
-    },
-    {
-      path: '**',
-      component: AboutInfoComponent
     }
   ]
   },
   { path: 'compare', component: CompareComponent},
   { path: 'home', component: HomeComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full'},
-  { path: '**', redirectTo: 'home'}
+  { path: '**', component: Error404Component}
 ];
 
 @NgModule({
