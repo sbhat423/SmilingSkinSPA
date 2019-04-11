@@ -1,0 +1,26 @@
+mat-card {
+    margin: 20px 20px 20px 20px;
+    text-align: center;
+    padding: 80px;
+}
+
+mat-card p {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+ul li {
+    text-align: justify;
+}
+
+p {
+  font-size: 16px;
+  line-height: 18pt;
+}
+
+li {
+    font-size: 16px;
+    line-height: 18pt;
+}
+
+

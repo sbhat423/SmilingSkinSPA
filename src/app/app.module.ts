@@ -28,6 +28,14 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { FooterComponent } from './footer/footer.component';
 import { SkinCancerComponent } from './skin-cancer/skin-cancer.component';
 import { CompareComponent } from './compare/compare.component';
+import { AboutInfoComponent } from './Info-pages/about-info/about-info.component';
+import { TypesInfoComponent } from './Info-pages/types-info/types-info.component';
+import { CausesInfoComponent } from './Info-pages/causes-info/causes-info.component';
+import { SymptomsInfoComponent } from './Info-pages/symptoms-info/symptoms-info.component';
+import { DiagnosisInfoComponent } from './Info-pages/diagnosis-info/diagnosis-info.component';
+import { TreatmentInfoComponent } from './Info-pages/treatment-info/treatment-info.component';
+import { PreventionInfoComponent } from './Info-pages/prevention-info/prevention-info.component';
+import { StatisticsInfoComponent } from './Info-pages/statistics-info/statistics-info.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +46,15 @@ import { CompareComponent } from './compare/compare.component';
     NewsComponent,
     FooterComponent,
     SkinCancerComponent,
-    CompareComponent
+    CompareComponent,
+    AboutInfoComponent,
+    TypesInfoComponent,
+    CausesInfoComponent,
+    SymptomsInfoComponent,
+    DiagnosisInfoComponent,
+    TreatmentInfoComponent,
+    PreventionInfoComponent,
+    StatisticsInfoComponent
   ],
   imports: [
     BrowserModule,

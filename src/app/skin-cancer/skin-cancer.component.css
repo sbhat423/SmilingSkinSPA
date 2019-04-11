@@ -32,7 +32,7 @@ mat-card img {
     background-color: #3f51b5;
 }
 
-.inactive{
+a {
     font-weight: bold;
     color: white;
     text-decoration: none;
@@ -41,6 +41,7 @@ mat-card img {
 .active{
     font-weight: bold;
     color: white;
+    text-decoration: underline;
 }
 
 .sub-nav mat-card div {

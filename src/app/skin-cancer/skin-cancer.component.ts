@@ -6,7 +6,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./skin-cancer.component.css']
 })
 export class SkinCancerComponent implements OnInit {
-  links: boolean[] = [false, false, false, false, false, false, false, false];
 
   constructor() {
    }
@@ -15,10 +14,5 @@ export class SkinCancerComponent implements OnInit {
   }
 
   setColor(loc: number) {
-    for ( let i = 0; i < 8; i++) {
-      this.links[i] = false;
-    }
-    this.links[loc] = true;
-    console.log(this.links[loc]);
   }
 }
