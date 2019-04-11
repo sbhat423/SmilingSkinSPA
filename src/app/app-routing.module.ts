@@ -11,7 +11,9 @@ const routes: Routes = [
   { path: 'news', component: NewsComponent},
   { path: 'skin-cancer', component: SkinCancerComponent},
   { path: 'compare', component: CompareComponent},
-  { path: '**', component: HomeComponent}
+  { path: 'home', component: HomeComponent},
+  { path: '', redirectTo: 'home', pathMatch: 'full'},
+  { path: '**', redirectTo: 'home'}
 ];
 
 @NgModule({
