@@ -9,10 +9,13 @@ mat-card {
     text-align: left;
     padding: 50px;
     line-height: 16pt;
+    position: fixed;
+    background-color: #3f51b5;
 }
 
 .sub-nav mat-card a {
     font-weight: bold;
+    color: white;
 }
 
 mat-card p {
