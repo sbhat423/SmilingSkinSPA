@@ -29,6 +29,10 @@
   display: inline;
 }
 
+.active-list-item {
+  background-color: #132ab1 !important;
+}
+
 /* When the screen size is less than or equal to 750px */
 @media (min-width: 800px){
   .sidenav {
