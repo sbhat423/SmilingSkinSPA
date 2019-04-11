@@ -17,6 +17,11 @@
   z-index: 1;
 }
 
+button {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
 .fill-space {
   flex: 1 1 auto;
 }
