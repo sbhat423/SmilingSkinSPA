@@ -10,7 +10,7 @@
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
-    <mat-toolbar class="mat-elevation-z8" color="primary">
+    <mat-toolbar class="mat-elevation-z22" color="primary">
       <div class="hamburger">
         <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
           *ngIf="isHandset$ | async">
@@ -23,9 +23,9 @@
       </button>
       <span class="fill-space"></span>
       <div class="buttons-topbar">
-        <button mat-button class="mat-elevation-z8" routerLink="/skin-cancer" routerLinkActive="active-list-item">About Skin Cancer</button>
-        <button mat-button class="mat-elevation-z8" routerLink="/compare" routerLinkActive="active-list-item">Skin Cancer Statistics</button>
-        <button mat-button class="mat-elevation-z8" routerLink="/about-us" routerLinkActive="active-list-item">About us</button>
+        <button mat-button routerLink="/skin-cancer" routerLinkActive="active-list-item">About Skin Cancer</button>
+        <button mat-button routerLink="/compare" routerLinkActive="active-list-item">Skin Cancer Statistics</button>
+        <button mat-button routerLink="/about-us" routerLinkActive="active-list-item">About us</button>
       </div>
     </mat-toolbar>
     <!-- Add Content Here -->

@@ -1,31 +1,19 @@
+<div class="main-image">
+  <mat-card>
+    <img src="../../assets/img/skin-page.jpeg"/>
+  </mat-card>
+</div>
 <div fxLayout fxLayout.lt-md="column">
   <div fxHide.lt-md="true" class="sub-nav " fxFlex=25%>
     <mat-card class="mat-elevation-z8">
-      <div>
-        <a href="skin-cancer#cancer" (click)="setColor(0)" [className]="links[0] ? 'active': 'inactive'">Skin cancer</a>
-      </div>
-      <div>
-        <a href="skin-cancer#types" (click)="setColor(1)" [className]="links[1] ? 'active' : 'inactive'">Types</a>
-      </div>
-      <div>
-        <a href="skin-cancer#causes" (click)="setColor(2)" [className]="links[2] ? 'active' : 'inactive'">Causes</a>
-      </div>
-      <div>
-        <a href="skin-cancer#symptoms" (click)="setColor(3)" [className]="links[3] ? 'active' : 'inactive'">Symptoms</a>
-      </div>
-      <div>
-        <a href="skin-cancer#diagnosis" (click)="setColor(4)" [className]="links[4] ? 'active' : 'inactive'">Diagnosis</a>
-      </div>
-      <div>
-        <a href="skin-cancer#treatment" (click)="setColor(5)" [className]="links[5] ? 'active' : 'inactive'">Treatment</a>
-      </div>
-      <div>
-        <a href="skin-cancer#prevention" (click)="setColor(6)"[className]="links[6] ? 'active' : 'inactive'">Prevention</a>
-      </div>
-      <div>
-        <a href="skin-cancer#statistics" (click)="setColor(7)" [className]="links[7] ? 'active' : 'inactive'">Statistics</a>
-      </div>
-      
+      <a href="skin-cancer#cancer" (click)="setColor(0)" [className]="links[0] ? 'active': 'inactive'">Skin cancer</a><br>
+      <a href="skin-cancer#types" (click)="setColor(1)" [className]="links[1] ? 'active' : 'inactive'">Types</a><br>
+      <a href="skin-cancer#causes" (click)="setColor(2)" [className]="links[2] ? 'active' : 'inactive'">Causes</a><br>
+      <a href="skin-cancer#symptoms" (click)="setColor(3)" [className]="links[3] ? 'active' : 'inactive'">Symptoms</a><br>
+      <a href="skin-cancer#diagnosis" (click)="setColor(4)" [className]="links[4] ? 'active' : 'inactive'">Diagnosis</a><br>
+      <a href="skin-cancer#treatment" (click)="setColor(5)" [className]="links[5] ? 'active' : 'inactive'">Treatment</a><br>
+      <a href="skin-cancer#prevention" (click)="setColor(6)"[className]="links[6] ? 'active' : 'inactive'">Prevention</a><br>
+      <a href="skin-cancer#statistics" (click)="setColor(7)" [className]="links[7] ? 'active' : 'inactive'">Statistics</a><br>
     </mat-card>
   </div>
   <div fxFlex=70%>
