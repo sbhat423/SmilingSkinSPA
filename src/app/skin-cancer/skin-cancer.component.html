@@ -1,14 +1,31 @@
 <div fxLayout fxLayout.lt-md="column">
   <div fxHide.lt-md="true" class="sub-nav " fxFlex=25%>
     <mat-card class="mat-elevation-z8">
-      <a mat-button href="skin-cancer#cancer">Skin cancer</a><br>
-      <a mat-button href="skin-cancer#types">Types</a><br>
-      <a mat-button href="skin-cancer#causes">Causes</a><br>
-      <a mat-button href="skin-cancer#symptoms">Symptoms</a><br>
-      <a mat-button href="skin-cancer#diagnosis">Diagnosis</a><br>
-      <a mat-button href="skin-cancer#treatment">Treatment</a><br>
-      <a mat-button href="skin-cancer#prevention">Prevention</a><br>
-      <a mat-button href="skin-cancer#statistics">Statistics</a><br>
+      <div>
+        <a href="skin-cancer#cancer" (click)="setColor(0)" [className]="links[0] ? 'active': 'inactive'">Skin cancer</a>
+      </div>
+      <div>
+        <a href="skin-cancer#types" (click)="setColor(1)" [className]="links[1] ? 'active' : 'inactive'">Types</a>
+      </div>
+      <div>
+        <a href="skin-cancer#causes" (click)="setColor(2)" [className]="links[2] ? 'active' : 'inactive'">Causes</a>
+      </div>
+      <div>
+        <a href="skin-cancer#symptoms" (click)="setColor(3)" [className]="links[3] ? 'active' : 'inactive'">Symptoms</a>
+      </div>
+      <div>
+        <a href="skin-cancer#diagnosis" (click)="setColor(4)" [className]="links[4] ? 'active' : 'inactive'">Diagnosis</a>
+      </div>
+      <div>
+        <a href="skin-cancer#treatment" (click)="setColor(5)" [className]="links[5] ? 'active' : 'inactive'">Treatment</a>
+      </div>
+      <div>
+        <a href="skin-cancer#prevention" (click)="setColor(6)"[className]="links[6] ? 'active' : 'inactive'">Prevention</a>
+      </div>
+      <div>
+        <a href="skin-cancer#statistics" (click)="setColor(7)" [className]="links[7] ? 'active' : 'inactive'">Statistics</a>
+      </div>
+      
     </mat-card>
   </div>
   <div fxFlex=70%>
