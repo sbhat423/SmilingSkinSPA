@@ -31,6 +31,6 @@ export class WeatherComponent implements OnInit {
           this.uvIndex = data['currently']['uvIndex'];
           this.ozone = data['currently']['ozone'];
         });
-    }, 1000);
+    }, 60000);
   }
 }

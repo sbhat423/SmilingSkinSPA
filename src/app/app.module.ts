@@ -39,6 +39,7 @@ import { StatisticsInfoComponent } from './Info-pages/statistics-info/statistics
 import { Error404Component } from './error404/error404.component';
 import { HttpClientModule } from '@angular/common/http';
 import { WeatherComponent } from './weather/weather.component';
+import { WeatherIconsModule } from 'ngx-icons';
 
 @NgModule({
   declarations: [
@@ -81,7 +82,8 @@ import { WeatherComponent } from './weather/weather.component';
     OwlModule,
     LayoutModule,
     FlexLayoutModule,
-    HttpClientModule
+    HttpClientModule,
+    WeatherIconsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
