@@ -37,6 +37,8 @@ import { TreatmentInfoComponent } from './Info-pages/treatment-info/treatment-in
 import { PreventionInfoComponent } from './Info-pages/prevention-info/prevention-info.component';
 import { StatisticsInfoComponent } from './Info-pages/statistics-info/statistics-info.component';
 import { Error404Component } from './error404/error404.component';
+import { HttpClientModule } from '@angular/common/http';
+import { WeatherComponent } from './weather/weather.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +58,8 @@ import { Error404Component } from './error404/error404.component';
     TreatmentInfoComponent,
     PreventionInfoComponent,
     StatisticsInfoComponent,
-    Error404Component
+    Error404Component,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,
@@ -77,7 +80,8 @@ import { Error404Component } from './error404/error404.component';
     MatSelectModule,
     OwlModule,
     LayoutModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

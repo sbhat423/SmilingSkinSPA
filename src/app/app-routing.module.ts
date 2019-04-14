@@ -14,53 +14,55 @@ import { TreatmentInfoComponent } from './Info-pages/treatment-info/treatment-in
 import { PreventionInfoComponent } from './Info-pages/prevention-info/prevention-info.component';
 import { StatisticsInfoComponent } from './Info-pages/statistics-info/statistics-info.component';
 import { Error404Component } from './error404/error404.component';
+import { WeatherComponent } from './weather/weather.component';
 
 const routes: Routes = [
   { path: 'about-us', component: AboutUsComponent},
   { path: 'news', component: NewsComponent},
   { path: 'skin-cancer', component: SkinCancerComponent,
   children: [
-    { 
-      path: '', 
-      redirectTo: 'cancer', 
-      pathMatch: 'full'
-    },          
     {
-        path:'cancer',
+      path: '',
+      redirectTo: 'cancer',
+      pathMatch: 'full'
+    },
+    {
+        path: 'cancer',
         component: AboutInfoComponent
     },
     {
-        path:'types',
+        path: 'types',
         component: TypesInfoComponent
     },
     {
-      path:'causes',
-      component:CausesInfoComponent
+      path: 'causes',
+      component: CausesInfoComponent
     },
     {
-      path:'symptoms',
-      component:SymptomsInfoComponent
+      path: 'symptoms',
+      component: SymptomsInfoComponent
     },
     {
-      path:'diagnosis',
-      component:DiagnosisInfoComponent
+      path: 'diagnosis',
+      component: DiagnosisInfoComponent
     },
     {
-      path:'treatment',
+      path: 'treatment',
       component: TreatmentInfoComponent
     },
     {
-      path:'prevention',
-      component:PreventionInfoComponent
+      path: 'prevention',
+      component: PreventionInfoComponent
     },
     {
       path: 'statistics',
-      component:StatisticsInfoComponent
+      component: StatisticsInfoComponent
     }
   ]
   },
   { path: 'compare', component: CompareComponent},
   { path: 'home', component: HomeComponent},
+  { path: 'weather', component: WeatherComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: '**', component: Error404Component}
 ];
