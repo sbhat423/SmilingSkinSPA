@@ -27,11 +27,15 @@ export class WeatherComponent implements OnInit {
   ngOnInit() {
     this.storeWeatherData();
     setInterval(() => {
-      this.storeWeatherData();
+      this.fetchCurrentData();
      }, 60000);
+     setInterval(() => {
+      this.storeWeatherData();
+     }, 600000);
   }
 
   storeWeatherData() {
+    console.log('store hourly data');
     this.weatherService.getWeatherData().subscribe(
       data => {
         this.summary = data['currently']['summary'];
@@ -68,6 +72,20 @@ export class WeatherComponent implements OnInit {
           console.log(res);
         });
       }
+    });
+  }
+
+  fetchCurrentData() {
+    console.log('fetch current data');
+    this.weatherService.getWeatherData().subscribe(
+      data => {
+        this.summary = data['currently']['summary'];
+        this.temperature = data['currently']['temperature'];
+        this.apparentTemperature = data['currently']['apparentTemperature'];
+        this.humidity = data['currently']['humidity'];
+        this.cloudCover = data['currently']['cloudCover'];
+        this.uvIndex = data['currently']['uvIndex'];
+        this.ozone = data['currently']['ozone'];
     });
   }
 }
