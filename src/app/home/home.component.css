@@ -118,3 +118,15 @@ div {
     font: 200%;
     position: fixed;
 }
+
+.sub-nav mat-card {
+    position: absolute;
+    top: 40%;
+    margin: 10px 40px 40px 10px;
+    text-align: left;
+    padding: 20px;
+    line-height: 16pt;
+    position: fixed;
+    background-color: #3f51b5;
+    z-index: 999;
+}
