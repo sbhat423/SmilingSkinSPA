@@ -19,9 +19,10 @@ export class HomeComponent implements OnInit {
   constructor(private weatherService: WeatherService) { }
 
   ngOnInit() {
+    this.fetchCurrentData();
     setInterval(() => {
       this.fetchCurrentData();
-     }, 1000);
+     }, 90000);
   }
 
   fetchCurrentData() {
