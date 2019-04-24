@@ -12,7 +12,7 @@ import { appInitializerFactory } from '@angular/platform-browser/src/browser/ser
   styleUrls: ['./weather.component.css']
 })
 export class WeatherComponent implements OnInit {
-  summary: string;
+  icon: string;
   temperature: number;
   apparentTemperature: number;
   humidity: number;
@@ -41,7 +41,7 @@ export class WeatherComponent implements OnInit {
     this.weatherService.getWeatherData().subscribe(
       data => {
         this.currentTime = data['currently']['time'];
-        this.summary = data['currently']['summary'];
+        this.icon = data['currently']['icon'];
         this.temperature = data['currently']['temperature'];
         this.apparentTemperature = data['currently']['apparentTemperature'];
         this.humidity = data['currently']['humidity'];

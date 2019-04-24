@@ -1,74 +1,77 @@
 <mat-tab-group>
   <mat-tab label="Current">
-    <ol>
-      <li>{{this.currentTime}}</li>
-      <li>{{this.summary}}</li>
-      <li>{{this.temperature}}</li>
-      <li>{{this.apparentTemperature}}</li>
-      <li>{{this.humidity}}</li>
-      <li>{{this.cloudCover}}</li>
-      <li>{{this.uvIndex}}</li>
-      <li>{{this.ozone}}</li>
-    </ol>
+    <p>{{this.currentTime}}</p>
+    <div fxLayout fxLayout.lt-md="column">
+      <div fxFlex=50%>
+        <mat-card class="mat-elevation-z4">
+          <p *ngIf="this.icon == 'clear-night'"><i class="wi wi-night-clear"></i> Clear Night</p>
+          <p *ngIf="this.icon == 'clear-day'"><i class="wi wi-day-sunny"></i> Clear Day</p>
+          <p *ngIf="this.icon == 'rain'"><i class="wi wi-rain"></i> Rain</p>
+          <p *ngIf="this.icon == 'snow'"><i class="wi wi-snow"></i> Snow</p>
+          <p *ngIf="this.icon == 'sleet'"><i class="wi wi-sleet"></i> Sleet</p>
+          <p *ngIf="this.icon == 'wind'"><i class="wi wi-windy"></i> Windy</p>
+          <p *ngIf="this.icon == 'fog'"><i class="wi wi-fog"></i> Foggy</p>
+          <p *ngIf="this.icon == 'cloudy'"><i class="wi wi-cloudy"></i> Cloudy</p>
+          <p *ngIf="this.icon == 'partly-cloudy-day'"><i class="wi wi-night-partly-cloudy"></i>Partly Cloudy</p>
+          <p *ngIf="this.icon == 'partly-cloudy-night'"><i class="wi wi-night-alt-partly-cloudy"></i>Partly Cloudy</p>
+        </mat-card>
+        <mat-card class="mat-elevation-z4">
+          <p><i class="wi wi-thermometer"></i> {{((this.temperature - 32)*5/9).toFixed(2)}}</p>
+        </mat-card>
+        <mat-card class="mat-elevation-z4">
+          <p>UV: {{this.uvIndex}}</p>
+        </mat-card>
+      </div>
+      <div fxFlex=50%>
+        <mat-card class="mat-elevation-z4">
+          <p><i class="wi wi-humidity"></i> {{this.humidity}}</p>
+        </mat-card>
+        <mat-card class="mat-elevation-z4">
+          <p><i class="wi wi-cloud"></i> {{this.cloudCover}}</p>
+        </mat-card>
+        <mat-card class="mat-elevation-z4">
+          <p>Ozone: {{this.ozone}}</p>
+        </mat-card>
+      </div>
+    </div>
   </mat-tab>
-  <mat-tab label="Hour +1">
-      <ol>
-          <li>{{this.hourlyData[this.currentHour + 1]['time']}}</li>          
-          <li>{{this.hourlyData[this.currentHour + 1]['summary']}}</li>
-          <li>{{this.hourlyData[this.currentHour + 1]['temperature']}}</li>
-          <li>{{this.hourlyData[this.currentHour + 1]['apparentTemperature']}}</li>
-          <li>{{this.hourlyData[this.currentHour + 1]['humidity']}}</li>
-          <li>{{this.hourlyData[this.currentHour + 1]['cloudCover']}}</li>
-          <li>{{this.hourlyData[this.currentHour + 1]['uvIndex']}}</li>
-          <li>{{this.hourlyData[this.currentHour + 1]['ozone']}}</li>
-        </ol>
+  <mat-tab *ngFor='let i of [1,2,3,4,5]' label="Hour +{{i}}">
+    <p>{{this.currentTime}}</p>
+    <div fxLayout fxLayout.lt-md="column">
+      <div fxFlex=50%>
+        <mat-card class="mat-elevation-z4">
+          <p *ngIf="this.hourlyData[this.currentHour + i]['icon'] == 'clear-night'"><i class="wi wi-night-clear"></i>
+            Clear Night</p>
+          <p *ngIf="this.hourlyData[this.currentHour + i]['icon'] == 'clear-day'"><i class="wi wi-day-sunny"></i> Clear
+            Day</p>
+          <p *ngIf="this.hourlyData[this.currentHour + i]['icon'] == 'rain'"><i class="wi wi-rain"></i> Rain</p>
+          <p *ngIf="this.hourlyData[this.currentHour + i]['icon'] == 'snow'"><i class="wi wi-snow"></i> Snow</p>
+          <p *ngIf="this.hourlyData[this.currentHour + i]['icon'] == 'sleet'"><i class="wi wi-sleet"></i> Sleet</p>
+          <p *ngIf="this.hourlyData[this.currentHour + i]['icon'] == 'wind'"><i class="wi wi-windy"></i> Windy</p>
+          <p *ngIf="this.hourlyData[this.currentHour + i]['icon'] == 'fog'"><i class="wi wi-fog"></i> Foggy</p>
+          <p *ngIf="this.hourlyData[this.currentHour + i]['icon'] == 'cloudy'"><i class="wi wi-cloudy"></i> Cloudy</p>
+          <p *ngIf="this.hourlyData[this.currentHour + i]['icon'] == 'partly-cloudy-day'"><i
+              class="wi wi-night-partly-cloudy"></i>Partly Cloudy</p>
+          <p *ngIf="this.hourlyData[this.currentHour + i]['icon'] == 'partly-cloudy-night'"><i
+              class="wi wi-night-alt-partly-cloudy"></i>Partly Cloudy</p>
+        </mat-card>
+        <mat-card class="mat-elevation-z4">
+          <p><i class="wi wi-thermometer"></i> {{((this.hourlyData[this.currentHour + i]['temperature'] - 32) * 5/9).toFixed(2)}}</p>
+        </mat-card>
+        <mat-card class="mat-elevation-z4">
+          <p>UV: {{this.hourlyData[this.currentHour + i]['uvIndex']}}</p>
+        </mat-card>
+      </div>
+      <div fxFlex=50%>
+        <mat-card class="mat-elevation-z4">
+          <p><i class="wi wi-humidity"></i> {{this.hourlyData[this.currentHour + i]['humidity']}}</p>
+        </mat-card>
+        <mat-card class="mat-elevation-z4">
+          <p><i class="wi wi-cloud"></i> {{this.hourlyData[this.currentHour + i]['cloudCover']}}</p>
+        </mat-card>
+        <mat-card class="mat-elevation-z4">
+          <p>Ozone: {{this.hourlyData[this.currentHour + i]['ozone']}}</p>
+        </mat-card>
+      </div>
+    </div>
   </mat-tab>
-  <mat-tab label="Hour +2">
-      <ol>
-          <li>{{this.hourlyData[this.currentHour + 2]['time']}}</li>
-          <li>{{this.hourlyData[this.currentHour + 2]['summary']}}</li>
-          <li>{{this.hourlyData[this.currentHour + 2]['temperature']}}</li>
-          <li>{{this.hourlyData[this.currentHour + 2]['apparentTemperature']}}</li>
-          <li>{{this.hourlyData[this.currentHour + 2]['humidity']}}</li>
-          <li>{{this.hourlyData[this.currentHour + 2]['cloudCover']}}</li>
-          <li>{{this.hourlyData[this.currentHour + 2]['uvIndex']}}</li>
-          <li>{{this.hourlyData[this.currentHour + 2]['ozone']}}</li>
-        </ol>
-  </mat-tab>
-  <mat-tab label="Hour +3">
-      <ol>
-          <li>{{this.hourlyData[this.currentHour + 3]['time']}}</li>
-          <li>{{this.hourlyData[this.currentHour + 3]['summary']}}</li>
-          <li>{{this.hourlyData[this.currentHour + 3]['temperature']}}</li>
-          <li>{{this.hourlyData[this.currentHour + 3]['apparentTemperature']}}</li>
-          <li>{{this.hourlyData[this.currentHour + 3]['humidity']}}</li>
-          <li>{{this.hourlyData[this.currentHour + 3]['cloudCover']}}</li>
-          <li>{{this.hourlyData[this.currentHour + 3]['uvIndex']}}</li>
-          <li>{{this.hourlyData[this.currentHour + 3]['ozone']}}</li>
-        </ol>
-  </mat-tab>
-  <mat-tab label="Hour +4">
-      <ol>
-          <li>{{this.hourlyData[this.currentHour + 4]['time']}}</li>
-          <li>{{this.hourlyData[this.currentHour + 4]['summary']}}</li>
-          <li>{{this.hourlyData[this.currentHour + 4]['temperature']}}</li>
-          <li>{{this.hourlyData[this.currentHour + 4]['apparentTemperature']}}</li>
-          <li>{{this.hourlyData[this.currentHour + 4]['humidity']}}</li>
-          <li>{{this.hourlyData[this.currentHour + 4]['cloudCover']}}</li>
-          <li>{{this.hourlyData[this.currentHour + 4]['uvIndex']}}</li>
-          <li>{{this.hourlyData[this.currentHour + 4]['ozone']}}</li>
-        </ol>
-  </mat-tab>
-  <mat-tab label="Hour +5">
-      <ol>
-          <li>{{this.hourlyData[this.currentHour + 5]['time']}}</li>
-          <li>{{this.hourlyData[this.currentHour + 5]['summary']}}</li>
-          <li>{{this.hourlyData[this.currentHour + 5]['temperature']}}</li>
-          <li>{{this.hourlyData[this.currentHour + 5]['apparentTemperature']}}</li>
-          <li>{{this.hourlyData[this.currentHour + 5]['humidity']}}</li>
-          <li>{{this.hourlyData[this.currentHour + 5]['cloudCover']}}</li>
-          <li>{{this.hourlyData[this.currentHour + 5]['uvIndex']}}</li>
-          <li>{{this.hourlyData[this.currentHour + 5]['ozone']}}</li>
-        </ol>
-  </mat-tab>
-</mat-tab-group>
