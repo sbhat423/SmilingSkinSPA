@@ -90,7 +90,7 @@ export class WeatherComponent implements OnInit {
     console.log('fetch current data');
     this.weatherService.getWeatherData().subscribe(
       data => {
-        this.summary = data['currently']['summary'];
+        this.icon = data['currently']['icon'];
         this.temperature = data['currently']['temperature'];
         this.apparentTemperature = data['currently']['apparentTemperature'];
         this.humidity = data['currently']['humidity'];
