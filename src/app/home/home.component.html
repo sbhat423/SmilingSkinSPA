@@ -13,12 +13,21 @@
 <div fxLayout fxLayout.lt-md="column">
     <div fxHide.lt-md="true" class="sub-nav " fxFlex=25%>
       <mat-card class="mat-elevation-z8">
-        <p>Summary: {{this.summary}}</p>
-        <p>Temperature: {{this.temperature}}</p>
+        <p *ngIf="this.icon == 'clear-night'"><i class="wi wi-night-clear"></i> Clear Night</p>
+        <p *ngIf="this.icon == 'clear-day'"><i class="wi wi-day-sunny"></i> Clear Day</p>
+        <p *ngIf="this.icon == 'rain'"><i class="wi wi-rain"></i> Rain</p>
+        <p *ngIf="this.icon == 'snow'"><i class="wi wi-snow"></i> Snow</p>
+        <p *ngIf="this.icon == 'sleet'"><i class="wi wi-sleet"></i> Sleet</p>
+        <p *ngIf="this.icon == 'wind'"><i class="wi wi-windy"></i> Windy</p>
+        <p *ngIf="this.icon == 'fog'"><i class="wi wi-fog"></i> Foggy</p>
+        <p *ngIf="this.icon == 'cloudy'"><i class="wi wi-cloudy"></i> Cloudy</p>
+        <p *ngIf="this.icon == 'partly-cloudy-day'"><i class="wi wi-night-partly-cloudy"></i>Partly Cloudy</p>
+        <p *ngIf="this.icon == 'partly-cloudy-night'"><i class="wi wi-night-alt-partly-cloudy"></i>Partly Cloudy</p>
+        <p><i class="wi wi-thermometer"></i> {{this.degreeTemperature}}</p>
         <!--<li><p>Apparent Temperature</p>{{this.apparentTemperature}}</li> -->
-        <p>Humidity: {{this.humidity}}</p>
-        <p>Cloud cover: {{this.cloudCover}}</p>
-        <p>UV Index: {{this.uvIndex}}</p>
+        <p><i class="wi wi-humidity"></i> {{this.humidity}}</p>
+        <p><i class="wi wi-cloud"></i> {{this.cloudCover}}</p>
+        <p>UV: {{this.uvIndex}}</p>
         <p>Ozone: {{this.ozone}}</p>
       </mat-card>
     </div>
