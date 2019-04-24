@@ -7,13 +7,14 @@ import { WeatherService } from '../service/weather.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  summary: string;
+  icon: string;
   temperature: number;
   apparentTemperature: number;
   humidity: number;
   cloudCover: number;
   uvIndex: number;
   ozone: number;
+  degreeTemperature: String;
 
   constructor(private weatherService: WeatherService) { }
 
@@ -27,8 +28,9 @@ export class HomeComponent implements OnInit {
     console.log('fetch current data');
     this.weatherService.getWeatherData().subscribe(
       data => {
-        this.summary = data['currently']['summary'];
+        this.icon = data['currently']['icon'];
         this.temperature = data['currently']['temperature'];
+        this.degreeTemperature = ((this.temperature - 32) * (5 / 9)).toFixed(2);
         this.apparentTemperature = data['currently']['apparentTemperature'];
         this.humidity = data['currently']['humidity'];
         this.cloudCover = data['currently']['cloudCover'];
