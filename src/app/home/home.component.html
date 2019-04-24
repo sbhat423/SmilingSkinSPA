@@ -13,6 +13,13 @@
 <div fxLayout fxLayout.lt-md="column">
     <div fxHide.lt-md="true" class="sub-nav " fxFlex=25%>
       <mat-card class="mat-elevation-z8">
+        <p>Summary: {{this.summary}}</p>
+        <p>Temperature: {{this.temperature}}</p>
+        <!--<li><p>Apparent Temperature</p>{{this.apparentTemperature}}</li> -->
+        <p>Humidity: {{this.humidity}}</p>
+        <p>Cloud cover: {{this.cloudCover}}</p>
+        <p>UV Index: {{this.uvIndex}}</p>
+        <p>Ozone: {{this.ozone}}</p>
       </mat-card>
     </div>
   </div>
