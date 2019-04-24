@@ -19,6 +19,8 @@ export class WeatherComponent implements OnInit {
   cloudCover: number;
   uvIndex: number;
   ozone: number;
+  currentTime: number;
+  currentHour: number;
   hourlyData: string[] = [];
 
   constructor(private weatherService: WeatherService,
@@ -38,6 +40,7 @@ export class WeatherComponent implements OnInit {
     console.log('store hourly data');
     this.weatherService.getWeatherData().subscribe(
       data => {
+        this.currentTime = data['currently']['time'];
         this.summary = data['currently']['summary'];
         this.temperature = data['currently']['temperature'];
         this.apparentTemperature = data['currently']['apparentTemperature'];
@@ -46,7 +49,8 @@ export class WeatherComponent implements OnInit {
         this.uvIndex = data['currently']['uvIndex'];
         this.ozone = data['currently']['ozone'];
         this.hourlyData = data['hourly']['data'];
-        for (let i = 0; i < 5; i++) {
+        let currentTimeFlag = false;
+        for (let i = 1; i < 6; i++) {
           const weather: Weather = {
             latitude: data['latitude'],
             longitude: data['longitude'],
@@ -68,9 +72,16 @@ export class WeatherComponent implements OnInit {
             visibility: this.hourlyData[i]['visibility'],
             ozone: this.hourlyData[i]['ozone']
         };
-        this.api.postWeatherData(weather).subscribe(res => {
-          console.log(res);
-        });
+        if (this.currentTime <= this.hourlyData[i]['time'] || currentTimeFlag) {
+          console.log(i);
+          this.api.postWeatherData(weather).subscribe(res => {
+            console.log(res);
+          });
+          if (!currentTimeFlag) {
+            currentTimeFlag = true;
+            this.currentHour = i;
+          }
+        }
       }
     });
   }

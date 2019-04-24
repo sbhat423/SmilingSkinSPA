@@ -1,11 +1,74 @@
-<ol>
-  <li>{{this.summary}}</li>
-  <li>{{this.temperature}}</li>
-  <li>{{this.apparentTemperature}}</li>
-  <li>{{this.humidity}}</li>
-  <li>{{this.cloudCover}}</li>
-  <li>{{this.uvIndex}}</li>
-  <li>{{this.ozone}}</li>
-</ol>
-<i class="wi wi-night-sleet"></i>
-<i class="wi wi-night-partly-cloudy"></i>
+<mat-tab-group>
+  <mat-tab label="Current">
+    <ol>
+      <li>{{this.currentTime}}</li>
+      <li>{{this.summary}}</li>
+      <li>{{this.temperature}}</li>
+      <li>{{this.apparentTemperature}}</li>
+      <li>{{this.humidity}}</li>
+      <li>{{this.cloudCover}}</li>
+      <li>{{this.uvIndex}}</li>
+      <li>{{this.ozone}}</li>
+    </ol>
+  </mat-tab>
+  <mat-tab label="Hour +1">
+      <ol>
+          <li>{{this.hourlyData[this.currentHour + 1]['time']}}</li>          
+          <li>{{this.hourlyData[this.currentHour + 1]['summary']}}</li>
+          <li>{{this.hourlyData[this.currentHour + 1]['temperature']}}</li>
+          <li>{{this.hourlyData[this.currentHour + 1]['apparentTemperature']}}</li>
+          <li>{{this.hourlyData[this.currentHour + 1]['humidity']}}</li>
+          <li>{{this.hourlyData[this.currentHour + 1]['cloudCover']}}</li>
+          <li>{{this.hourlyData[this.currentHour + 1]['uvIndex']}}</li>
+          <li>{{this.hourlyData[this.currentHour + 1]['ozone']}}</li>
+        </ol>
+  </mat-tab>
+  <mat-tab label="Hour +2">
+      <ol>
+          <li>{{this.hourlyData[this.currentHour + 2]['time']}}</li>
+          <li>{{this.hourlyData[this.currentHour + 2]['summary']}}</li>
+          <li>{{this.hourlyData[this.currentHour + 2]['temperature']}}</li>
+          <li>{{this.hourlyData[this.currentHour + 2]['apparentTemperature']}}</li>
+          <li>{{this.hourlyData[this.currentHour + 2]['humidity']}}</li>
+          <li>{{this.hourlyData[this.currentHour + 2]['cloudCover']}}</li>
+          <li>{{this.hourlyData[this.currentHour + 2]['uvIndex']}}</li>
+          <li>{{this.hourlyData[this.currentHour + 2]['ozone']}}</li>
+        </ol>
+  </mat-tab>
+  <mat-tab label="Hour +3">
+      <ol>
+          <li>{{this.hourlyData[this.currentHour + 3]['time']}}</li>
+          <li>{{this.hourlyData[this.currentHour + 3]['summary']}}</li>
+          <li>{{this.hourlyData[this.currentHour + 3]['temperature']}}</li>
+          <li>{{this.hourlyData[this.currentHour + 3]['apparentTemperature']}}</li>
+          <li>{{this.hourlyData[this.currentHour + 3]['humidity']}}</li>
+          <li>{{this.hourlyData[this.currentHour + 3]['cloudCover']}}</li>
+          <li>{{this.hourlyData[this.currentHour + 3]['uvIndex']}}</li>
+          <li>{{this.hourlyData[this.currentHour + 3]['ozone']}}</li>
+        </ol>
+  </mat-tab>
+  <mat-tab label="Hour +4">
+      <ol>
+          <li>{{this.hourlyData[this.currentHour + 4]['time']}}</li>
+          <li>{{this.hourlyData[this.currentHour + 4]['summary']}}</li>
+          <li>{{this.hourlyData[this.currentHour + 4]['temperature']}}</li>
+          <li>{{this.hourlyData[this.currentHour + 4]['apparentTemperature']}}</li>
+          <li>{{this.hourlyData[this.currentHour + 4]['humidity']}}</li>
+          <li>{{this.hourlyData[this.currentHour + 4]['cloudCover']}}</li>
+          <li>{{this.hourlyData[this.currentHour + 4]['uvIndex']}}</li>
+          <li>{{this.hourlyData[this.currentHour + 4]['ozone']}}</li>
+        </ol>
+  </mat-tab>
+  <mat-tab label="Hour +5">
+      <ol>
+          <li>{{this.hourlyData[this.currentHour + 5]['time']}}</li>
+          <li>{{this.hourlyData[this.currentHour + 5]['summary']}}</li>
+          <li>{{this.hourlyData[this.currentHour + 5]['temperature']}}</li>
+          <li>{{this.hourlyData[this.currentHour + 5]['apparentTemperature']}}</li>
+          <li>{{this.hourlyData[this.currentHour + 5]['humidity']}}</li>
+          <li>{{this.hourlyData[this.currentHour + 5]['cloudCover']}}</li>
+          <li>{{this.hourlyData[this.currentHour + 5]['uvIndex']}}</li>
+          <li>{{this.hourlyData[this.currentHour + 5]['ozone']}}</li>
+        </ol>
+  </mat-tab>
+</mat-tab-group>

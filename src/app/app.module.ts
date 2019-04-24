@@ -19,6 +19,7 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatSelectModule } from '@angular/material/select';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { HomeComponent } from './home/home.component';
+import {MatTabsModule} from '@angular/material';
 
 import { OwlModule } from 'ngx-owl-carousel';
 import { MainNavComponent } from './main-nav/main-nav.component';
@@ -83,7 +84,9 @@ import { WeatherIconsModule } from 'ngx-icons';
     LayoutModule,
     FlexLayoutModule,
     HttpClientModule,
-    WeatherIconsModule
+    WeatherIconsModule,
+    MatTabsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
