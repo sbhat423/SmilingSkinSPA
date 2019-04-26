@@ -15,6 +15,7 @@ import { PreventionInfoComponent } from './Info-pages/prevention-info/prevention
 import { StatisticsInfoComponent } from './Info-pages/statistics-info/statistics-info.component';
 import { Error404Component } from './error404/error404.component';
 import { WeatherComponent } from './weather/weather.component';
+import { PrenevtionComponent } from './prenevtion/prenevtion.component';
 
 const routes: Routes = [
   { path: 'about-us', component: AboutUsComponent},
@@ -63,6 +64,7 @@ const routes: Routes = [
   { path: 'compare', component: CompareComponent},
   { path: 'home', component: HomeComponent},
   { path: 'weather', component: WeatherComponent},
+  { path: 'prevention', component: PrenevtionComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: '**', component: Error404Component}
 ];

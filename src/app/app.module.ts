@@ -41,6 +41,7 @@ import { Error404Component } from './error404/error404.component';
 import { HttpClientModule } from '@angular/common/http';
 import { WeatherComponent } from './weather/weather.component';
 import { WeatherIconsModule } from 'ngx-icons';
+import { PrenevtionComponent } from './prenevtion/prenevtion.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +62,8 @@ import { WeatherIconsModule } from 'ngx-icons';
     PreventionInfoComponent,
     StatisticsInfoComponent,
     Error404Component,
-    WeatherComponent
+    WeatherComponent,
+    PrenevtionComponent
   ],
   imports: [
     BrowserModule,
