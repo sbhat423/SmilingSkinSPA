@@ -4,6 +4,7 @@
     [opened]="!(isHandset$ | async)">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
+      <a mat-list-item routerLink="/home">Home</a>
       <a mat-list-item routerLink="/skin-cancer">About Skin Cancer</a>
       <a mat-list-item routerLink="/prevention">Prevention</a>
       <a mat-list-item routerLink="/compare">Skin Cancer Statistics</a>
@@ -24,6 +25,7 @@
       </button>
       <span class="fill-space"></span>
       <div class="buttons-topbar">
+        <button mat-button routerLink="/home" style="padding:8px 25px 8px 25px ">Home</button>
         <button mat-button routerLink="/skin-cancer" routerLinkActive="active-list-item">About Skin Cancer</button>
         <button mat-button routerLink="/prevention" routerLinkActive="active-list-item">Prevention</button>
         <button mat-button routerLink="/compare" routerLinkActive="active-list-item">Skin Cancer Statistics</button>
