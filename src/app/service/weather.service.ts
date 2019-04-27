@@ -10,6 +10,6 @@ export class WeatherService {
 
   getWeatherData() {
     // tslint:disable-next-line:max-line-length
-    return this.http.get('https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/da2bc56863c0342b0692741c49d8011b/-37.814639,144.962912');
+    return this.http.get('https://cors-anywhere.herokuapp.com/https://api.darksky.net/forecast/da2bc56863c0342b0692741c49d8011b/-37.876823,145.045837');
   }
 }
