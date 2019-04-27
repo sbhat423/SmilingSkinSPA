@@ -36,10 +36,72 @@
   <div>
     <p class="second-block">RECOMMENDATIONS BASED ON THE CURRENT RISK LEVEL</p>
   </div>
-  <div>
-    <!--
+  <div fxLayout fxLayout.lt-md="column">
+    <div fxFlex=50%>
+      <!--
       recommendation content go here
     -->
+    </div>
+    <div fxFlex=50%>
+      <mat-form-field>
+        <mat-label>Select SPF</mat-label>
+        <mat-select [(value)]="spf" (valueChange)="getReportValue()">
+          <mat-option value="0">SPF 0</mat-option>
+          <mat-option value="15">SPF 15</mat-option>
+          <mat-option value="30">SPF 30</mat-option>
+          <mat-option value="50">SPF 50</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <p></p>
+      <mat-form-field>
+        <mat-label>Select your Skin Type</mat-label>
+        <mat-select [(value)]="skinType" (valueChange)="getReportValue()">
+          <mat-option value="1">Skin Type 1</mat-option>
+          <mat-option value="2">Skin Type 2</mat-option>
+          <mat-option value="3">Skin Type 3</mat-option>
+          <mat-option value="4">Skin Type 4</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <p></p>
+
+
+        <mat-form-field class="example-full-width">
+          <input type="number" matInput placeholder="Duration in minutes" [(ngModel)]="duration"  (input)="getReportValue()">
+        </mat-form-field>
+    
+      <mat-form-field>
+        <mat-label>Select your Cloth Fabric</mat-label>
+        <mat-select [(value)]="fabric" (valueChange)="getReportValue()">
+          <mat-option value="Lycra/Elastanes">Lycra/Elastanes</mat-option>
+          <mat-option value="Plastic">Plastic</mat-option>
+          <mat-option value="Nylon">Nylon</mat-option>
+          <mat-option value="Polyester">Polyester</mat-option>
+          <mat-option value="Cotton">Cotton</mat-option>
+          <mat-option value="Polyester/Cotton">Polyester/Cotton</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <p></p>
+
+      <mat-form-field>
+        <mat-label>Select Activity</mat-label>
+        <mat-select [(value)]="activities" (change)="getReportValue()">
+          <mat-option value="Picnic,Barbecue">Picnic/Barbecue</mat-option>
+          <mat-option value="Grasslands">Grassland</mat-option>
+          <mat-option value="Soil, clay">Soil/Clay</mat-option>
+          <mat-option value="Road trip">Road Trip</mat-option>
+          <mat-option value="Road trip">Road Trip</mat-option>
+          <mat-option value="City tour">City Tour</mat-option>
+          <mat-option value="Boat dec(wood or fibreglass)">Boat Dec(Wood/Fibreglass)</mat-option>
+          <mat-option value="Open water">Open Water</mat-option>
+          <mat-option value="Open ocean">Open Ocean</mat-option>
+          <mat-option value="Sea surf">Sea surf</mat-option>
+          <mat-option value="Beach sand, wet">Beach Sand(Wet)</mat-option>
+          <mat-option value="Beach sand, dry">Beach Sand(Dry)</mat-option>
+          <mat-option value="Snow">Snow</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <p></p>
+    </div>
   </div>
   <div fxLayout fxLayout.lt-md="column">
     <div fxFlex=50%>
@@ -75,11 +137,15 @@
         -->
     </div>
   </div>
-  <div>
+ 
+  <!-- Disable map
+     <div>
     <p class="second-block">ACCESS TO THE NEAREST SKIN CANCER CLINIC</p>
   </div>
-  <div style="padding: 15px;">
+<div style="padding: 15px;">
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
     <div class="elfsight-app-f333d798-ed6b-4715-a5c1-ca0d6c27406b"></div>
   </div>
+  -->
+  
 </div>

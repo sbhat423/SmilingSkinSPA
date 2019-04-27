@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -42,6 +43,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { WeatherComponent } from './weather/weather.component';
 import { WeatherIconsModule } from 'ngx-icons';
 import { PrenevtionComponent } from './prenevtion/prenevtion.component';
+import { GaugeModule } from 'angular-gauge';
+
 
 @NgModule({
   declarations: [
@@ -88,7 +91,9 @@ import { PrenevtionComponent } from './prenevtion/prenevtion.component';
     HttpClientModule,
     WeatherIconsModule,
     MatTabsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    GaugeModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
