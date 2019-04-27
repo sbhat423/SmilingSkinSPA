@@ -43,7 +43,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { WeatherComponent } from './weather/weather.component';
 import { WeatherIconsModule } from 'ngx-icons';
 import { PrenevtionComponent } from './prenevtion/prenevtion.component';
-import { GaugeModule } from 'angular-gauge';
+// import { GaugeModule } from 'angular-gauge';
 
 
 @NgModule({
@@ -92,8 +92,7 @@ import { GaugeModule } from 'angular-gauge';
     WeatherIconsModule,
     MatTabsModule,
     BrowserAnimationsModule,
-    FormsModule,
-    GaugeModule.forRoot()
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
