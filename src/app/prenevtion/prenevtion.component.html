@@ -37,15 +37,11 @@
     <p class="second-block">RECOMMENDATIONS BASED ON THE CURRENT RISK LEVEL</p>
   </div>
   <div fxLayout fxLayout.lt-md="column">
-    <div fxFlex=50%>
-      <!--
-      recommendation content go here
-    -->
-    </div>
-    <div fxFlex=50%>
+    <div fxFlex=10%></div>
+    <div fxFlex=30%>
       <mat-form-field>
         <mat-label>Select SPF</mat-label>
-        <mat-select [(value)]="spf" (valueChange)="getReportValue()">
+        <mat-select [(value)]="spf" [disabled]='disabled' (valueChange)="getReportValue()">
           <mat-option value="0">SPF 0</mat-option>
           <mat-option value="15">SPF 15</mat-option>
           <mat-option value="30">SPF 30</mat-option>
@@ -55,7 +51,7 @@
       <p></p>
       <mat-form-field>
         <mat-label>Select your Skin Type</mat-label>
-        <mat-select [(value)]="skinType" (valueChange)="getReportValue()">
+        <mat-select [(value)]="skinType" [disabled]='disabled' (valueChange)="getReportValue()">
           <mat-option value="1">Skin Type 1</mat-option>
           <mat-option value="2">Skin Type 2</mat-option>
           <mat-option value="3">Skin Type 3</mat-option>
@@ -65,13 +61,15 @@
       <p></p>
 
 
-        <mat-form-field class="example-full-width">
-          <input type="number" matInput placeholder="Duration in minutes" [(ngModel)]="duration"  (input)="getReportValue()">
-        </mat-form-field>
-    
+      <mat-form-field class="example-full-width">
+        <input type="number" [disabled]='disabled' matInput placeholder="Duration in minutes" [(ngModel)]="duration"
+          (input)="getReportValue()">
+      </mat-form-field>
+      <p></p>
+
       <mat-form-field>
         <mat-label>Select your Cloth Fabric</mat-label>
-        <mat-select [(value)]="fabric" (valueChange)="getReportValue()">
+        <mat-select [(value)]="fabric" [disabled]='disabled' (valueChange)="getReportValue()">
           <mat-option value="Lycra/Elastanes">Lycra/Elastanes</mat-option>
           <mat-option value="Plastic">Plastic</mat-option>
           <mat-option value="Nylon">Nylon</mat-option>
@@ -84,7 +82,7 @@
 
       <mat-form-field>
         <mat-label>Select Activity</mat-label>
-        <mat-select [(value)]="activities" (change)="getReportValue()">
+        <mat-select [(value)]="activities" [disabled]='disabled' (change)="getReportValue()">
           <mat-option value="Picnic,Barbecue">Picnic/Barbecue</mat-option>
           <mat-option value="Grasslands">Grassland</mat-option>
           <mat-option value="Soil, clay">Soil/Clay</mat-option>
@@ -102,6 +100,27 @@
       </mat-form-field>
       <p></p>
     </div>
+    <div fxFlex=40%> 
+      <!--
+      recommendation content go here
+      
+    -->
+    <div>
+        <img *ngIf="dangerlevel == '1'" src='../../assets/img/level1.jpeg' style="width: 350px; height:200px">
+        <img *ngIf="dangerlevel == '2'" src='../../assets/img/level2.jpeg' style="width: 350px; height:200px">
+        <img *ngIf="dangerlevel == '3'" src='../../assets/img/level3.jpeg' style="width: 350px; height:200px">
+        <img *ngIf="dangerlevel == '4'" src='../../assets/img/level4.jpeg' style="width: 350px; height:200px">
+        <img *ngIf="dangerlevel == '5'" src='../../assets/img/level5.jpeg' style="width: 350px; height:200px">
+    </div>
+      <div>
+        <mat-slider class='example-margin' [disabled]='disabled' [invert]='invert' [max]='max' [min]='min' [step]='step'
+          [thumbLabel]='thumbLabel' [tickInterval]='tickInterval' [(ngModel)]='value' [vertical]='vertical'
+          (valueChange)="getReportValue()">
+        </mat-slider>
+        <p>UV Index: {{value}}</p>
+      </div>
+    </div>
+    <div fxFlex=20%></div>
   </div>
   <div fxLayout fxLayout.lt-md="column">
     <div fxFlex=50%>
@@ -137,7 +156,7 @@
         -->
     </div>
   </div>
- 
+
   <!-- Disable map
      <div>
     <p class="second-block">ACCESS TO THE NEAREST SKIN CANCER CLINIC</p>
@@ -147,5 +166,5 @@
     <div class="elfsight-app-f333d798-ed6b-4715-a5c1-ca0d6c27406b"></div>
   </div>
   -->
-  
+
 </div>

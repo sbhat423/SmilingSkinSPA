@@ -43,8 +43,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { WeatherComponent } from './weather/weather.component';
 import { WeatherIconsModule } from 'ngx-icons';
 import { PrenevtionComponent } from './prenevtion/prenevtion.component';
-import { GaugeModule } from 'angular-gauge';
-
+import { MatSliderModule, MatCheckboxModule} from '@angular/material';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
+import { GestureConfig } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -93,9 +95,11 @@ import { GaugeModule } from 'angular-gauge';
     MatTabsModule,
     BrowserAnimationsModule,
     FormsModule,
-    GaugeModule.forRoot()
+    MatSliderModule,
+    MatCheckboxModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [{ provide: HAMMER_GESTURE_CONFIG, useClass: GestureConfig }, ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
