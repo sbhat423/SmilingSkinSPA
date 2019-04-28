@@ -48,6 +48,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { GestureConfig } from '@angular/material';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -98,6 +99,7 @@ import { GestureConfig } from '@angular/material';
     MatSliderModule,
     MatCheckboxModule,
     ReactiveFormsModule
+
   ],
   providers: [{ provide: HAMMER_GESTURE_CONFIG, useClass: GestureConfig }, ],
   bootstrap: [AppComponent]
