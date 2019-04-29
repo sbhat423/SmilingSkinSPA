@@ -33,7 +33,9 @@ export class PrenevtionComponent implements OnInit {
   private _tickInterval = 1;
   ngOnInit() {
     this.fetchCurrentData();
-    this.getReportValue();
+    setTimeout(() => {
+      this.getReportValue();
+    }, 500);
   }
 
   fetchCurrentData() {
@@ -41,16 +43,17 @@ export class PrenevtionComponent implements OnInit {
     this.weatherService.getWeatherData().subscribe(
       data => {
         this.uv = data['currently']['uvIndex'];
-    console.log(this.uv);
-    });
+    console.log('uv', this.uv);
     this.value = Number(this.uv);
+    console.log('value', this.value);
+    });
   }
 
   getReportValue() {
     this.disabled = true;
     this.uv = this.value.toString();
     console.log(this.uv, this.spf, this.skinType, this.duration, this.fabric, this.activities);
-    this.http.get('https://cors-anywhere.herokuapp.com/https://13.250.145.208:82/receiver', {
+    this.http.get('https://cors-anywhere.herokuapp.com/https://www.smilingskin-python.ml/receiver', {
       params: {
         uv: this.uv,
         duration: this.duration,

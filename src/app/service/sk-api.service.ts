@@ -14,6 +14,6 @@ export class SkApiService {
   constructor(private http: HttpClient) { }
 
   postWeatherData(weather: Weather) {
-     return this.http.post<Weather>('https://13.250.145.208:81/api/weathers', weather, httpOptions);
+     return this.http.post<Weather>('https://www.smilingskin-backend.ml/api/weathers', weather, httpOptions);
   }
 }
