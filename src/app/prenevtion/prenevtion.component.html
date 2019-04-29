@@ -100,10 +100,11 @@
           <mat-option value="Snow">Snow</mat-option>
         </mat-select>
       </mat-form-field>
-      <p><br><br><br><br></p>
+      <p><br><br><br><br><br><br><br><br><br></p>
     </div>
     <div fxFlex=40%>
       <div>
+        <h2>CURRENT RISK LEVEL</h2>
         <mat-spinner *ngIf="disabled" style="display:block; margin-left:auto; margin-right:auto;"></mat-spinner>
         <img *ngIf="dangerlevel == '1' && !disabled" src='../../assets/img/level1.jpeg' style="width: 350px; height:225px">
         <img *ngIf="dangerlevel == '2' && !disabled" src='../../assets/img/level2.jpeg' style="width: 350px; height:225px">
@@ -117,19 +118,18 @@
           (valueChange)="getReportValue()">
         </mat-slider>
         <p>UV Index: {{value}}</p>
+        <p *ngIf="dangerlevel == '1'">Low: You have 0-10% chance to Burn under the Sun.</p>
+        <p *ngIf="dangerlevel == '2'">Median: You have 10-20% chance to Burn under the Sun.</p>
+        <p *ngIf="dangerlevel == '3'">High: You have 20-30% chance to Burn under the Sun.</p>
+        <p *ngIf="dangerlevel == '4'">Very high: You have 30-40% chance to Burn under the Sun.</p>
+        <p *ngIf="dangerlevel == '5'">Extremely high: You have greater than 40% chance to Burn under the Sun.</p>
         <p><br></p>
       </div>
     </div>
-    <div fxFlex=30% style="margin-right:20px;text-align:right">
-      <p>Low: You have 0-10% chance to Burn under the Sun.</p>
-      <p>Median: You have 10-20% chance to Burn under the Sun.</p>
-      <p>High: You have 20-30% chance to Burn under the Sun.</p>
-      <p>Very high: You have 30-40% chance to Burn under the Sun.</p>
-      <p>Extremely high: You have greater than 40% chance to Burn under the Sun.</p>
+    <div fxFlex=30% style="margin-right:20px;text-align:center">
+      <h2>RECOMMENDATION</h2>
       <p><br></p>
-      <div *ngIf="!defaultFlag">
-          <p style="font: bold; color: red">We will recommend you to put on SPF : {{spf_rec}} Sunscreen to reduce the risk level to low.</p>
-      </div>
+      <h1>We will recommend you to put on SPF {{spf_rec}} sunscreen to reduce the risk level to low</h1>
     </div>
   </div>
   <div fxLayout fxLayout.lt-md="column">
@@ -162,15 +162,15 @@
     </div>
     <div fxFlex=50% style="padding-left: 5px;">
       <img src="../../assets/img/left.jpg" style="max-width: 80%; max-height: 500px;" />
-      <p style="text-align: center">Figure 1. Prevention Tips<br></p>
-    <p style="font-size: 15px;">Source: Avoid Skin Cancer in the Summer Heat – Hollis Cobb. (2019). Retrieved from <a href="https://www.holliscobb.com/avoid-skin-cancer-summer-heat/">https://www.holliscobb.com/avoid-skin-cancer-summer-heat/</a><br><br></p>
+      <p class="content-text" style="text-align: center">Figure 1. Prevention Tips<br></p>
+    <p class="content-text">Source: Avoid Skin Cancer in the Summer Heat – Hollis Cobb. (2019). Retrieved from <a href="https://www.holliscobb.com/avoid-skin-cancer-summer-heat/">https://www.holliscobb.com/avoid-skin-cancer-summer-heat/</a><br><br></p>
     </div>
   </div>
   <div fxLayout fxLayout.lt-md="column">
     <div fxFlex=50% style="padding-left: 5px;margin-top: 50px;">
       <img src="../../assets/img/right.jpg" style="max-width: 80%; max-height: 400px;" />
-      <p style="text-align: center">Figure 2. Prevention Tips<br></p>
-    <p style="font-size: 15px;">Source: Avoid Skin Cancer in the Summer Heat – Hollis Cobb. (2019). Retrieved from <a href="https://www.holliscobb.com/avoid-skin-cancer-summer-heat/">https://www.holliscobb.com/avoid-skin-cancer-summer-heat/</a><br><br></p>
+      <p class="content-text" style="text-align: center">Figure 2. Prevention Tips<br></p>
+    <p class="content-text">Source: Avoid Skin Cancer in the Summer Heat – Hollis Cobb. (2019). Retrieved from <a href="https://www.holliscobb.com/avoid-skin-cancer-summer-heat/">https://www.holliscobb.com/avoid-skin-cancer-summer-heat/</a><br><br></p>
     </div>
     <div fxFlex=50% style="padding-left: 5px;">
       <p class="second-block">WHAT IS THE BEST TYPE OF SUNSCREEN?</p>
