@@ -43,7 +43,6 @@ export class PrenevtionComponent implements OnInit {
         this.uv = data['currently']['uvIndex'];
     console.log(this.uv);
     });
-    this.uv = '5';
     this.value = Number(this.uv);
   }
 
@@ -51,7 +50,7 @@ export class PrenevtionComponent implements OnInit {
     this.disabled = true;
     this.uv = this.value.toString();
     console.log(this.uv, this.spf, this.skinType, this.duration, this.fabric, this.activities);
-    this.http.get('https://cors-anywhere.herokuapp.com/http://13.250.145.208:82/receiver', {
+    this.http.get('https://cors-anywhere.herokuapp.com/https://13.250.145.208:82/receiver', {
       params: {
         uv: this.uv,
         duration: this.duration,
