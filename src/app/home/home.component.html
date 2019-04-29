@@ -13,7 +13,7 @@
 <div fxLayout fxLayout.lt-md="column">
     <div fxHide.lt-md="true" class="sub-nav " fxFlex=25%>
       <mat-card class="mat-elevation-z8">
-        <p  matTooltip="weather summary" *ngIf="this.icon == 'clear-night'"><i class="wi wi-night-clear"></i>&nbsp;Clear Night</p>
+        <p matTooltip="weather summary" *ngIf="this.icon == 'clear-night'"><i class="wi wi-night-clear"></i>&nbsp;Clear Night</p>
         <p matTooltip="weather summary" *ngIf="this.icon == 'clear-day'"><i class="wi wi-day-sunny"></i>&nbsp;Clear Day</p>
         <p matTooltip="weather summary" *ngIf="this.icon == 'rain'"><i class="wi wi-rain"></i>&nbsp;Rain</p>
         <p matTooltip="weather summary" *ngIf="this.icon == 'snow'"><i class="wi wi-snow"></i>&nbsp;Snow</p>
@@ -27,7 +27,7 @@
         <!--<li><p>Apparent Temperature</p>{{this.apparentTemperature}}</li> -->
         <p matTooltip="humidity %"><i class="wi wi-humidity"></i>&nbsp;&nbsp;&nbsp;{{this.humidity}}%</p>
         <p matTooltip="cloud cover %"><i class="wi wi-cloud"></i>&nbsp;&nbsp;&nbsp;{{this.cloudCover}}%</p>
-        <p matTooltip="uv index">&nbsp;UV:&nbsp;&nbsp;&nbsp;{{this.uvIndex}}</p>
+        <p matTooltip="uv index"><i class="wi wi-day-sunny"></i>&nbsp;uv:&nbsp;&nbsp;&nbsp;{{this.uvIndex}}</p>
       </mat-card>
     </div> 
   </div>
@@ -53,16 +53,11 @@
         <button class="learn-more mat-elevation-z8" mat-button routerLink="/skin-cancer/causes">Learn More</button>
     </div>
 </div>
-<div class="block3">
-    <mat-card class="mat-elevation-z22">
-            <img src="../../assets/img/block3.jpg"/>
-    </mat-card>
-</div>
 <div fxLayout fxLayout.lt-md="column" class="block4">
     <div fxFlex=33%>
         <p class="second-block">SKIN CANCER PREVENTION<br><br></p>
         <h4>Get advice and tips on ways you can reduce your risk of skin cancer</h4>
-        <button class="learn-more mat-elevation-z8" mat-button routerLink="/skin-cancer/prevention">Learn More</button>
+        <button class="learn-more mat-elevation-z8" mat-button routerLink="/prevention">Learn More</button>
     </div>
     <div fxFlex=33%>
         <mat-card class="mat-elevation-z8" style="margin-bottom:20px;">
@@ -81,12 +76,6 @@
         </mat-card>
     </div>
 </div>
-
-<!-- Disable map
-    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-<div class="elfsight-app-f333d798-ed6b-4715-a5c1-ca0d6c27406b"></div>
--->
-
 
 <button mat-icon-button class="up">
     <a href="home#backTT"><mat-icon>keyboard_arrow_up</mat-icon></a>
