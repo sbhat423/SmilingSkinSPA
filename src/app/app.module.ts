@@ -21,6 +21,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { HomeComponent } from './home/home.component';
 import {MatTabsModule} from '@angular/material';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { OwlModule } from 'ngx-owl-carousel';
 import { MainNavComponent } from './main-nav/main-nav.component';
@@ -98,8 +99,8 @@ import { GestureConfig } from '@angular/material';
     FormsModule,
     MatSliderModule,
     MatCheckboxModule,
-    ReactiveFormsModule
-
+    ReactiveFormsModule,
+    MatTooltipModule
   ],
   providers: [{ provide: HAMMER_GESTURE_CONFIG, useClass: GestureConfig }, ],
   bootstrap: [AppComponent]

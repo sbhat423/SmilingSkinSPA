@@ -12,8 +12,8 @@ export class HomeComponent implements OnInit {
   icon: string;
   temperature: number;
   apparentTemperature: number;
-  humidity: number;
-  cloudCover: number;
+  humidity: string;
+  cloudCover: string;
   uvIndex: number;
   ozone: number;
   degreeTemperature: String;
@@ -42,8 +42,8 @@ export class HomeComponent implements OnInit {
         this.temperature = data['currently']['temperature'];
         this.degreeTemperature = ((this.temperature - 32) * (5 / 9)).toFixed(2);
         this.apparentTemperature = data['currently']['apparentTemperature'];
-        this.humidity = data['currently']['humidity'];
-        this.cloudCover = data['currently']['cloudCover'];
+        this.humidity = (data['currently']['humidity'] * 100).toFixed(2);
+        this.cloudCover = (data['currently']['cloudCover'] * 100).toFixed(2);
         this.uvIndex = data['currently']['uvIndex'];
         this.ozone = data['currently']['ozone'];
     });

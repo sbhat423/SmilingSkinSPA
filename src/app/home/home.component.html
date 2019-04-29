@@ -1,5 +1,5 @@
 <div id="backTT">
-    <p class="sub-slogan">We Believe in a Skin Cancer free Future</p>
+    <p class="sub-slogan">We Believe in a Skin Cancer Free Future</p>
 </div>
 <div>
     <p class="main-slogan">SUN PROTECTION FOR EVERYONE</p>
@@ -13,23 +13,23 @@
 <div fxLayout fxLayout.lt-md="column">
     <div fxHide.lt-md="true" class="sub-nav " fxFlex=25%>
       <mat-card class="mat-elevation-z8">
-        <p *ngIf="this.icon == 'clear-night'"><i class="wi wi-night-clear"></i> Clear Night</p>
-        <p *ngIf="this.icon == 'clear-day'"><i class="wi wi-day-sunny"></i> Clear Day</p>
-        <p *ngIf="this.icon == 'rain'"><i class="wi wi-rain"></i> Rain</p>
-        <p *ngIf="this.icon == 'snow'"><i class="wi wi-snow"></i> Snow</p>
-        <p *ngIf="this.icon == 'sleet'"><i class="wi wi-sleet"></i> Sleet</p>
-        <p *ngIf="this.icon == 'wind'"><i class="wi wi-windy"></i> Windy</p>
-        <p *ngIf="this.icon == 'fog'"><i class="wi wi-fog"></i> Foggy</p>
-        <p *ngIf="this.icon == 'cloudy'"><i class="wi wi-cloudy"></i> Cloudy</p>
-        <p *ngIf="this.icon == 'partly-cloudy-day'"><i class="wi wi-night-partly-cloudy"></i>Partly Cloudy</p>
-        <p *ngIf="this.icon == 'partly-cloudy-night'"><i class="wi wi-night-alt-partly-cloudy"></i>Partly Cloudy</p>
-        <p><i class="wi wi-thermometer"></i> {{this.degreeTemperature}}</p>
+        <p matTooltip="weather summary" *ngIf="this.icon == 'clear-night'"><i class="wi wi-night-clear"></i>&nbsp;Clear Night</p>
+        <p matTooltip="weather summary" *ngIf="this.icon == 'clear-day'"><i class="wi wi-day-sunny"></i>&nbsp;Clear Day</p>
+        <p matTooltip="weather summary" *ngIf="this.icon == 'rain'"><i class="wi wi-rain"></i>&nbsp;Rain</p>
+        <p matTooltip="weather summary" *ngIf="this.icon == 'snow'"><i class="wi wi-snow"></i>&nbsp;Snow</p>
+        <p matTooltip="weather summary" *ngIf="this.icon == 'sleet'"><i class="wi wi-sleet"></i>&nbsp;Sleet</p>
+        <p matTooltip="weather summary" *ngIf="this.icon == 'wind'"><i class="wi wi-windy"></i>&nbsp;Windy</p>
+        <p matTooltip="weather summary" *ngIf="this.icon == 'fog'"><i class="wi wi-fog"></i>&nbsp;Foggy</p>
+        <p matTooltip="weather summary" *ngIf="this.icon == 'cloudy'"><i class="wi wi-cloudy"></i>&nbsp;Cloudy</p>
+        <p matTooltip="weather summary" *ngIf="this.icon == 'partly-cloudy-day'"><i class="wi wi-night-partly-cloudy"></i>&nbsp;Partly Cloudy</p>
+        <p matTooltip="weather summary" *ngIf="this.icon == 'partly-cloudy-night'"><i class="wi wi-night-alt-partly-cloudy"></i>&nbsp;Partly Cloudy</p>
+        <p matTooltip="temperature in °C"><i class="wi wi-thermometer"></i>&nbsp;&nbsp;&nbsp;{{this.degreeTemperature}}&nbsp;°C</p>
         <!--<li><p>Apparent Temperature</p>{{this.apparentTemperature}}</li> -->
-        <p><i class="wi wi-humidity"></i> {{this.humidity}}</p>
-        <p><i class="wi wi-cloud"></i> {{this.cloudCover}}</p>
-        <p>UV: {{this.uvIndex}}</p>
+        <p matTooltip="humidity %"><i class="wi wi-humidity"></i>&nbsp;&nbsp;&nbsp;{{this.humidity}}%</p>
+        <p matTooltip="cloud cover %"><i class="wi wi-cloud"></i>&nbsp;&nbsp;&nbsp;{{this.cloudCover}}%</p>
+        <p matTooltip="uv index"><i class="wi wi-day-sunny"></i>&nbsp;uv:&nbsp;&nbsp;&nbsp;{{this.uvIndex}}</p>
       </mat-card>
-    </div>
+    </div> 
   </div>
 <div>
     <p class="second-block">QUESTIONS ABOUT SKIN CANCER</p>
@@ -53,40 +53,29 @@
         <button class="learn-more mat-elevation-z8" mat-button routerLink="/skin-cancer/causes">Learn More</button>
     </div>
 </div>
-<div class="block3">
-    <mat-card class="mat-elevation-z22">
-            <img src="../../assets/img/block3.jpg"/>
-    </mat-card>
-</div>
 <div fxLayout fxLayout.lt-md="column" class="block4">
     <div fxFlex=33%>
         <p class="second-block">SKIN CANCER PREVENTION<br><br></p>
         <h4>Get advice and tips on ways you can reduce your risk of skin cancer</h4>
-        <button class="learn-more mat-elevation-z8" mat-button routerLink="/skin-cancer/prevention">Learn More</button>
+        <button class="learn-more mat-elevation-z8" mat-button routerLink="/prevention">Learn More</button>
     </div>
     <div fxFlex=33%>
         <mat-card class="mat-elevation-z8" style="margin-bottom:20px;">
             <img src="../../assets/img/block4-1.jpg" />
         </mat-card>
         <mat-card class="mat-elevation-z8" style="margin-bottom:20px;">
-            <img src="../../assets/img/block4-2.jpg" />
+            <img src="../../assets/img/mole.jpg" />
         </mat-card>
     </div>
     <div fxFlex=33%>
         <mat-card class="mat-elevation-z8" style="margin-bottom:20px;">
-            <img src="../../assets/img/block4-3.jpg" />
+            <img src="../../assets/img/mole2.jpg" />
         </mat-card>
         <mat-card class="mat-elevation-z8" style="margin-bottom:20px;">
             <img src="../../assets/img/block4-4.jpg" />
         </mat-card>
     </div>
 </div>
-
-<!-- Disable map
-    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-<div class="elfsight-app-f333d798-ed6b-4715-a5c1-ca0d6c27406b"></div>
--->
-
 
 <button mat-icon-button class="up">
     <a href="home#backTT"><mat-icon>keyboard_arrow_up</mat-icon></a>

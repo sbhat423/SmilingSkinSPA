@@ -53,7 +53,7 @@ export class PrenevtionComponent implements OnInit {
     this.disabled = true;
     this.uv = this.value.toString();
     console.log(this.uv, this.spf, this.skinType, this.duration, this.fabric, this.activities);
-    this.http.get('https://cors-anywhere.herokuapp.com/https://www.smilingskin-python.ml/receiver', {
+    this.http.get('https://www.smilingskin-python.ml/receiver', {
       params: {
         uv: this.uv,
         duration: this.duration,

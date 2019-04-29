@@ -1,4 +1,4 @@
-<div>
+<div id="back">
   <p class="main-slogan">PREVENTION</p>
 </div>
 <div>
@@ -17,9 +17,11 @@
     </p>
   </div>
   <div>
-    <iframe id="interactApp5cc12ea1539d8f001457d4fa" width="800" height="800"
+    <p><br></p>
+    <iframe id="interactApp5cc12ea1539d8f001457d4fa" width="800" height="600"
       style="border:none;max-width:100%;margin:0;" allowTransparency="true" frameborder="0"
       src="https://quiz.tryinteract.com/#/5cc12ea1539d8f001457d4fa?method=iframe"></iframe>
+      <p><br></p>
   </div>
   <div>
     <p class="content-text">
@@ -39,7 +41,8 @@
   <div fxLayout fxLayout.lt-md="column">
     <div fxFlex=10%></div>
     <div fxFlex=30%>
-      <mat-form-field>
+      <!--
+<mat-form-field>
         <mat-label>Select SPF</mat-label>
         <mat-select [(value)]="spf" [disabled]='disabled' (valueChange)="getReportValue()">
           <mat-option value="0">SPF 0</mat-option>
@@ -48,6 +51,7 @@
           <mat-option value="50">SPF 50</mat-option>
         </mat-select>
       </mat-form-field>
+      -->
       <p></p>
       <mat-form-field>
         <mat-label>Select your Skin Type</mat-label>
@@ -100,18 +104,18 @@
       </mat-form-field>
       <p></p>
     </div>
-    <div fxFlex=40%> 
+    <div fxFlex=40%>
       <!--
       recommendation content go here
       
     -->
-    <div>
+      <div>
         <img *ngIf="dangerlevel == '1'" src='../../assets/img/level1.jpeg' style="width: 350px; height:200px">
         <img *ngIf="dangerlevel == '2'" src='../../assets/img/level2.jpeg' style="width: 350px; height:200px">
         <img *ngIf="dangerlevel == '3'" src='../../assets/img/level3.jpeg' style="width: 350px; height:200px">
         <img *ngIf="dangerlevel == '4'" src='../../assets/img/level4.jpeg' style="width: 350px; height:200px">
         <img *ngIf="dangerlevel == '5'" src='../../assets/img/level5.jpeg' style="width: 350px; height:200px">
-    </div>
+      </div>
       <div>
         <mat-slider class='example-margin' [disabled]='disabled' [invert]='invert' [max]='max' [min]='min' [step]='step'
           [thumbLabel]='thumbLabel' [tickInterval]='tickInterval' [(ngModel)]='value' [vertical]='vertical'
@@ -123,8 +127,8 @@
     <div fxFlex=20%></div>
   </div>
   <div fxLayout fxLayout.lt-md="column">
-    <div fxFlex=50%>
-      <p class="second-block">PREVENTING SKIN CANCE</p>
+    <div fxFlex=50% style="padding-left: 5px;">
+      <p class="second-block">PREVENTING SKIN CANCER</p>
       <p class="content-text">
         In order to achieve the best protection effect, when the ultraviolet radiation level is 3 or above, we
         recommend combining some protection measures:</p>
@@ -150,19 +154,56 @@
         Be extra careful on the day with the highest ultraviolet intensity.<br><br>
       </p>
     </div>
-    <div fxFlex=50%>
-      <img src="../../assets/img/suggestion.jpg" style="max-width: 100%; max-height: 500px;"/>
+    <div fxFlex=50% style="padding-left: 5px;">
+      <img src="../../assets/img/left.jpg" style="max-width: 80%; max-height: 500px;" />
+    </div>
+  </div>
+  <div fxLayout fxLayout.lt-md="column">
+    <div fxFlex=50% style="padding-left: 5px;margin-top: 50px;">
+      <img src="../../assets/img/right.jpg" style="max-width: 80%; max-height: 400px;" />
+    </div>
+    <div fxFlex=50% style="padding-left: 5px;">
+      <p class="second-block">WHAT IS THE BEST TYPE OF SUNSCREEN?</p>
+      <p class="content-text">
+        In Australia we have very strict guidelines when it comes to sunscreen. Apply a broad-spectrum sunscreen with an
+        SPF of at least 50+ every two hours and after swimming or exercise. The following points will help you ensure
+        that you get the best possible protection:</p>
+      <ul class="content-text-item">
+        <li>
+          Use the sunscreen with the highest possible SPF. This is currently SPF50+ in Australia.<br><br>
+        </li>
+        <li>
+          Ensure your sunscreen is broad-spectrum. That means it protects you against both UVA and UVB rays.<br><br>
+        </li>
+        <li>
+          Typically we only use 25% -50% of the amount of sunscreen that we actually need to be protected, often missing
+          areas. When too little sunscreen is applied, it reduces the sun protection factor significantly e.g. an SPF30+
+          may only be working as an SPF10.<br><br>
+        </li>
+        <li>
+          Ensure that all exposed skin is thoroughly covered with sunscreen.<br><br>
+        </li>
+        <li>
+          If you are in the water ensure you use a water resident variety of sunscreen and re-apply regularly, at least
+          every two-hours. <br><br>
+        </li>
+      </ul>
     </div>
   </div>
 
-  <!-- Disable map
-     <div>
+ 
+<div>
     <p class="second-block">ACCESS TO THE NEAREST SKIN CANCER CLINIC</p>
   </div>
-<div style="padding: 15px;">
+<div style="padding: 15px;" style="margin-left: 50px">
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
     <div class="elfsight-app-f333d798-ed6b-4715-a5c1-ca0d6c27406b"></div>
   </div>
-  -->
+
+  <button mat-icon-button class="up">
+    <a href="prevention#back">
+      <mat-icon>keyboard_arrow_up</mat-icon>
+    </a>
+  </button>
 
 </div>
