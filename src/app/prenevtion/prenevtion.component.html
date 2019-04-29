@@ -85,14 +85,13 @@
 
       <mat-form-field>
         <mat-label>Select Activity</mat-label>
-        <mat-select [(value)]="activities" [disabled]='disabled' (change)="getReportValue()">
+        <mat-select [(value)]="activities" [disabled]='disabled' (valueChange)="getReportValue()">
           <mat-option value="Picnic,Barbecue">Picnic/Barbecue</mat-option>
           <mat-option value="Grasslands">Grassland</mat-option>
           <mat-option value="Soil, clay">Soil/Clay</mat-option>
           <mat-option value="Road trip">Road Trip</mat-option>
-          <mat-option value="Road trip">Road Trip</mat-option>
           <mat-option value="City tour">City Tour</mat-option>
-          <mat-option value="Boat dec(wood or fibreglass)">Boat Dec(Wood/Fibreglass)</mat-option>
+          <mat-option value="Boat deck(wood or fibreglass)">Boat Deck(Wood/Fibreglass)</mat-option>
           <mat-option value="Open water">Open Water</mat-option>
           <mat-option value="Open ocean">Open Ocean</mat-option>
           <mat-option value="Sea surf">Sea surf</mat-option>
@@ -104,16 +103,13 @@
       <p></p>
     </div>
     <div fxFlex=40%>
-      <!--
-      recommendation content go here
-      
-    -->
       <div>
-        <img *ngIf="dangerlevel == '1'" src='../../assets/img/level1.jpeg' style="width: 350px; height:200px">
-        <img *ngIf="dangerlevel == '2'" src='../../assets/img/level2.jpeg' style="width: 350px; height:200px">
-        <img *ngIf="dangerlevel == '3'" src='../../assets/img/level3.jpeg' style="width: 350px; height:200px">
-        <img *ngIf="dangerlevel == '4'" src='../../assets/img/level4.jpeg' style="width: 350px; height:200px">
-        <img *ngIf="dangerlevel == '5'" src='../../assets/img/level5.jpeg' style="width: 350px; height:200px">
+        <mat-spinner *ngIf="disabled" style="display:block; margin-left:auto; margin-right:auto;"></mat-spinner>
+        <img *ngIf="dangerlevel == '1' && !disabled" src='../../assets/img/level1.jpeg' style="width: 350px; height:225px">
+        <img *ngIf="dangerlevel == '2' && !disabled" src='../../assets/img/level2.jpeg' style="width: 350px; height:225px">
+        <img *ngIf="dangerlevel == '3' && !disabled" src='../../assets/img/level3.jpeg' style="width: 350px; height:225px">
+        <img *ngIf="dangerlevel == '4' && !disabled" src='../../assets/img/level4.jpeg' style="width: 350px; height:225px">
+        <img *ngIf="dangerlevel == '5' && !disabled" src='../../assets/img/level5.jpeg' style="width: 350px; height:225px">
       </div>
       <div>
         <mat-slider class='example-margin' [disabled]='disabled' [invert]='invert' [max]='max' [min]='min' [step]='step'
@@ -124,7 +120,7 @@
         <p><br></p>
       </div>
     </div>
-    <div fxFlex=30%>
+    <div fxFlex=30% style="margin-right: 10px">
       <p>Low: You have 0-10% chance to Burn under the Sun.</p>
       <p>Median: You have 10-20% chance to Burn under the Sun.</p>
       <p>High: You have 20-30% chance to Burn under the Sun.</p>
@@ -139,7 +135,7 @@
   <div fxLayout fxLayout.lt-md="column">
     <div fxFlex=50% style="padding-left: 5px;">
       <p class="second-block">PREVENTING SKIN CANCER</p>
-      <p class="content-text">
+      <p class="content-text" >
         In order to achieve the best protection effect, when the ultraviolet radiation level is 3 or above, we
         recommend combining some protection measures:</p>
       <ul class="content-text-item">
@@ -207,9 +203,9 @@
   </div>
 <div style="padding: 15px;">
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-    <div class="elfsight-app-f333d798-ed6b-4715-a5c1-ca0d6c27406b" style="  display: block;
-    margin-left:auto;
-    margin-right:auto;"></div>
+    <div class="elfsight-app-f333d798-ed6b-4715-a5c1-ca0d6c27406b" 
+    style="display:block; margin-left:auto; margin-right:auto;">
+  </div>
   </div>
 
   <button mat-icon-button class="up">
