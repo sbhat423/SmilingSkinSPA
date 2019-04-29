@@ -95,16 +95,16 @@ div {
 
 .block4 div mat-card {
     padding: 0px 0px 0px 0px;
-    height: 200px;
-    width: 200px;
+    height: 225px;
+    width: 350px;
     display: block;
     margin-left:auto;
     margin-right:auto;
 }
 
 .block4 div mat-card img {
-    max-width: 300px;
-    max-height: 200px;
+    max-width: 400px;
+    max-height: 225px;
 }
 
 .block3 mat-card {
