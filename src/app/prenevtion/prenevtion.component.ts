@@ -16,7 +16,8 @@ export class PrenevtionComponent implements OnInit {
   activities = 'Picnic,Barbecue';
   uv: string;
   dangerlevel: string;
-  spf_rec: string;
+  spf_rec = '';
+  defaultFlag = true;
 
   autoTicks = false;
   disabled = false;
@@ -34,7 +35,7 @@ export class PrenevtionComponent implements OnInit {
   ngOnInit() {
     this.fetchCurrentData();
     setTimeout(() => {
-      this.getReportValue();
+      this.getReportValuePre();
     }, 500);
   }
 
@@ -49,7 +50,35 @@ export class PrenevtionComponent implements OnInit {
     });
   }
 
+  getReportValuePre() {
+    this.disabled = true;
+    this.uv = this.value.toString();
+    console.log(this.uv, this.spf, this.skinType, this.duration, this.fabric, this.activities);
+    this.http.get('https://www.smilingskin-python.ml/receiver', {
+      params: {
+        uv: this.uv,
+        duration: this.duration,
+        skin_type: this.skinType,
+        spf: this.spf,
+        cloth_type: this.fabric,
+        activities: this.activities
+      },
+      observe: 'response'
+    })
+    .toPromise()
+    .then(response => {
+      console.log(response);
+      const responseBody = response.body;
+      this.dangerlevel = responseBody['danger_level'];
+      this.spf_rec = responseBody['spf_rec'];
+      console.log(this.dangerlevel, this.spf_rec);
+      this.disabled = false;
+    })
+    .catch(console.log);
+  }
+
   getReportValue() {
+    this.defaultFlag = false;
     this.disabled = true;
     this.uv = this.value.toString();
     console.log(this.uv, this.spf, this.skinType, this.duration, this.fabric, this.activities);

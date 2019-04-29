@@ -36,22 +36,10 @@
     </p>
   </div>
   <div>
-    <p class="second-block">RECOMMENDATIONS BASED ON THE CURRENT RISK LEVEL</p>
+    <p class="second-block"><br>RECOMMENDATIONS BASED ON THE CURRENT RISK LEVEL</p>
   </div>
   <div fxLayout fxLayout.lt-md="column">
-    <div fxFlex=10%></div>
     <div fxFlex=30%>
-      <!--
-<mat-form-field>
-        <mat-label>Select SPF</mat-label>
-        <mat-select [(value)]="spf" [disabled]='disabled' (valueChange)="getReportValue()">
-          <mat-option value="0">SPF 0</mat-option>
-          <mat-option value="15">SPF 15</mat-option>
-          <mat-option value="30">SPF 30</mat-option>
-          <mat-option value="50">SPF 50</mat-option>
-        </mat-select>
-      </mat-form-field>
-      -->
       <p></p>
       <mat-form-field>
         <mat-label>Select your Skin Type</mat-label>
@@ -65,11 +53,22 @@
       <p></p>
 
 
-      <mat-form-field class="example-full-width">
-        <input type="number" [disabled]='disabled' matInput placeholder="Duration in minutes" [(ngModel)]="duration"
-          (input)="getReportValue()">
-      </mat-form-field>
-      <p></p>
+      <mat-form-field>
+          <mat-label>Duration in hours</mat-label>
+          <mat-select [(value)]="duration" [disabled]='disabled' (valueChange)="getReportValue()">
+            <mat-option value="60">0 to 1</mat-option>
+            <mat-option value="120">1 to 2</mat-option>
+            <mat-option value="180">2 to 3</mat-option>
+            <mat-option value="240">3 to 4</mat-option>
+            <mat-option value="300">4 to 5</mat-option>
+            <mat-option value="360">5 to 6</mat-option>
+            <mat-option value="420">6 to 7</mat-option>
+            <mat-option value="480">7 to 8</mat-option>
+            <mat-option value="540">8 to 9</mat-option>
+            <mat-option value="600">9 to 10</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <p></p>
 
       <mat-form-field>
         <mat-label>Select your Cloth Fabric</mat-label>
@@ -122,9 +121,20 @@
           (valueChange)="getReportValue()">
         </mat-slider>
         <p>UV Index: {{value}}</p>
+        <p><br></p>
       </div>
     </div>
-    <div fxFlex=20%></div>
+    <div fxFlex=30%>
+      <p>Low: You have 0-10% chance to Burn under the Sun.</p>
+      <p>Median: You have 10-20% chance to Burn under the Sun.</p>
+      <p>High: You have 20-30% chance to Burn under the Sun.</p>
+      <p>Very high: You have 30-40% chance to Burn under the Sun.</p>
+      <p>Extremely high: You have greater than 40% chance to Burn under the Sun.</p>
+      <p><br></p>
+      <div *ngIf="!defaultFlag">
+          <p>We will recommend you to put on SPF : {{spf_rec}} Sunscreen to reduce the risk level to low.</p>
+      </div>
+    </div>
   </div>
   <div fxLayout fxLayout.lt-md="column">
     <div fxFlex=50% style="padding-left: 5px;">
@@ -191,8 +201,8 @@
     </div>
   </div>
 
- 
-<div>
+  
+   <div>
     <p class="second-block">ACCESS TO THE NEAREST SKIN CANCER CLINIC</p>
   </div>
 <div style="padding: 15px;" style="margin-left: 50px">
