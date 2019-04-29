@@ -16,13 +16,9 @@
 
 iframe {
     min-height: 900px;
-    min-width: 1200px;
+    min-width: 1000px;
 }
 
 div {
-    margin: 50px 0px 0px 20px;
-}
-
-mat-progress-bar {
-    height: 15px;
+    padding: 50px 0px 0px 20px;
 }
