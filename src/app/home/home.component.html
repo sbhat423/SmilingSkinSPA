@@ -13,23 +13,23 @@
 <div fxLayout fxLayout.lt-md="column">
     <div fxHide.lt-md="true" class="sub-nav " fxFlex=25%>
       <mat-card class="mat-elevation-z8">
-        <p *ngIf="this.icon == 'clear-night'"><i class="wi wi-night-clear"></i> Clear Night</p>
-        <p *ngIf="this.icon == 'clear-day'"><i class="wi wi-day-sunny"></i> Clear Day</p>
-        <p *ngIf="this.icon == 'rain'"><i class="wi wi-rain"></i> Rain</p>
-        <p *ngIf="this.icon == 'snow'"><i class="wi wi-snow"></i> Snow</p>
-        <p *ngIf="this.icon == 'sleet'"><i class="wi wi-sleet"></i> Sleet</p>
-        <p *ngIf="this.icon == 'wind'"><i class="wi wi-windy"></i> Windy</p>
-        <p *ngIf="this.icon == 'fog'"><i class="wi wi-fog"></i> Foggy</p>
-        <p *ngIf="this.icon == 'cloudy'"><i class="wi wi-cloudy"></i> Cloudy</p>
-        <p *ngIf="this.icon == 'partly-cloudy-day'"><i class="wi wi-night-partly-cloudy"></i>Partly Cloudy</p>
-        <p *ngIf="this.icon == 'partly-cloudy-night'"><i class="wi wi-night-alt-partly-cloudy"></i>Partly Cloudy</p>
-        <p><i class="wi wi-thermometer"></i> {{this.degreeTemperature}}</p>
+        <p  matTooltip="weather summary" *ngIf="this.icon == 'clear-night'"><i class="wi wi-night-clear"></i>&nbsp;Clear Night</p>
+        <p matTooltip="weather summary" *ngIf="this.icon == 'clear-day'"><i class="wi wi-day-sunny"></i>&nbsp;Clear Day</p>
+        <p matTooltip="weather summary" *ngIf="this.icon == 'rain'"><i class="wi wi-rain"></i>&nbsp;Rain</p>
+        <p matTooltip="weather summary" *ngIf="this.icon == 'snow'"><i class="wi wi-snow"></i>&nbsp;Snow</p>
+        <p matTooltip="weather summary" *ngIf="this.icon == 'sleet'"><i class="wi wi-sleet"></i>&nbsp;Sleet</p>
+        <p matTooltip="weather summary" *ngIf="this.icon == 'wind'"><i class="wi wi-windy"></i>&nbsp;Windy</p>
+        <p matTooltip="weather summary" *ngIf="this.icon == 'fog'"><i class="wi wi-fog"></i>&nbsp;Foggy</p>
+        <p matTooltip="weather summary" *ngIf="this.icon == 'cloudy'"><i class="wi wi-cloudy"></i>&nbsp;Cloudy</p>
+        <p matTooltip="weather summary" *ngIf="this.icon == 'partly-cloudy-day'"><i class="wi wi-night-partly-cloudy"></i>&nbsp;Partly Cloudy</p>
+        <p matTooltip="weather summary" *ngIf="this.icon == 'partly-cloudy-night'"><i class="wi wi-night-alt-partly-cloudy"></i>&nbsp;Partly Cloudy</p>
+        <p matTooltip="temperature in °C"><i class="wi wi-thermometer"></i>&nbsp;&nbsp;&nbsp;{{this.degreeTemperature}}&nbsp;°C</p>
         <!--<li><p>Apparent Temperature</p>{{this.apparentTemperature}}</li> -->
-        <p><i class="wi wi-humidity"></i> {{this.humidity}}</p>
-        <p><i class="wi wi-cloud"></i> {{this.cloudCover}}</p>
-        <p>UV: {{this.uvIndex}}</p>
+        <p matTooltip="humidity %"><i class="wi wi-humidity"></i>&nbsp;&nbsp;&nbsp;{{this.humidity}}%</p>
+        <p matTooltip="cloud cover %"><i class="wi wi-cloud"></i>&nbsp;&nbsp;&nbsp;{{this.cloudCover}}%</p>
+        <p matTooltip="uv index">&nbsp;UV:&nbsp;&nbsp;&nbsp;{{this.uvIndex}}</p>
       </mat-card>
-    </div>
+    </div> 
   </div>
 <div>
     <p class="second-block">QUESTIONS ABOUT SKIN CANCER</p>
