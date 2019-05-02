@@ -29,9 +29,9 @@ export class HomeComponent implements OnInit {
     setInterval(() => {
       this.fetchCurrentData();
      }, 90000);
-     setInterval(() => {
-      this.storeWeatherData();
-     }, 600000);
+    //  setInterval(() => {
+    //   this.storeWeatherData();
+    //  }, 600000);
   }
 
   fetchCurrentData() {

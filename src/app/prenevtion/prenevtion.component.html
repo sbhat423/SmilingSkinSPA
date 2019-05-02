@@ -5,8 +5,8 @@
   <img src='../../assets/img/block4-2.jpg' class="main-image mat-elevation-z22" />
 </div>
 <div>
-  <div>
-    <p class="second-block">WHAT ARE THE DIFFERENT SKIN TYPES?</p>
+  <div class="grey-block">
+    <p class="second-block" style="margin-top: 0%;"><br>WHAT ARE THE DIFFERENT SKIN TYPES?</p>
     <p class="content-text">If you’ve
       ever tried to match foundation or concealer to your skin, you know just how tricky skin typing can be. Enter
       Fitzpatrick skin typing, a scientific skin type classification.
@@ -15,15 +15,17 @@
       <br><br>
       A simple quiz will help you identify your skin type.
     </p>
+    <p><br></p>
   </div>
   <div>
+      <p class="second-block"><br>A simple quiz will help you identify your skin type.</p>
     <p><br></p>
     <iframe id="interactApp5cc12ea1539d8f001457d4fa" width="800" height="600"
       style="border:none;max-width:100%;margin:0;" allowTransparency="true" frameborder="0"
       src="https://quiz.tryinteract.com/#/5cc12ea1539d8f001457d4fa?method=iframe"></iframe>
-      <p><br></p>
   </div>
-  <div>
+  <div class="grey-block">
+    <p><br></p>
     <p class="content-text">
       Though this form of skin typing won’t help you find your perfect shade, it can tell you just how much shade you
       should get on sunny days.
@@ -34,12 +36,15 @@
       It’s possible that you won’t meet all of the characteristics of any one type, so you should go with the one that
       best describes you.
     </p>
+    <p><br></p>
   </div>
   <div>
     <p class="second-block"><br>RECOMMENDATIONS BASED ON THE CURRENT RISK LEVEL</p>
   </div>
   <div fxLayout fxLayout.lt-md="column">
-    <div fxFlex=30%>
+    <div fxFlex=10%>
+    </div>
+    <div fxFlex=35% style="background-color: #efefef">
       <p></p>
       <mat-form-field>
         <mat-label>Select your Skin Type</mat-label>
@@ -54,21 +59,21 @@
 
 
       <mat-form-field>
-          <mat-label>Duration in hours</mat-label>
-          <mat-select [(value)]="duration" [disabled]='disabled' (valueChange)="getReportValue()">
-            <mat-option value="60">0 to 1</mat-option>
-            <mat-option value="120">1 to 2</mat-option>
-            <mat-option value="180">2 to 3</mat-option>
-            <mat-option value="240">3 to 4</mat-option>
-            <mat-option value="300">4 to 5</mat-option>
-            <mat-option value="360">5 to 6</mat-option>
-            <mat-option value="420">6 to 7</mat-option>
-            <mat-option value="480">7 to 8</mat-option>
-            <mat-option value="540">8 to 9</mat-option>
-            <mat-option value="600">9 to 10</mat-option>
-          </mat-select>
-        </mat-form-field>
-        <p></p>
+        <mat-label>Duration in hours</mat-label>
+        <mat-select [(value)]="duration" [disabled]='disabled' (valueChange)="getReportValue()">
+          <mat-option value="60">0 to 1</mat-option>
+          <mat-option value="120">1 to 2</mat-option>
+          <mat-option value="180">2 to 3</mat-option>
+          <mat-option value="240">3 to 4</mat-option>
+          <mat-option value="300">4 to 5</mat-option>
+          <mat-option value="360">5 to 6</mat-option>
+          <mat-option value="420">6 to 7</mat-option>
+          <mat-option value="480">7 to 8</mat-option>
+          <mat-option value="540">8 to 9</mat-option>
+          <mat-option value="600">9 to 10</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <p></p>
 
       <mat-form-field>
         <mat-label>Select your Cloth Fabric</mat-label>
@@ -100,17 +105,22 @@
           <mat-option value="Snow">Snow</mat-option>
         </mat-select>
       </mat-form-field>
-      <p><br><br><br><br><br><br><br><br><br></p>
+      <p><br><br><br><br><br><br><br></p>
     </div>
-    <div fxFlex=40%>
+    <div fxFlex=35% style="background-color: #efefef">
       <div>
         <h2>CURRENT RISK LEVEL</h2>
         <mat-spinner *ngIf="disabled" style="display:block; margin-left:auto; margin-right:auto;"></mat-spinner>
-        <img *ngIf="dangerlevel == '1' && !disabled" src='../../assets/img/level1.jpeg' style="width: 350px; height:225px">
-        <img *ngIf="dangerlevel == '2' && !disabled" src='../../assets/img/level2.jpeg' style="width: 350px; height:225px">
-        <img *ngIf="dangerlevel == '3' && !disabled" src='../../assets/img/level3.jpeg' style="width: 350px; height:225px">
-        <img *ngIf="dangerlevel == '4' && !disabled" src='../../assets/img/level4.jpeg' style="width: 350px; height:225px">
-        <img *ngIf="dangerlevel == '5' && !disabled" src='../../assets/img/level5.jpeg' style="width: 350px; height:225px">
+        <img *ngIf="dangerlevel == '1' && !disabled" src='../../assets/img/level1.jpeg'
+          style="width: 350px; height:225px">
+        <img *ngIf="dangerlevel == '2' && !disabled" src='../../assets/img/level2.jpeg'
+          style="width: 350px; height:225px">
+        <img *ngIf="dangerlevel == '3' && !disabled" src='../../assets/img/level3.jpeg'
+          style="width: 350px; height:225px">
+        <img *ngIf="dangerlevel == '4' && !disabled" src='../../assets/img/level4.jpeg'
+          style="width: 350px; height:225px">
+        <img *ngIf="dangerlevel == '5' && !disabled" src='../../assets/img/level5.jpeg'
+          style="width: 350px; height:225px">
       </div>
       <div>
         <mat-slider class='example-margin' [disabled]='disabled' [invert]='invert' [max]='max' [min]='min' [step]='step'
@@ -126,16 +136,18 @@
         <p><br></p>
       </div>
     </div>
-    <div fxFlex=30% style="margin-right:20px;text-align:center">
-      <h2>RECOMMENDATION</h2>
-      <p><br></p>
-      <h1>We will recommend you to put on<span style="color: red"> SPF {{spf_rec}}</span> sunscreen to reduce the risk level to low</h1>
-    </div>
+  </div>
+  <div class="blue-block">
+    <p><br></p>
+      <h1>RECOMMENDATION</h1>
+      <h2>We will recommend you to put on SPF {{spf_rec}} sunscreen to reduce the risk
+        level to low</h2>
+    <p><br></p>
   </div>
   <div fxLayout fxLayout.lt-md="column">
-    <div fxFlex=50% style="padding-left: 5px;">
+    <div fxFlex=50% class="grey-block" style="padding-left: 5px">
       <p class="second-block">PREVENTING SKIN CANCER</p>
-      <p class="content-text" >
+      <p class="content-text">
         In order to achieve the best protection effect, when the ultraviolet radiation level is 3 or above, we
         recommend combining some protection measures:</p>
       <ul class="content-text-item">
@@ -163,16 +175,20 @@
     <div fxFlex=50% style="padding-left: 5px;">
       <img src="../../assets/img/left.jpg" style="max-width: 80%; max-height: 500px;" />
       <p class="content-text" style="text-align: center">Figure 1. Prevention Tips<br></p>
-    <p class="content-text">Source: Avoid Skin Cancer in the Summer Heat – Hollis Cobb. (2019). Retrieved from <a href="https://www.holliscobb.com/avoid-skin-cancer-summer-heat/">https://www.holliscobb.com/avoid-skin-cancer-summer-heat/</a><br><br></p>
+      <p class="content-text">Source: Avoid Skin Cancer in the Summer Heat – Hollis Cobb. (2019). Retrieved from <a
+          href="https://www.holliscobb.com/avoid-skin-cancer-summer-heat/">https://www.holliscobb.com/avoid-skin-cancer-summer-heat/</a><br><br>
+      </p>
     </div>
   </div>
   <div fxLayout fxLayout.lt-md="column">
-    <div fxFlex=50% style="padding-left: 5px;margin-top: 50px;">
+    <div fxFlex=50% style="padding-left: 5px;margin-top: 50px">
       <img src="../../assets/img/right.jpg" style="max-width: 80%; max-height: 400px;" />
       <p class="content-text" style="text-align: center">Figure 2. Prevention Tips<br></p>
-    <p class="content-text">Source: Avoid Skin Cancer in the Summer Heat – Hollis Cobb. (2019). Retrieved from <a href="https://www.holliscobb.com/avoid-skin-cancer-summer-heat/">https://www.holliscobb.com/avoid-skin-cancer-summer-heat/</a><br><br></p>
+      <p class="content-text">Source: Avoid Skin Cancer in the Summer Heat – Hollis Cobb. (2019). Retrieved from <a
+          href="https://www.holliscobb.com/avoid-skin-cancer-summer-heat/">https://www.holliscobb.com/avoid-skin-cancer-summer-heat/</a><br><br>
+      </p>
     </div>
-    <div fxFlex=50% style="padding-left: 5px;">
+    <div fxFlex=50% class="grey-block" style="padding-left: 5px">
       <p class="second-block">WHAT IS THE BEST TYPE OF SUNSCREEN?</p>
       <p class="content-text">
         In Australia we have very strict guidelines when it comes to sunscreen. Apply a broad-spectrum sunscreen with an
@@ -201,15 +217,15 @@
     </div>
   </div>
 
-  
-   <div>
+
+  <div>
     <p class="second-block">ACCESS TO THE NEAREST SKIN CANCER CLINIC</p>
   </div>
-<div style="padding: 15px;">
+  <div class="map-block" style="padding: 40px;">
     <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-    <div class="elfsight-app-f333d798-ed6b-4715-a5c1-ca0d6c27406b" 
-    style="display:block; margin-left:auto; margin-right:auto;">
-  </div>
+    <div class="elfsight-app-f333d798-ed6b-4715-a5c1-ca0d6c27406b"
+      style="display:block; margin-left:auto; margin-right:auto;">
+    </div>
   </div>
 
   <button mat-icon-button class="up">
@@ -217,5 +233,4 @@
       <mat-icon>keyboard_arrow_up</mat-icon>
     </a>
   </button>
-
 </div>
