@@ -38,7 +38,6 @@ import { SymptomsInfoComponent } from './Info-pages/symptoms-info/symptoms-info.
 import { DiagnosisInfoComponent } from './Info-pages/diagnosis-info/diagnosis-info.component';
 import { TreatmentInfoComponent } from './Info-pages/treatment-info/treatment-info.component';
 import { PreventionInfoComponent } from './Info-pages/prevention-info/prevention-info.component';
-import { StatisticsInfoComponent } from './Info-pages/statistics-info/statistics-info.component';
 import { Error404Component } from './error404/error404.component';
 import { HttpClientModule } from '@angular/common/http';
 import { WeatherComponent } from './weather/weather.component';
@@ -67,7 +66,6 @@ import { GestureConfig } from '@angular/material';
     DiagnosisInfoComponent,
     TreatmentInfoComponent,
     PreventionInfoComponent,
-    StatisticsInfoComponent,
     Error404Component,
     WeatherComponent,
     PrenevtionComponent

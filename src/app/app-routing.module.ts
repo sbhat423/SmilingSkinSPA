@@ -12,7 +12,6 @@ import { SymptomsInfoComponent } from './Info-pages/symptoms-info/symptoms-info.
 import { DiagnosisInfoComponent } from './Info-pages/diagnosis-info/diagnosis-info.component';
 import { TreatmentInfoComponent } from './Info-pages/treatment-info/treatment-info.component';
 import { PreventionInfoComponent } from './Info-pages/prevention-info/prevention-info.component';
-import { StatisticsInfoComponent } from './Info-pages/statistics-info/statistics-info.component';
 import { Error404Component } from './error404/error404.component';
 import { WeatherComponent } from './weather/weather.component';
 import { PrenevtionComponent } from './prenevtion/prenevtion.component';
@@ -54,10 +53,6 @@ const routes: Routes = [
     {
       path: 'prevention',
       component: PreventionInfoComponent
-    },
-    {
-      path: 'statistics',
-      component: StatisticsInfoComponent
     }
   ]
   },
