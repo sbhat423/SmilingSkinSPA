@@ -26,7 +26,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     document.getElementsByTagName('mat-sidenav-content')[0].scrollTo(0, 0);
     this.fetchCurrentData();
-    this.storeWeatherData();
+    // this.storeWeatherData();
     setInterval(() => {
       this.fetchCurrentData();
      }, 90000);
