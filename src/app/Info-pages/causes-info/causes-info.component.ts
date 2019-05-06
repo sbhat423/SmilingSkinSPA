@@ -10,6 +10,7 @@ export class CausesInfoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    document.getElementsByTagName('mat-sidenav-content')[0].scrollTo(0, 0);
   }
 
 }

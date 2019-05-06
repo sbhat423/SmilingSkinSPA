@@ -24,6 +24,7 @@ export class HomeComponent implements OnInit {
   constructor(private weatherService: WeatherService, private api: SkApiService) { }
 
   ngOnInit() {
+    document.getElementsByTagName('mat-sidenav-content')[0].scrollTo(0, 0);
     this.fetchCurrentData();
     this.storeWeatherData();
     setInterval(() => {

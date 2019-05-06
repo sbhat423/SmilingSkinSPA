@@ -33,6 +33,7 @@ export class PrenevtionComponent implements OnInit {
   constructor(private http: HttpClient, private weatherService: WeatherService) { }
   private _tickInterval = 1;
   ngOnInit() {
+    document.getElementsByTagName('mat-sidenav-content')[0].scrollTo(0, 0);
     this.fetchCurrentData();
     setTimeout(() => {
       this.getReportValuePre();

@@ -11,6 +11,7 @@ export class SkinCancerComponent implements OnInit {
    }
 
   ngOnInit() {
+    document.getElementsByTagName('mat-sidenav-content')[0].scrollTo(0, 0);
   }
 
   setColor(loc: number) {

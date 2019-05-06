@@ -13,6 +13,7 @@ export class CompareComponent implements OnInit {
   }
 
   ngOnInit() {
+    document.getElementsByTagName('mat-sidenav-content')[0].scrollTo(0, 0);
     setTimeout (() => {
       this.isLoading = false;
     }, 7000);
