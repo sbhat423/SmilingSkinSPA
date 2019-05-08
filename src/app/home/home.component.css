@@ -128,3 +128,19 @@ div {
 .wi {
     font-size: 40px;
 }
+
+.material-icons.md { 
+    font-size: 65px;
+    color: white;
+}
+
+.circle-icon {
+    background: #6ec1e4;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+    vertical-align: middle;
+    padding: 15px;
+}
