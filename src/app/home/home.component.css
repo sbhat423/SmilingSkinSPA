@@ -110,16 +110,6 @@ div {
     padding: 0px;
 }
 
-.up a mat-icon{
-    position: absolute;
-    top: 90%;
-    left: 95%;
-    font: 200%;
-    position: fixed;
-    z-index: 999;
-    color: black;
-}
-
 .sub-nav mat-card {
     position: absolute;
     top: 35%;
