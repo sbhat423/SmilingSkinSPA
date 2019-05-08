@@ -51,7 +51,7 @@ div {
     color: white;
     position: absolute;
     top: 30%;
-    left: 25%;
+    left: 35%;
     font-weight: 900;
     font-size: 200%;
 }
@@ -61,8 +61,13 @@ div {
     font-size: xx-large;
 }
 
+.sub-heading {
+    font-weight: bold;
+    font-size: x-large;
+}
+
 .block2 div {
-    padding: 40px 40px 40px 40px;
+    padding: 10px 20px 10px 20px;
 }
 
 .block2 div mat-card {
@@ -143,4 +148,9 @@ div {
     line-height: 100px;
     vertical-align: middle;
     padding: 15px;
+}
+
+.circle-icon:hover {
+    transform: scale(0.90);
+    cursor: pointer;
 }
