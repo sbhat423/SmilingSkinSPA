@@ -3,13 +3,22 @@
 </mat-card>
 -->
 <mat-card>
-  <div fxLayout fxLayout.lt-md="column">
-    <div fxFlex=50%>
-        <h4>VectorFive</h4>
+    <p></p>
+    <div fxLayout="row wrap" ngClass.lt-md="mobile-footer">
+        <div fxFlex.lt-md=100% fxFlex.gt-sm=33.33% fxLayout="column">
+            <a>Home</a>
+            <a>About Skin Cancer</a>
+            <a>Prevention</a>
+        </div>
+        <div fxFlex.lt-md=100% fxFlex.gt-sm=33.33% fxLayout="column">
+            <a>Skin Cancer Statistics</a>
+            <a>About Us</a>
+        </div>
+        <div fxFlex.lt-md=100% fxFlex.gt-sm=33.33% fxLayout="column">
+            <div fxHide.gt-sm="true" fxFlex=100%><p></p></div>
+            <a><b>VectorFive</b></a>
+            <a><b>Copyright © 2019 All rights reserved</b></a>
+        </div>
     </div>
-    <div fxFlex=50%>
-        <p>Copyright © 2019 All rights reserved</p>
-    </div>
-  </div>
+    <p></p>
 </mat-card>
-
