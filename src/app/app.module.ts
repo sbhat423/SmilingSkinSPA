@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
+import {DatePipe} from '@angular/common';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
@@ -102,7 +103,7 @@ import { TripComponent } from './trip/trip.component';
     MatDatepickerModule,
     MatNativeDateModule
   ],
-  providers: [{ provide: HAMMER_GESTURE_CONFIG, useClass: GestureConfig }, ],
+  providers: [{ provide: HAMMER_GESTURE_CONFIG, useClass: GestureConfig }, DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

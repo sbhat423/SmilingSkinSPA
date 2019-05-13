@@ -25,12 +25,26 @@
       <div fxFlex.sm=100% fxFlex.gt-md=50% fxLayout="column">
         <p class="second-block">Attractions</p>
         <mat-form-field>
+            <mat-label>Select Activity</mat-label>
+            <mat-select [(value)]="location" (valueChange)="getResult()">
+              <mat-option value="Great Ocean Road">Great Ocean Road</mat-option>
+              <mat-option value="Phillip Island">Phillip Island</mat-option>
+              <mat-option value="Point Lonsdale">Point Lonsdale</mat-option>
+              <mat-option value="Peninsula">Peninsula</mat-option>
+            </mat-select>
+          </mat-form-field>
+        <mat-form-field>
             <input matInput [matDatepicker]="picker" placeholder="Choose a date"
-            [min]="minDate" [max]="maxDate" [(ngModel)]="selectedDate" (ngModelChange)="getResult(selectedDate)" required>
+            [min]="minDate" [max]="maxDate" [(ngModel)]="selectedDate" (ngModelChange)="getResult()" required>
             <mat-datepicker-toggle matSuffix [for]="picker" ></mat-datepicker-toggle>
             <mat-datepicker #picker></mat-datepicker>
           </mat-form-field>
-          
+          <div>
+            <img *ngIf="location=='Great Ocean Road'" src="../../assets/img/Great Ocean Road.jpg">
+            <img *ngIf="location=='Phillip Island'" src="../../assets/img/Phillip Island.jpg">
+            <img *ngIf="location=='Point Lonsdale'" src="../../assets/img/Point Lonsdale.jpg">
+            <img *ngIf="location=='Peninsula'" src="../../assets/img/Peninsula.jpg">
+          </div>
       </div>
 
       <div fxFlex.sm=100% fxFlex.gt-md=50% fxLayout="column">
@@ -41,7 +55,6 @@
           </p>
         </mat-card>
       </div>
-
     </div>
   </div>
 </div>
