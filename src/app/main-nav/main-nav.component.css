@@ -39,6 +39,21 @@ button {
   background-color: lightgray !important;
 }
 
+mat-icon {
+  position: absolute;
+    top: 25%;
+    padding-right: 10px;
+}
+
+button {
+  font-size: 18px;
+}
+
+.buttons-topbar button {
+  padding-right: 25px; 
+}
+
+
 /* When the screen size is less than or equal to 750px */
 @media (min-width: 800px){
   .sidenav {
