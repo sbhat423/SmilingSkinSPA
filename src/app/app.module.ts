@@ -12,7 +12,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material';
+import { MatInputModule, MatDatepickerModule, MatNativeDateModule } from '@angular/material';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatListModule } from '@angular/material/list';
@@ -47,6 +47,7 @@ import { MatSliderModule, MatCheckboxModule} from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { GestureConfig } from '@angular/material';
+import { TripComponent } from './trip/trip.component';
 
 
 @NgModule({
@@ -68,7 +69,8 @@ import { GestureConfig } from '@angular/material';
     PreventionInfoComponent,
     Error404Component,
     WeatherComponent,
-    PrenevtionComponent
+    PrenevtionComponent,
+    TripComponent
   ],
   imports: [
     BrowserModule,
@@ -98,7 +100,9 @@ import { GestureConfig } from '@angular/material';
     MatSliderModule,
     MatCheckboxModule,
     ReactiveFormsModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [{ provide: HAMMER_GESTURE_CONFIG, useClass: GestureConfig }, ],
   bootstrap: [AppComponent]

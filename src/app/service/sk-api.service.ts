@@ -16,4 +16,8 @@ export class SkApiService {
   postWeatherData(weather: Weather) {
      return this.http.post<Weather>('https://www.smilingskin-backend.ml/api/weathers', weather, httpOptions);
   }
+
+  getPlacesData() {
+    return this.http.get('http://localhost:50259/api/places');
+  }
 }
