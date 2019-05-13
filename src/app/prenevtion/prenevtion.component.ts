@@ -55,7 +55,7 @@ export class PrenevtionComponent implements OnInit {
     this.disabled = true;
     this.uv = this.value.toString();
     console.log(this.uv, this.spf, this.skinType, this.duration, this.fabric, this.activities);
-    this.http.get('https://www.smilingskin-python.ml/receiver', {
+    this.http.get('https://x6hc4g61ok.execute-api.ap-southeast-2.amazonaws.com/production/activity', {
       params: {
         uv: this.uv,
         duration: this.duration,
@@ -83,7 +83,7 @@ export class PrenevtionComponent implements OnInit {
     this.disabled = true;
     this.uv = this.value.toString();
     console.log(this.uv, this.spf, this.skinType, this.duration, this.fabric, this.activities);
-    this.http.get('https://www.smilingskin-python.ml/receiver', {
+    this.http.get('https://x6hc4g61ok.execute-api.ap-southeast-2.amazonaws.com/production/activity', {
       params: {
         uv: this.uv,
         duration: this.duration,
