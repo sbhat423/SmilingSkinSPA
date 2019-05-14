@@ -22,4 +22,6 @@ mat-card div div {
 
 a {
     color: white;
+    padding-left: 20px;
+    text-decoration: none;
 }
