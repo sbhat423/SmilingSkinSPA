@@ -5,7 +5,137 @@
   <img src='../../assets/img/block4-2.jpg' class="main-image mat-elevation-z22" />
 </div>
 <div>
-  <div class="grey-block">
+  <p class="second-block"><br>RECOMMENDATIONS BASED ON THE CURRENT RISK LEVEL</p>
+</div>
+<div>
+  <div class="parameters" style="display: inline-block">
+    
+    <mat-form-field>
+      <mat-label>Select your Skin Type</mat-label>
+      <mat-select [(value)]="skinType" [disabled]='disabled' (valueChange)="getReportValue()">
+        <mat-option value="1">Skin Type 1</mat-option>
+        <mat-option value="2">Skin Type 2</mat-option>
+        <mat-option value="3">Skin Type 3</mat-option>
+        <mat-option value="4">Skin Type 4</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Duration in hours</mat-label>
+      <mat-select [(value)]="duration" [disabled]='disabled' (valueChange)="getReportValue()">
+        <mat-option value="60">0 to 1</mat-option>
+        <mat-option value="120">1 to 2</mat-option>
+        <mat-option value="180">2 to 3</mat-option>
+        <mat-option value="240">3 to 4</mat-option>
+        <mat-option value="300">4 to 5</mat-option>
+        <mat-option value="360">5 to 6</mat-option>
+        <mat-option value="420">6 to 7</mat-option>
+        <mat-option value="480">7 to 8</mat-option>
+        <mat-option value="540">8 to 9</mat-option>
+        <mat-option value="600">9 to 10</mat-option>
+      </mat-select>
+    </mat-form-field>
+   
+    <mat-form-field>
+      <mat-label>Select your Cloth Fabric</mat-label>
+      <mat-select [(value)]="fabric" [disabled]='disabled' (valueChange)="getReportValue()">
+        <mat-option value="Lycra/Elastanes">Lycra/Elastanes</mat-option>
+        <mat-option value="Plastic">Plastic</mat-option>
+        <mat-option value="Nylon">Nylon</mat-option>
+        <mat-option value="Polyester">Polyester</mat-option>
+        <mat-option value="Cotton">Cotton</mat-option>
+        <mat-option value="Polyester/Cotton">Polyester/Cotton</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Select Activity</mat-label>
+      <mat-select [(value)]="activities" [disabled]='disabled' (valueChange)="getReportValue()">
+        <mat-option value="Picnic,Barbecue">Picnic/Barbecue</mat-option>
+        <mat-option value="Grasslands">Grassland</mat-option>
+        <mat-option value="Soil, clay">Soil/Clay</mat-option>
+        <mat-option value="Road trip">Road Trip</mat-option>
+        <mat-option value="City tour">City Tour</mat-option>
+        <mat-option value="Boat deck(wood or fibreglass)">Boat Deck(Wood/Fibreglass)</mat-option>
+        <mat-option value="Open water">Open Water</mat-option>
+        <mat-option value="Open ocean">Open Ocean</mat-option>
+        <mat-option value="Sea surf">Sea surf</mat-option>
+        <mat-option value="Beach sand, wet">Beach Sand(Wet)</mat-option>
+        <mat-option value="Beach sand, dry">Beach Sand(Dry)</mat-option>
+        <mat-option value="Snow">Snow</mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  
+
+  <div>
+    <div fxFlex=50%>
+      <mat-card class="frame">
+        <p></p>
+          <h2>CURRENT RISK LEVEL</h2>
+          <mat-spinner *ngIf="disabled" style="display:block; margin-left:auto; margin-right:auto;"></mat-spinner>
+          <img *ngIf="dangerlevel == '1' && !disabled" src='../../assets/img/level1.jpeg'
+            style="width: 350px; height:225px">
+          <img *ngIf="dangerlevel == '2' && !disabled" src='../../assets/img/level2.jpeg'
+            style="width: 350px; height:225px">
+          <img *ngIf="dangerlevel == '3' && !disabled" src='../../assets/img/level3.jpeg'
+            style="width: 350px; height:225px">
+          <img *ngIf="dangerlevel == '4' && !disabled" src='../../assets/img/level4.jpeg'
+            style="width: 350px; height:225px">
+          <img *ngIf="dangerlevel == '5' && !disabled" src='../../assets/img/level5.jpeg'
+            style="width: 350px; height:225px">
+       
+          <mat-slider class='example-margin' [disabled]='disabled' [invert]='invert' [max]='max' [min]='min' [step]='step'
+            [thumbLabel]='thumbLabel' [tickInterval]='tickInterval' [(ngModel)]='value' [vertical]='vertical'
+            (valueChange)="getReportValue()">
+          </mat-slider>
+          <p>UV Index: {{value}}</p>
+          <p *ngIf="dangerlevel == '1'">Low: You have 0-10% chance to Burn under the Sun.</p>
+          <p *ngIf="dangerlevel == '2'">Median: You have 10-20% chance to Burn under the Sun.</p>
+          <p *ngIf="dangerlevel == '3'">High: You have 20-30% chance to Burn under the Sun.</p>
+          <p *ngIf="dangerlevel == '4'">Very high: You have 30-40% chance to Burn under the Sun.</p>
+          <p *ngIf="dangerlevel == '5'">Extremely high: You have greater than 40% chance to Burn under the Sun.</p>
+          <p><br><br></p>
+      </mat-card>
+    </div>
+    <div fxFlex=50%>
+      <mat-card class="frame">
+          <p><br></p>
+          <h1>RECOMMENDATION</h1>
+          <h2>We will recommend you to put on SPF {{spf_rec}} sunscreen to reduce the risk
+            level to low</h2>
+        <p><br></p>
+      </mat-card>
+      </div>
+  </div>
+</div>
+
+<div class="grey-block">
+  <div fxFlex=50%>
+    <p></p>
+    <div>
+        <h1>WHAT IS THE BEST TYPE OF SUNSCREEN?</h1>
+    </div>
+    <div>
+
+    </div>
+  </div>
+  <div fxFlex=50%>
+    <p>In Australia we have very strict guidelines when it comes to sunscreen. Apply a broad-spectrum sunscreen with an SPF of at least 50+ every two hours and after swimming or exercise. The following points will help you ensure that you get the best possible protection:</p>
+    <ul>
+      <li><p>Use the sunscreen with the highest possible SPF. This is currently SPF50+ in Australia.</p></li>
+      <li><p>Ensure your sunscreen is broad-spectrum. That means it protects you against both UVA and UVB rays.</p></li>
+      <li><p>Typically we only use 25% -50% of the amount of sunscreen that we actually need to be protected, often missing areas. When too little sunscreen is applied, it reduces the sun protection factor significantly e.g. an SPF30+ may only be working as an SPF10.</p></li>
+      <li><p>Ensure that all exposed skin is thoroughly covered with sunscreen.</p></li>
+      <li><p>If you are in the water ensure you use a water resident variety of sunscreen and re-apply regularly, at least every two-hours.</p></li>
+    </ul>
+  </div>
+</div>
+
+
+
+<div>
+  <div>
     <p class="second-block" style="margin-top: 0%;"><br>WHAT ARE THE DIFFERENT SKIN TYPES?</p>
     <p class="content-text">
         Did you know that there are different skin types and each of them has a different reaction to the sun. 
@@ -37,191 +167,6 @@
       What Are the Fitzpatrick Skin Types?. (2019). Retrieved from https://www.healthline.com/health/beauty-skin-care/fitzpatrick-skin-types
     </p>
     <p><br></p>
-  </div>
-  <div>
-    <p class="second-block"><br>RECOMMENDATIONS BASED ON THE CURRENT RISK LEVEL</p>
-  </div>
-  <div fxLayout fxLayout.lt-md="column">
-    <div fxFlex=10%>
-    </div>
-    <div fxFlex=35% style="background-color: #efefef">
-      <p></p>
-      <mat-form-field>
-        <mat-label>Select your Skin Type</mat-label>
-        <mat-select [(value)]="skinType" [disabled]='disabled' (valueChange)="getReportValue()">
-          <mat-option value="1">Skin Type 1</mat-option>
-          <mat-option value="2">Skin Type 2</mat-option>
-          <mat-option value="3">Skin Type 3</mat-option>
-          <mat-option value="4">Skin Type 4</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <p></p>
-
-
-      <mat-form-field>
-        <mat-label>Duration in hours</mat-label>
-        <mat-select [(value)]="duration" [disabled]='disabled' (valueChange)="getReportValue()">
-          <mat-option value="60">0 to 1</mat-option>
-          <mat-option value="120">1 to 2</mat-option>
-          <mat-option value="180">2 to 3</mat-option>
-          <mat-option value="240">3 to 4</mat-option>
-          <mat-option value="300">4 to 5</mat-option>
-          <mat-option value="360">5 to 6</mat-option>
-          <mat-option value="420">6 to 7</mat-option>
-          <mat-option value="480">7 to 8</mat-option>
-          <mat-option value="540">8 to 9</mat-option>
-          <mat-option value="600">9 to 10</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <p></p>
-
-      <mat-form-field>
-        <mat-label>Select your Cloth Fabric</mat-label>
-        <mat-select [(value)]="fabric" [disabled]='disabled' (valueChange)="getReportValue()">
-          <mat-option value="Lycra/Elastanes">Lycra/Elastanes</mat-option>
-          <mat-option value="Plastic">Plastic</mat-option>
-          <mat-option value="Nylon">Nylon</mat-option>
-          <mat-option value="Polyester">Polyester</mat-option>
-          <mat-option value="Cotton">Cotton</mat-option>
-          <mat-option value="Polyester/Cotton">Polyester/Cotton</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <p></p>
-
-      <mat-form-field>
-        <mat-label>Select Activity</mat-label>
-        <mat-select [(value)]="activities" [disabled]='disabled' (valueChange)="getReportValue()">
-          <mat-option value="Picnic,Barbecue">Picnic/Barbecue</mat-option>
-          <mat-option value="Grasslands">Grassland</mat-option>
-          <mat-option value="Soil, clay">Soil/Clay</mat-option>
-          <mat-option value="Road trip">Road Trip</mat-option>
-          <mat-option value="City tour">City Tour</mat-option>
-          <mat-option value="Boat deck(wood or fibreglass)">Boat Deck(Wood/Fibreglass)</mat-option>
-          <mat-option value="Open water">Open Water</mat-option>
-          <mat-option value="Open ocean">Open Ocean</mat-option>
-          <mat-option value="Sea surf">Sea surf</mat-option>
-          <mat-option value="Beach sand, wet">Beach Sand(Wet)</mat-option>
-          <mat-option value="Beach sand, dry">Beach Sand(Dry)</mat-option>
-          <mat-option value="Snow">Snow</mat-option>
-        </mat-select>
-      </mat-form-field>
-      <p><br><br><br><br><br><br><br></p>
-    </div>
-    <div fxFlex=35% style="background-color: #efefef">
-      <div>
-        <h2>CURRENT RISK LEVEL</h2>
-        <mat-spinner *ngIf="disabled" style="display:block; margin-left:auto; margin-right:auto;"></mat-spinner>
-        <img *ngIf="dangerlevel == '1' && !disabled" src='../../assets/img/level1.jpeg'
-          style="width: 350px; height:225px">
-        <img *ngIf="dangerlevel == '2' && !disabled" src='../../assets/img/level2.jpeg'
-          style="width: 350px; height:225px">
-        <img *ngIf="dangerlevel == '3' && !disabled" src='../../assets/img/level3.jpeg'
-          style="width: 350px; height:225px">
-        <img *ngIf="dangerlevel == '4' && !disabled" src='../../assets/img/level4.jpeg'
-          style="width: 350px; height:225px">
-        <img *ngIf="dangerlevel == '5' && !disabled" src='../../assets/img/level5.jpeg'
-          style="width: 350px; height:225px">
-      </div>
-      <div>
-        <mat-slider class='example-margin' [disabled]='disabled' [invert]='invert' [max]='max' [min]='min' [step]='step'
-          [thumbLabel]='thumbLabel' [tickInterval]='tickInterval' [(ngModel)]='value' [vertical]='vertical'
-          (valueChange)="getReportValue()">
-        </mat-slider>
-        <p>UV Index: {{value}}</p>
-        <p *ngIf="dangerlevel == '1'">Low: You have 0-10% chance to Burn under the Sun.</p>
-        <p *ngIf="dangerlevel == '2'">Median: You have 10-20% chance to Burn under the Sun.</p>
-        <p *ngIf="dangerlevel == '3'">High: You have 20-30% chance to Burn under the Sun.</p>
-        <p *ngIf="dangerlevel == '4'">Very high: You have 30-40% chance to Burn under the Sun.</p>
-        <p *ngIf="dangerlevel == '5'">Extremely high: You have greater than 40% chance to Burn under the Sun.</p>
-        <p><br></p>
-      </div>
-    </div>
-  </div>
-  <div class="blue-block">
-    <p><br></p>
-      <h1>RECOMMENDATION</h1>
-      <h2>We will recommend you to put on SPF {{spf_rec}} sunscreen to reduce the risk
-        level to low</h2>
-    <p><br></p>
-  </div>
-  <div fxLayout fxLayout.lt-md="column">
-    <div fxFlex=50% class="grey-block" style="padding-left: 5px">
-      <p class="second-block">PREVENTING SKIN CANCER</p>
-      <p class="content-text">
-        Sunsmart (2019) recommends the following measures to be taken separately or together to ensure you are protected from the sun when the Ultraviolet (UV) radiation level is 3 and above:</p>
-      <ul class="content-text-item">
-        <li>
-          Wear sun-protective clothes to cover your skin. Try to cover as much skin as possible.<br><br>
-        </li>
-        <li>
-          Use sunscreen. We recommend a sunscreen of broad spectrum with waterproof features and having SPF30 and above. Apply it 20 minutes before going out.<br><br>
-        </li>
-        <li>
-          Wear a hat. It helps to protect your face, neck and ears.<br><br>
-        </li>
-        <li>
-          Look for shaded areas where you can hide under.<br><br>
-        </li>
-        <li>
-          Wear sunglasses when you are outside. Ensure that it meets the Australian standards.<br><br>
-        </li>
-      </ul>
-      <p class="content-text">
-        Caution: Please be very careful on days where the Ultraviolet intensity is at its highest. 
-        On days like these, it is best to stay indoors.<br><br>
-      </p>
-      <p class="content-text">
-        Sunsmart. (2019). Retrieved from http://www.sunsmart.com.au/downloads/communities/early-childhood-primary-school/resources/be-sunsmart-play-sunsmart.pdf<br><br>
-      </p>
-    </div>
-    <div fxFlex=50% style="padding-left: 5px;">
-      <img src="../../assets/img/left.jpg" style="max-width: 80%; max-height: 500px;" />
-      <p class="content-text" style="text-align: center">Figure 1. Prevention Tips<br></p>
-    </div>
-  </div>
-  <div fxLayout fxLayout.lt-md="column">
-    <div fxFlex=50% style="padding-left: 5px;margin-top: 50px">
-      <img src="../../assets/img/right.jpg" style="max-width: 80%; max-height: 400px;" />
-      <p class="content-text" style="text-align: center">Figure 2. Prevention Tips<br></p>
-    </div>
-    <div fxFlex=50% class="grey-block" style="padding-left: 5px">
-      <p class="second-block">WHAT IS THE BEST TYPE OF SUNSCREEN?</p>
-      <p class="content-text">
-        Please follow Melanoma Institute Australia (2019) strict guidelines to using sunscreen in Australia to ensure that you are well protected:</p>
-      <ul class="content-text-item">
-        <li>
-          Using sunscreen with the highest SPF. Currently in Australia, the highest is SPF50+.<br><br>
-        </li>
-        <li>
-          Your sunscreen should be broad-spectrum. Meaning it will protect you from both kinds of Ultraviolet (UV) rays, UVA and UVB.<br><br>
-        </li>
-        <li>
-          Applying the right amount of sunscreen. 
-          We found that we only use about 25% to 50% of the required amount of sunscreen. 
-          Using too little sunscreen reduces the sun protection factor significantly.<br><br>
-        </li>
-        <li>
-          All exposed skin must be thoroughly covered with sunscreen.<br><br>
-        </li>
-        <li>
-          If you are doing water related activities, ensure that you use a waterproof sunscreen and reapply it at least 2 hours regularly.<br><br>
-        </li>
-      </ul>
-      <p class="content-text">
-        Melanoma Institute Australia. (2019). Retrieved from https://www.melanoma.org.au/preventing-melanoma/how-do-i-protect-my-skin/<br><br>
-      </p>
-    </div>
-  </div>
-
-
-  <div>
-    <p class="second-block">ACCESS TO THE NEAREST SKIN CANCER CLINIC</p>
-  </div>
-  <div class="map-block" style="padding: 40px;">
-    <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-    <div class="elfsight-app-f333d798-ed6b-4715-a5c1-ca0d6c27406b"
-      style="display:block; margin-left:auto; margin-right:auto;">
-    </div>
   </div>
 
   <button mat-icon-button class="up">

@@ -203,3 +203,16 @@ div {
     color: white;
     background-color: #3f51b5;
 }
+
+.parameters mat-form-field {
+    padding: 10px;  
+}
+
+.frame {
+    margin: 10px 10px 10px 30px;
+    border-radius: 2%;
+}
+
+.grey-block p,ul {
+    text-align: justify;
+}
