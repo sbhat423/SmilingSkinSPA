@@ -13,9 +13,9 @@
     <img src='../../assets/img/homepage.jpg' class="main-image mat-elevation-z22"/>
 </div>
 <div fxLayout fxLayout.lt-md="column">
-    <div fxHide.lt-md="true" class="sub-nav " fxFlex=25%>
-      <mat-card class="mat-elevation-z8">
-        <p matTooltip="weather summary" *ngIf="this.icon == 'clear-night'"><i class="wi wi-night-clear"></i>&nbsp;Clear Night</p>
+    <div fxHide.lt-md="true" class="sub-nav">
+      
+        <p  matTooltip="weather summary" *ngIf="this.icon == 'clear-night'"><i class="wi wi-night-clear"></i>&nbsp;Clear Night</p>
         <p matTooltip="weather summary" *ngIf="this.icon == 'clear-day'"><i class="wi wi-day-sunny"></i>&nbsp;Clear Day</p>
         <p matTooltip="weather summary" *ngIf="this.icon == 'rain'"><i class="wi wi-rain"></i>&nbsp;Rain</p>
         <p matTooltip="weather summary" *ngIf="this.icon == 'snow'"><i class="wi wi-snow"></i>&nbsp;Snow</p>
@@ -26,11 +26,10 @@
         <p matTooltip="weather summary" *ngIf="this.icon == 'partly-cloudy-day'"><i class="wi wi-night-partly-cloudy"></i>&nbsp;Partly Cloudy</p>
         <p matTooltip="weather summary" *ngIf="this.icon == 'partly-cloudy-night'"><i class="wi wi-night-alt-partly-cloudy"></i>&nbsp;Partly Cloudy</p>
         <p matTooltip="temperature in °C"><i class="wi wi-thermometer"></i>&nbsp;&nbsp;&nbsp;{{this.degreeTemperature}}&nbsp;°C</p>
-        <!--<li><p>Apparent Temperature</p>{{this.apparentTemperature}}</li> -->
         <p matTooltip="humidity %"><i class="wi wi-humidity"></i>&nbsp;&nbsp;&nbsp;{{this.humidity}}%</p>
         <p matTooltip="cloud cover %"><i class="wi wi-cloud"></i>&nbsp;&nbsp;&nbsp;{{this.cloudCover}}%</p>
         <p matTooltip="uv index"><i class="wi wi-day-sunny"></i>&nbsp;uv:&nbsp;&nbsp;&nbsp;{{this.uvIndex}}</p>
-      </mat-card>
+     
     </div> 
   </div>
 <div>

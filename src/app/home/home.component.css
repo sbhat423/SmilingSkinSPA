@@ -123,19 +123,22 @@ div {
     padding: 0px;
 }
 
-.sub-nav mat-card {
+.sub-nav {
     position: absolute;
-    top: 35%;
     margin: 10px 40px 40px 10px;
+    top: 10%;
+    left: 20%;
     text-align: left;
     padding: 20px;
-    line-height: 16pt;
-    background-color: #3f51b5;
-    z-index: 99;
+    background-color: transparent;
+    z-index: 999;
+    border: 0px;
 }
 
-.sub-nav mat-card p {
+.sub-nav p {
     color: white;
+    padding: 15px;
+    display: inline;
 }
 
 .wi {
