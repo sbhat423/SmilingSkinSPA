@@ -8,11 +8,32 @@ img {
     max-width: 100%;
     height: 800px;
     overflow: hidden;
-    filter: brightness(0.8)
 }
 
 div {
     text-align: center;
+}
+
+.main-slogan {
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 900;
+    font-size: 300%;
+    z-index: 10;
+}
+
+.sub-slogan {
+    color: white;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 900;
+    font-size: 200%;
+    z-index: 10;
 }
 
 .read-more {
@@ -20,7 +41,8 @@ div {
     background: #6ec1e4;
     color: #ffffff;
     top: 65%;
-    left: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding: 5px 20px 5px 20px;
     border-radius: 15px;
     font-size: x-large;
@@ -42,26 +64,6 @@ div {
     display: block;
     margin-left:auto;
     margin-right:auto;
-}
-
-.main-slogan{
-    color: white;
-    position: absolute;
-    top: 40%;
-    left: 15%;
-    font-weight: 900;
-    font-size: 300%;
-    z-index: 10;
-}
-
-.sub-slogan {
-    color: white;
-    position: absolute;
-    top: 30%;
-    left: 35%;
-    font-weight: 900;
-    font-size: 200%;
-    z-index: 10;
 }
 
 .second-block {
@@ -125,14 +127,13 @@ div {
 
 .sub-nav {
     position: absolute;
-    margin: 10px 40px 40px 10px;
     top: 10%;
-    left: 20%;
-    text-align: left;
+    left: 50%;
+    transform: translate(-50%);
+    white-space: nowrap;
     padding: 20px;
     background-color: transparent;
     z-index: 999;
-    border: 0px;
 }
 
 .sub-nav-mobile {
