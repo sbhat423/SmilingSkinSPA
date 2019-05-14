@@ -15,6 +15,7 @@ import { Error404Component } from './error404/error404.component';
 import { WeatherComponent } from './weather/weather.component';
 import { PrenevtionComponent } from './prenevtion/prenevtion.component';
 import { TripComponent } from './trip/trip.component';
+import { MapComponent } from './map/map.component';
 
 const routes: Routes = [
   { path: 'news', component: NewsComponent},
@@ -60,6 +61,7 @@ const routes: Routes = [
   { path: 'weather', component: WeatherComponent},
   { path: 'prevention', component: PrenevtionComponent},
   { path: 'trip', component: TripComponent},
+  { path: 'map', component: MapComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: '**', component: Error404Component}
 ];

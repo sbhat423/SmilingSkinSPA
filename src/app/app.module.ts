@@ -48,6 +48,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { GestureConfig } from '@angular/material';
 import { TripComponent } from './trip/trip.component';
+import { MapComponent } from './map/map.component';
 
 
 @NgModule({
@@ -69,7 +70,8 @@ import { TripComponent } from './trip/trip.component';
     Error404Component,
     WeatherComponent,
     PrenevtionComponent,
-    TripComponent
+    TripComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,

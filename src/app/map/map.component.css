@@ -1,0 +1,11 @@
+.second-block {
+    font-weight: bold;
+    font-size: xx-large;
+    text-align: center;
+}
+
+.map-block {
+    background-color: #3f51b5;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
