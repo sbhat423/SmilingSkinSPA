@@ -135,6 +135,25 @@ div {
     border: 0px;
 }
 
+.sub-nav-mobile {
+    margin: 10px 40px 40px 10px;
+    text-align: left;
+    padding: 20px;
+    z-index: 999;
+    border: 0px;
+}
+
+.sub-nav-mobile mat-card {
+    background-color: #3f51b5;
+    color: white;
+}
+
+.sub-nav-mobile p {
+    margin-left: 30px;
+}
+
+
+
 .sub-nav p {
     color: white;
     padding: 15px;
