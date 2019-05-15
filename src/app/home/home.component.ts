@@ -41,10 +41,10 @@ export class HomeComponent implements OnInit {
       data => {
         this.icon = data['currently']['icon'];
         this.temperature = data['currently']['temperature'];
-        this.degreeTemperature = ((this.temperature - 32) * (5 / 9)).toFixed(2);
+        this.degreeTemperature = ((this.temperature - 32) * (5 / 9)).toFixed(1);
         this.apparentTemperature = data['currently']['apparentTemperature'];
-        this.humidity = (data['currently']['humidity'] * 100).toFixed(2);
-        this.cloudCover = (data['currently']['cloudCover'] * 100).toFixed(2);
+        this.humidity = (data['currently']['humidity'] * 100).toFixed(0);
+        this.cloudCover = (data['currently']['cloudCover'] * 100).toFixed(0);
         this.uvIndex = data['currently']['uvIndex'];
         this.ozone = data['currently']['ozone'];
     });

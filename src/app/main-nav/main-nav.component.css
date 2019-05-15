@@ -29,11 +29,11 @@ button {
 }
 
 .mat-toolbar .buttons-topbar {
-  display: none;
+  display: inline;
 }
 
 .mat-toolbar .hamburger {
-  display: inline;
+  display: none;
 }
 
 .active-list-item {
@@ -54,17 +54,16 @@ button {
   padding-right: 25px; 
 }
 
-
-/* When the screen size is less than or equal to 750px */
-@media (min-width: 800px){
+/* When screen size less than or equal 650px */
+@media all and (max-width: 650px){
   .sidenav {
-    display: none;
+    display: inline;
   }
   .mat-toolbar .hamburger {
-    display: none;
+    display: inline;
   }
   .mat-toolbar .buttons-topbar {
-    display: inline;
+    display: none;
   }
 }
 
