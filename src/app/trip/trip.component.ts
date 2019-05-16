@@ -3,6 +3,7 @@ import { WeatherService } from '../service/weather.service';
 import { SkApiService } from '../service/sk-api.service';
 import { TravelLocation } from '../model/travelLocation';
 import { DatePipe } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-trip',
@@ -13,16 +14,20 @@ export class TripComponent implements OnInit {
 selectedDate = new Date();
 minDate = new Date();
 maxDate = new Date();
-location: string;
+location = 'Alpine National Park';
 destination: TravelLocation[];
+spf_rec: string;
+disabled = false;
 
-  constructor(private weatherService: WeatherService, private api: SkApiService, private datePipe: DatePipe) { }
+  constructor(private weatherService: WeatherService,
+    private api: SkApiService,
+    private datePipe: DatePipe,
+    private http: HttpClient) { }
 
   ngOnInit() {
     this.getTravelData();
-    this.maxDate.setDate(this.minDate.getDate() + 7);
-    console.log(this.minDate);
-    console.log(this.maxDate);
+    this.maxDate.setDate(this.minDate.getDate() + 6);
+    this.getResult();
   }
 
   getTravelData() {
@@ -49,6 +54,23 @@ destination: TravelLocation[];
   }
 
   getResult() {
-    console.log(this.datePipe.transform(this.selectedDate , 'yyyy-MM-dd' ));
+    const date = this.datePipe.transform(this.selectedDate , 'yyyy-MM-dd' );
+    console.log(date);
+    this.http.get('https://x6hc4g61ok.execute-api.ap-southeast-2.amazonaws.com/production/attraction', {
+      params: {
+        date1: date,
+        attraction: this.location
+      },
+      observe: 'response'
+    })
+    .toPromise()
+    .then(response => {
+      console.log(response);
+      const responseBody = response.body;
+      this.spf_rec = responseBody['spf_rec_attraction'];
+      console.log(this.spf_rec);
+      this.disabled = false;
+    })
+    .catch(console.log);
   }
 }

@@ -108,4 +108,29 @@ img {
     border-color: red;
 }
 
-  
+mat-form-field {
+  padding: 20px;
+}
+
+.img-container {
+  padding: 0px;
+  margin: 0px;
+}
+
+.img-container img {
+  margin: 0px;
+}
+
+.recommendation {
+  width: 80%;
+  position: relative;
+  top:10%;
+  margin-bottom: 60px;
+}
+
+.recommendation p {
+  padding: 40px 20px 40px 20px;
+  text-align: justify;
+  font-size: 30px;
+  font-size: bold;
+}
