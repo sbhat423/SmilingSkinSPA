@@ -211,6 +211,7 @@ div {
 .frame {
     margin: 10px 10px 10px 30px;
     border-radius: 2%;
+    height: 85%;
 }
 
 .grey-block p,ul {
