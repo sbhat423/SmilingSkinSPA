@@ -8,12 +8,12 @@
     </p>
   </div>
   <div class="grey-block">
-    <div>
+    <div fxLayout="row wrap">
       <p><br></p>
       <div fxHide.lt-md="true" fxFlex.gt-sm=10% fxLayout="column"></div>
-      <div fxFlex.sm=100% fxFlex.gt-sm=30% fxLayout="column">
+      <div fxFlex.lt-md=100% fxFlex.gt-sm=30% fxLayout="column">
           <mat-form-field>
-              <mat-label>Select Destination</mat-label>
+              <mat-label>Select Travel Attraction</mat-label>
               <mat-select [(value)]="location" (valueChange)="getResult()">
                 <mat-option value="Alpine National Park">Alpine National Park</mat-option>
                 <mat-option value="Ballarat">Ballarat</mat-option>
@@ -40,9 +40,9 @@
             </mat-form-field>
       </div>
 
-      <div fxHide.lt-md="true" fxFlex.gt-sm=10% fxLayout="column"></div>
+      <div fxHide.lt-md="true" fxFlex.gt-sm=20% fxLayout="column"></div>
 
-      <div fxFlex.sm=100% fxFlex.gt-sm=30% fxLayout="column">
+      <div fxFlex.lt-md=100% fxFlex.gt-sm=30% fxLayout="column">
           <mat-form-field>
               <input matInput [matDatepicker]="picker" placeholder="Choose a date" [min]="minDate" [max]="maxDate"
                 [(ngModel)]="selectedDate" (ngModelChange)="getResult()" required>
@@ -87,11 +87,12 @@
 
       <div fxFlex.sm=100% fxFlex.gt-md=50% fxLayout="column">
         <p class="second-block">How to Prepare</p>
-        <mat-card class="recommendation">
-          <p><br>
-            We will recommend you to put on SPF {{spf_rec}} Sunscreen.
+        <div class="recommendation">
+          <p>
+            We will recommend you to put on SPF {{spf_rec}} sunscreen, if you are travelling to {{location}} on {{readableDate}}.
           </p>
-        </mat-card>
+        </div>
+        <p><br></p>
       </div>
     </div>
   </div>

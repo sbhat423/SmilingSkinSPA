@@ -18,6 +18,8 @@ location = 'Alpine National Park';
 destination: TravelLocation[];
 spf_rec: string;
 disabled = false;
+formattedDate: string;
+readableDate: string;
 
   constructor(private weatherService: WeatherService,
     private api: SkApiService,
@@ -54,11 +56,12 @@ disabled = false;
   }
 
   getResult() {
-    const date = this.datePipe.transform(this.selectedDate , 'yyyy-MM-dd' );
-    console.log(date);
+    this.formattedDate = this.datePipe.transform(this.selectedDate , 'yyyy-MM-dd' );
+    this.readableDate = this.datePipe.transform(this.selectedDate , 'dd-MM-yyyy' );
+    console.log(this.formattedDate);
     this.http.get('https://x6hc4g61ok.execute-api.ap-southeast-2.amazonaws.com/production/attraction', {
       params: {
-        date1: date,
+        date1: this.formattedDate,
         attraction: this.location
       },
       observe: 'response'
