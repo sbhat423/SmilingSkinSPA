@@ -1,111 +1,126 @@
-img {
-    width: 100%;
-    margin: 40px 0px 40px 0px;
-  }
-  
-  .main-image {
-    max-width: 100%;
-    overflow: hidden;
-    filter: brightness(80%);
+.main-image-wrap {
+  max-height: 500px;
+  overflow: hidden;
+}
+
+.main-image {
+  width: 100%;
+  filter: brightness(60%);
 }
   
-  div {
-    text-align: center;
-  }
-  
-  .read-more {
-    position: absolute;
-    background: #3f51b5;
-    color: #ffffff;
-    top: 65%;
-    left: 45%;
-    padding: 5px 20px 5px 20px;
-    border-radius: 15px;
-    font-size: x-large
-  }
-  
-  .learn-more {
-    background: #3f51b5;
-    color: #ffffff;
-    padding: 5px 20px 5px 20px;
-    border-radius: 15px;
-    font-family: Arial, Helvetica;
-    font-size: x-large;
-    display: block;
-    margin-left:auto;
-    margin-right:auto;
-  }
-  
-  .main-slogan{
-    color: white;
-    position: absolute;
-    top: 40vh;
-    left: 40vh;
-    font-weight: 900;
-    font-size: 300%;
-  }
-  
-  .sub-slogan {
-    color: white;
-    position: absolute;
-    top: 30%;
-    left: 35%;
-    font-weight: 200;
-    font-size: 5vw;
-  }
-  
-  .second-block {
-    font-weight: bold;
-    font-size: xx-large;
-  }
-  
-  .sub-heading {
-    font-weight: bold;
-    font-size: 4vh;
-  }
-  
-  .block2 div {
-    padding: 10px 20px 10px 20px;
-  }
-  
-  .block2 div mat-card {
-    padding: 0px 0px 0px 0px;
-    height: 300px;
-    width: 400px;
-    display: block;
-    margin-left:auto;
-    margin-right:auto;
-  }
-  
-  .block2 div mat-card img {
-    max-width: 400px;
-    max-height: 300px;
-  }
-  
-  .block2-sub {
-    font-weight: bold;
-    font-size: x-large;
- }
+div {
+  text-align: center;
+}
 
- .content-text {
-    text-align: left;
-    font-size:15px;
-    font-family: sans-serif;
-    line-height: 22.35px;
-    padding: 0px 40px 0px 40px;
+.main-slogan {
+  color: white;
+  position: absolute;
+  top: 280px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 900;
+  font-size: 300%;
+  z-index: 10;
+}
+
+
+@media all and (max-width: 1500px){
+  .main-slogan {
+      color: white;
+      position: absolute;
+      top: 21vw;
+      font-weight: 900;
+      font-size: calc(30px + 1vw);
+      z-index: 10;
+  }
+
+  .main-image {
+    filter: brightness(60%);
+  }
+}
+
+@media all and (max-width: 1200px) {
+  .main-image-wrap {
+    max-height: 450px;
+  }
+}
+
+@media all and (max-width: 1000px) {
+  .main-slogan {
+    top: 23vw;
+  }
+
+  .main-image-wrap {
+    max-height: 400px;
+  }
+}
+
+@media all and (max-width: 700px) {
+  .main-slogan {
+      color: white;
+      position: absolute;
+      top: 35vw;
+      font-weight: 900;
+      z-index: 10;
+  }
+
+  .main-image-wrap {
+    max-height: 350px;
+  }
+}
+
+.second-block {
+  font-weight: bold;
+  font-size: xx-large;
+}
+
+.sub-heading {
+  font-weight: bold;
+  font-size: 4vh;
+}
+
+.block2 div {
+  padding: 10px 20px 10px 20px;
+}
+
+.block2 div mat-card {
+  padding: 0px 0px 0px 0px;
+  height: 300px;
+  width: 400px;
+  display: block;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.block2 div mat-card img {
+  max-width: 400px;
+  max-height: 300px;
+}
+
+.block2-sub {
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.content-text {
+  text-align: left;
+  font-size:15px;
+  font-family: sans-serif;
+  line-height: 22.35px;
+  padding: 0px 40px 0px 40px;
 }
 
 .content-text-item {
-    text-align: left;
-    font-size:15px;
-    font-family: sans-serif;
-    line-height: 22.35px;
-    padding: 0px 10px 0px 40px;
+  text-align: left;
+  font-size:15px;
+  font-family: sans-serif;
+  line-height: 22.35px;
+  padding: 0px 10px 0px 40px;
 }
 
 .frame {
-    border-radius: 5%;
-    border-color: red;
+  border-radius: 5%;
+  border-color: red;
 }
 
 mat-form-field {
@@ -119,6 +134,7 @@ mat-form-field {
 
 .img-container img {
   margin: 0px;
+  width: 100%;
 }
 
 .recommendation {
