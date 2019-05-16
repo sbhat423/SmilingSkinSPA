@@ -108,11 +108,9 @@ div {
     .sub-slogan {
         color: white;
         position: absolute;
-        top: 35vw;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        top: 25vw;
         font-weight: 900;
-        font-size: 4vw;
+        font-size: 5vw;
         z-index: 10;
     }
 
@@ -120,10 +118,8 @@ div {
         color: white;
         position: absolute;
         top: 50vw;
-        left: 50%;
-        transform: translate(-50%, -50%);
         font-weight: 900;
-        font-size: 4vw;
+        font-size: 7vw;
         z-index: 10;
     }
 

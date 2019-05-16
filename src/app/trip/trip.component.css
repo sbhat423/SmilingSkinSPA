@@ -67,6 +67,10 @@ div {
   .main-image-wrap {
     max-height: 350px;
   }
+
+  .recommendation {
+    top: 0%;
+  }
 }
 
 .second-block {
