@@ -1,0 +1,222 @@
+img {
+    width: 100%;
+}
+
+.main-image {
+    max-width: 100%;
+    overflow: hidden;
+    filter: brightness(80%);
+}
+
+div {
+    text-align: center;
+}
+
+.read-more {
+    position: absolute;
+    background: #3f51b5;
+    color: #ffffff;
+    top: 65%;
+    left: 45%;
+    padding: 5px 20px 5px 20px;
+    border-radius: 15px;
+    font-family: sans-serif;
+    font-size: x-large
+}
+
+.learn-more {
+    background: #3f51b5;
+    color: #ffffff;
+    padding: 5px 20px 5px 20px;
+    border-radius: 15px;
+    font-family: sans-serif;
+    font-size: x-large;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.main-slogan{
+    color: white;
+    position: absolute;
+    top: 25%;
+    left: 30%;
+    font-weight: 900;
+    font-size: 500%;
+    z-index: 10;
+}
+
+.sub-slogan {
+    color: white;
+    position: absolute;
+    top: 30%;
+    left: 30%;
+    font-weight: 900;
+    font-size: 200%;
+}
+
+.second-block {
+    font-weight: bold;
+    font-size: xx-large;
+    color: black;
+}
+
+.block2 div {
+    padding: 40px 40px 40px 40px;
+}
+
+.block2 div mat-card {
+    padding: 0px 0px 0px 0px;
+    height: 300px;
+    width: 400px;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.block2 div mat-card img {
+    max-width: 400px;
+    max-height: 300px;
+}
+
+.block2-sub {
+    font-weight: bold;
+    font-size: x-large;
+}
+
+.block4 div {
+    padding: 5px;
+}
+
+.block4 div {
+    padding: 40px 40px 40px 40px;
+}
+
+.block4 div mat-card {
+    padding: 0px 0px 0px 0px;
+    height: 200px;
+    width: 200px;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.block4 div mat-card img {
+    max-width: 300px;
+    max-height: 200px;
+}
+
+.block3 mat-card {
+    padding: 0px;
+}
+
+.up a mat-icon{
+    position: absolute;
+    top: 80%;
+    left: 1%;
+    font: 200%;
+    position: fixed;
+}
+
+.sub-nav mat-card {
+    position: absolute;
+    top: 40%;
+    margin: 10px 40px 40px 10px;
+    text-align: left;
+    padding: 20px;
+    line-height: 16pt;
+    position: fixed;
+    background-color: #3f51b5;
+    z-index: 999;
+}
+
+.sub-nav mat-card p {
+    color: white;
+}
+
+.wi {
+    font-size: 40px;
+}
+
+.map-block {
+    background-color: #3f51b5;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.content-text {
+    text-align: left;
+    font-size:16px;
+    font-family: Arial;
+    line-height: 22.35px;
+    padding: 0px 40px 0px 40px;
+}
+
+.content-text-item {
+    text-align: left;
+    font-size:16px;
+    font-family: Arial;
+    line-height: 22.35px;
+    padding: 0px 10px 0px 40px;
+}
+
+.example-h2 {
+    margin: 10px;
+  }
+  
+  .example-section {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    height: 60px;
+  }
+  
+  .example-margin {
+    margin: 10px;
+  }
+  
+  .mat-slider-horizontal {
+    width: 300px;
+  }
+  
+  .mat-slider-vertical {
+    height: 300px;
+  }
+
+  .up a mat-icon{
+    position: absolute;
+    top: 90%;
+    left: 95%;
+    font: 200%;
+    position: fixed;
+    z-index: 999;
+    color: black;
+}
+
+.grey-block {
+    background-color: #efefef;
+}
+
+.blue-block {
+    color: white;
+    background-color: #3f51b5;
+}
+
+.parameters mat-form-field {
+    padding: 20px;  
+}
+
+.frame {
+    margin: 20px 40px 20px 30px;
+    border-radius: 5%;
+    height: 85%;
+}
+
+.grey-block p,ul {
+    text-align: justify;
+}
+
+.question-img {
+    width: 60%;
+    height: 85%;
+}
