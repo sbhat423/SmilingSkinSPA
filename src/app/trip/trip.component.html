@@ -56,7 +56,7 @@
 
       <div fxFlex.sm=100% fxFlex.gt-md=50% fxLayout="column">
         <p class="second-block" style="margin-bottom: 5px;">Attractions</p>
-        <div class="img-container" style="height: 50vh; width: 90vh;">
+        <div class="img-container">
           <img *ngIf="location=='Alpine National Park'" src="../../assets/attraction_img/Alpine_National_Park.jpg">
           <img *ngIf="location=='Ballarat'" src="../../assets/attraction_img/Ballarat.jpg">
           <img *ngIf="location=='Bendigo'" src="../../assets/attraction_img/Bendigo.jpg">
@@ -87,7 +87,7 @@
 
       <div fxFlex.sm=100% fxFlex.gt-md=50% fxLayout="column">
         <p class="second-block" style="margin-bottom: 15px;">How to Prepare</p>
-        <div class="recommendation" style="height: 55vh; width: 85vh;">
+        <div class="recommendation">
           <p><b>
             We will recommend you to put on SPF <span style="color:red">{{spf_rec}}</span> sunscreen and reapply every two hours, if you are travelling to {{location}} on {{readableDate}}.</b>
           </p>

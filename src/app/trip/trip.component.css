@@ -79,7 +79,7 @@ div {
 }
 
 .block2 div {
-  padding: 10px 20px 10px 20px;
+  padding: 10px;
 }
 
 .block2 div mat-card {
@@ -130,8 +130,6 @@ mat-form-field {
   position: relative;
   padding: 0px;
   margin: 0px;
-  width: 80%;
-  height: 55%;
 }
 
 .img-container img {
@@ -143,7 +141,7 @@ mat-form-field {
 .recommendation {
   position: relative;
   width: 80%;
-  height: 55%;
+  height: 76%;
   margin-bottom: 60px;
   border: 2px solid lightgreen;
   border-radius: 15px;
