@@ -148,7 +148,7 @@ mat-form-field {
 }
 
 .recommendation p {
-  text-align: justify;
+  text-align: center;
   font-size: 25px;
   line-height: 35px;
   font-size: bold;
