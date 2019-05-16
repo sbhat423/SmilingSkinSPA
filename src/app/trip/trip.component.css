@@ -127,26 +127,29 @@ mat-form-field {
 }
 
 .img-container {
+  position: relative;
   padding: 0px;
   margin: 0px;
+  width: 80%;
+  height: 55%;
 }
 
 .img-container img {
-  margin: 0px;
+  position: relative;
+  margin: 0 auto;
   width: 100%;
 }
 
 .recommendation {
-  width: 80%;
   position: relative;
-  top: 10%;
+  width: 80%;
+  height: 55%;
   margin-bottom: 60px;
   border: 2px solid lightgreen;
   border-radius: 15px;
 }
 
 .recommendation p {
-  padding: 40px 20px 40px 20px;
   text-align: justify;
   font-size: 25px;
   line-height: 35px;
