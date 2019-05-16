@@ -5,19 +5,14 @@
   <p class="main-slogan">PLAN YOUR TRIP</p>
   <div>
     <p class="second-block">Plan Ahead for Sun Protection</p>
-    <p class="content-text">Your usual way of sun protection at home may not be the best way when you travel around VIC.
-      When it comes to traveling to far away places, it’s important to be well prepared. From destination weather and
-      clothes to sunscreen, there’s a lot to consider before you trip. Our ‘How to Prepare’ guide is below with some
-      handy tips for sun protection of your trip.
-    </p>
   </div>
   <div class="grey-block">
     <div fxLayout="row wrap">
       <p><br></p>
-      <div fxHide.lt-md="true" fxFlex.gt-sm=10% fxLayout="column"></div>
-      <div fxFlex.lt-md=100% fxFlex.gt-sm=30% fxLayout="column">
+      <div fxHide.lt-md="true" fxFlex.gt-sm=15% fxLayout="column"></div>
+      <div fxFlex.lt-md=100% fxFlex.gt-sm=20% fxLayout="column">
           <mat-form-field>
-              <mat-label>Select Travel Attraction</mat-label>
+          <p><b>Choose Travel Attraction</b></p>
               <mat-select [(value)]="location" (valueChange)="getResult()">
                 <mat-option value="Alpine National Park">Alpine National Park</mat-option>
                 <mat-option value="Ballarat">Ballarat</mat-option>
@@ -44,11 +39,12 @@
             </mat-form-field>
       </div>
 
-      <div fxHide.lt-md="true" fxFlex.gt-sm=20% fxLayout="column"></div>
+      <div fxHide.lt-md="true" fxFlex.gt-sm=30% fxLayout="column"></div>
 
-      <div fxFlex.lt-md=100% fxFlex.gt-sm=30% fxLayout="column">
+      <div fxFlex.lt-md=100% fxFlex.gt-sm=20% fxLayout="column">
           <mat-form-field>
-              <input matInput [matDatepicker]="picker" placeholder="Choose a date" [min]="minDate" [max]="maxDate"
+            <p><b>Choose Travel Date</b></p>
+              <input matInput [matDatepicker]="picker" [min]="minDate" [max]="maxDate"
                 [(ngModel)]="selectedDate" (ngModelChange)="getResult()" required>
               <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
               <mat-datepicker #picker></mat-datepicker>
@@ -60,8 +56,7 @@
 
       <div fxFlex.sm=100% fxFlex.gt-md=50% fxLayout="column">
         <p class="second-block" style="margin-bottom: 5px;">Attractions</p>
-        <p>{{location}}</p>
-        <div class="img-container">
+        <div class="img-container" style="height: 50vh; width: 90vh;">
           <img *ngIf="location=='Alpine National Park'" src="../../assets/attraction_img/Alpine_National_Park.jpg">
           <img *ngIf="location=='Ballarat'" src="../../assets/attraction_img/Ballarat.jpg">
           <img *ngIf="location=='Bendigo'" src="../../assets/attraction_img/Bendigo.jpg">
@@ -87,13 +82,14 @@
           <img *ngIf="location=='Wimmera'" src="../../assets/attraction_img/Wimmera.jpg">
           <img *ngIf="location=='Yarra Valley'" src="../../assets/attraction_img/Yarra_Valley.jpg">
         </div>
+        <p><br></p>
       </div>
 
       <div fxFlex.sm=100% fxFlex.gt-md=50% fxLayout="column">
-        <p class="second-block">How to Prepare</p>
-        <div class="recommendation">
-          <p>
-            We will recommend you to put on SPF {{spf_rec}} sunscreen, if you are travelling to {{location}} on {{readableDate}}.
+        <p class="second-block" style="margin-bottom: 15px;">How to Prepare</p>
+        <div class="recommendation" style="height: 55vh; width: 85vh;">
+          <p><b>
+            We will recommend you to put on SPF <span style="color:red">{{spf_rec}}</span> sunscreen and reapply every two hours, if you are travelling to {{location}} on {{readableDate}}.</b>
           </p>
         </div>
         <p><br></p>
