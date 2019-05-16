@@ -15,10 +15,27 @@
         <mat-form-field>
             <mat-label>Select Activity</mat-label>
             <mat-select [(value)]="location" (valueChange)="getResult()">
+              <mat-option value="Alpine National Park">Alpine National Park</mat-option>
+              <mat-option value="Ballarat">Ballarat</mat-option>
+              <mat-option value="Bendigo">Bendigo</mat-option>
+              <mat-option value="Daylesford (Spa Country)">Daylesford (Spa Country)</mat-option>
+              <mat-option value="Geelong">Geelong</mat-option>
+              <mat-option value="Gippsland">Gippsland</mat-option>
               <mat-option value="Great Ocean Road">Great Ocean Road</mat-option>
+              <mat-option value="Great Otway National Park">Great Otway National Park</mat-option>
+              <mat-option value="Healesville Sanctuary">Healesville Sanctuary</mat-option>
+              <mat-option value="High Country">High Country</mat-option>
+              <mat-option value="Macedon">Macedon</mat-option>
+              <mat-option value="Melbourne City">Melbourn City</mat-option>
+              <mat-option value="Mount Dandenong">Mount Dandenong</mat-option>
+              <mat-option value="Peninsula">Peninsula</mat-option>
               <mat-option value="Phillip Island">Phillip Island</mat-option>
               <mat-option value="Point Lonsdale">Point Lonsdale</mat-option>
-              <mat-option value="Peninsula">Peninsula</mat-option>
+              <mat-option value="Upper Yarra">Upper Yarra</mat-option>
+              <mat-option value="Western Grampians">Western Grampians</mat-option>
+              <mat-option value="Wilsons Promontory National Park">Wilsons Promontory National Park</mat-option>
+              <mat-option value="Wimmera">Wimmera</mat-option>
+              <mat-option value="Yarra Valley">Yarra Valley</mat-option>
             </mat-select>
           </mat-form-field>
         <mat-form-field>
@@ -28,10 +45,27 @@
             <mat-datepicker #picker></mat-datepicker>
           </mat-form-field>
           <div>
+            <img *ngIf="location=='Alpine National Park'" src="../../assets/attraction_img/Alpine_National_Park.jpg">
+            <img *ngIf="location=='Ballarat'" src="../../assets/attraction_img/Ballarat.jpg">
+            <img *ngIf="location=='Bendigo'" src="../../assets/attraction_img/Bendigo.jpg">
+            <img *ngIf="location=='Daylesford (Spa Country)'" src="../../assets/attraction_img/Daylesford_(Spa Country).jpg">
+            <img *ngIf="location=='Geelong'" src="../../assets/attraction_img/Geelong.jpg">
+            <img *ngIf="location=='Gippsland'" src="../../assets/attraction_img/Gippsland.jpg">
             <img *ngIf="location=='Great Ocean Road'" src="../../assets/attraction_img/Great_Ocean_Road.jpg">
+            <img *ngIf="location=='Great Otway National Park'" src="../../assets/attraction_img/Great_Otway_National_Park.jpg">
+            <img *ngIf="location=='Healesville Sanctuary'" src="../../assets/attraction_img/Healesville_Sanctuary.jpg">
+            <img *ngIf="location=='High Country'" src="../../assets/attraction_img/High_Country.jpg">
+            <img *ngIf="location=='Macedon'" src="../../assets/attraction_img/Macedon.jpg">
+            <img *ngIf="location=='Melbourne City'" src="../../assets/attraction_img/Melbourne_City.jpg">
+            <img *ngIf="location=='Mount Dandenong'" src="../../assets/attraction_img/Mount_Dandenong.jpg">
+            <img *ngIf="location=='Peninsula'" src="../../assets/attraction_img/Peninsula.jpg">
             <img *ngIf="location=='Phillip Island'" src="../../assets/attraction_img/Phillip_Island.jpg">
             <img *ngIf="location=='Point Lonsdale'" src="../../assets/attraction_img/Point_Lonsdale.jpg">
-            <img *ngIf="location=='Peninsula'" src="../../assets/attraction_img/Peninsula.jpg">
+            <img *ngIf="location=='Upper Yarra'" src="../../assets/attraction_img/Upper_Yarra.jpg">
+            <img *ngIf="location=='Western Grampians'" src="../../assets/attraction_img/Western_Grampians.jpg">
+            <img *ngIf="location=='Wilsons Promontory National Park'" src="../../assets/attraction_img/Wilsons_Promontory_National_Park.jpg">
+            <img *ngIf="location=='Wimmera'" src="../../assets/attraction_img/Wimmera.jpg">
+            <img *ngIf="location=='Yarra Valley'" src="../../assets/attraction_img/Yarra_Valley.jpg">
           </div>
       </div>
 
