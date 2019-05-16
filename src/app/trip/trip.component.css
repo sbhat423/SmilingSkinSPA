@@ -23,7 +23,6 @@ div {
   z-index: 10;
 }
 
-
 @media all and (max-width: 1500px){
   .main-slogan {
       color: white;
@@ -32,10 +31,6 @@ div {
       font-weight: 900;
       font-size: calc(30px + 1vw);
       z-index: 10;
-  }
-
-  .main-image {
-    filter: brightness(60%);
   }
 }
 
