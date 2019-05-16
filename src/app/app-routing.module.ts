@@ -16,6 +16,7 @@ import { WeatherComponent } from './weather/weather.component';
 import { PrenevtionComponent } from './prenevtion/prenevtion.component';
 import { TripComponent } from './trip/trip.component';
 import { MapComponent } from './map/map.component';
+import { SkinTypeComponent } from './skin-type/skin-type.component';
 
 const routes: Routes = [
   { path: 'news', component: NewsComponent},
@@ -62,6 +63,7 @@ const routes: Routes = [
   { path: 'prevention', component: PrenevtionComponent},
   { path: 'trip', component: TripComponent},
   { path: 'map', component: MapComponent },
+  { path: 'skin-type', component: SkinTypeComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: '**', component: Error404Component}
 ];

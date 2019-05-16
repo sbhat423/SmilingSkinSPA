@@ -49,6 +49,7 @@ import { HAMMER_GESTURE_CONFIG } from '@angular/platform-browser';
 import { GestureConfig } from '@angular/material';
 import { TripComponent } from './trip/trip.component';
 import { MapComponent } from './map/map.component';
+import { SkinTypeComponent } from './skin-type/skin-type.component';
 
 
 @NgModule({
@@ -71,7 +72,8 @@ import { MapComponent } from './map/map.component';
     WeatherComponent,
     PrenevtionComponent,
     TripComponent,
-    MapComponent
+    MapComponent,
+    SkinTypeComponent
   ],
   imports: [
     BrowserModule,

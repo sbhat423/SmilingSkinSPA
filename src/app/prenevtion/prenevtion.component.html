@@ -102,6 +102,7 @@
       <mat-card class="frame">
           <p><br></p>
           <h1>RECOMMENDATION</h1>
+          <p><br><br></p>
           <h2>We will recommend you to put on SPF {{spf_rec}} sunscreen to reduce the risk
             level to low</h2>
         <p><br></p>
@@ -110,19 +111,21 @@
   </div>
 </div>
 
-<div class="grey-block">
-  <div fxFlex=50%>
+<div class="grey-block" fxLayout="row wrap">
+  <div fxFlex.lt-sm=100% fxFlex.gt-md=50% fxLayout="column">
     <p></p>
     <div>
         <h1>WHAT IS THE BEST TYPE OF SUNSCREEN?</h1>
     </div>
     <div>
-
+      <img class="question-img" src="../../assets/img/question.jpeg"/>
+      <p><br></p>
     </div>
   </div>
-  <div fxFlex=50%>
-    <p class="content-text">Please follow Melanoma Institute Australia (2019) strict guidelines to using sunscreen in Australia to ensure that you are well protected:</p>
-    <ul class="content-text-item">
+  <div fxFlex.lt-sm=100% fxFlex.gt-md=50% fxLayout="column" style="padding:15px 20px 15px 20px;">
+    <p><br><br></p>
+    <p>Please follow Melanoma Institute Australia (2019) strict guidelines to using sunscreen in Australia to ensure that you are well protected:</p>
+    <ul>
       <li><p>Using sunscreen with the highest SPF. Currently in Australia, the highest is SPF50+.</p></li>
       <li><p>Your sunscreen should be broad-spectrum. Meaning it will protect you from both kinds of Ultraviolet (UV) rays, UVA and UVB.</p></li>
       <li><p>Applying the right amount of sunscreen. 
@@ -131,50 +134,6 @@
       <li><p>All exposed skin must be thoroughly covered with sunscreen.</p></li>
       <li><p>If you are doing water related activities, ensure that you use a waterproof sunscreen and reapply it at least 2 hours regularly.</p></li>
     </ul>
-    <p class="content-text">Melanoma Institute Australia. (2019). Retrieved from https://www.melanoma.org.au/preventing-melanoma/how-do-i-protect-my-skin/</p>
+    <p>Melanoma Institute Australia. (2019). Retrieved from https://www.melanoma.org.au/preventing-melanoma/how-do-i-protect-my-skin/</p>
   </div>
-</div>
-
-
-
-<div>
-  <div>
-    <p class="second-block" style="margin-top: 0%;"><br>WHAT ARE THE DIFFERENT SKIN TYPES?</p>
-    <p class="content-text">
-        Did you know that there are different skin types and each of them has a different reaction to the sun. 
-        You can't tell what skin type you are by just looking at your own skin. 
-        Therefore, we'll be using a skin typing technique developed by Fitzpatrick called "Fitzpatrick skin typing". 
-        In short, this guy scientifically classify skins into different types based on the skin reactions to the sun. 
-        <br><br>
-        Below is a simple quiz to determine your skin type. 
-        Just answer these simple questions and you will know your skin type in a matter of seconds. 
-        Once you get to know your skin type from the quiz, you can take the right measures to protect yourself and your skin.
-    </p>
-    <p><br></p>
-  </div>
-  <div>
-      <p class="second-block"><br>A simple quiz that will help you identify your skin type.</p>
-    <p><br></p>
-    <iframe id="interactApp5cc12ea1539d8f001457d4fa" width="800" height="600"
-      style="border:none;max-width:100%;margin:0;" allowTransparency="true" frameborder="0"
-      src="https://quiz.tryinteract.com/#/5cc12ea1539d8f001457d4fa?method=iframe"></iframe>
-  </div>
-  <div class="grey-block">
-    <p><br></p>
-    <p class="content-text">
-      This is a semi-subjective classification because it was built by interviewing people's past reactions of being under the sun. 
-      After picking out different trends, six groups were identified (What Are the Fitzpatrick Skin Types?, 2019).
-      <br><br>
-      You may not be able to satisfy all the characteristics of any one type, so you should choose the feature that best describes you (What Are the Fitzpatrick Skin Types?, 2019).
-      <br><br>
-      What Are the Fitzpatrick Skin Types?. (2019). Retrieved from https://www.healthline.com/health/beauty-skin-care/fitzpatrick-skin-types
-    </p>
-    <p><br></p>
-  </div>
-
-  <button mat-icon-button class="up">
-    <a href="prevention#back">
-      <mat-icon>keyboard_arrow_up</mat-icon>
-    </a>
-  </button>
 </div>

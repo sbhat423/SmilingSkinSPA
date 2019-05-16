@@ -24,12 +24,12 @@
         <button mat-button [matMenuTriggerFor]="skinCancerMenu">Skin Cancer<span><mat-icon>expand_more</mat-icon></span></button>
         <mat-menu #skinCancerMenu="matMenu" yPosition="above">
             <button mat-menu-item routerLink="/compare" routerLinkActive="active-list-item">Skin Cancer Statistics</button>
-            <button mat-menu-item routerLink="/skin-cancer">Skin Care Symptoms</button>
+            <button mat-menu-item routerLink="/skin-cancer">Skin Cancer Information</button>
           </mat-menu>
         <button mat-button [matMenuTriggerFor]="aboveMenu">Prevention<span><mat-icon>expand_more</mat-icon></span></button>
         <mat-menu #aboveMenu="matMenu" yPosition="above">
           <button mat-menu-item routerLink="/prevention" routerLinkActive="active-list-item">SPF Recommendation</button>
-          <button mat-menu-item routerLink="/map">Clinics</button>
+          <button mat-menu-item routerLink="/map">Access to Clinics</button>
         </mat-menu>
         <button mat-button routerLink="/trip" routerLinkActive="active-list-item">Plan Your Trip</button>
       </div>
