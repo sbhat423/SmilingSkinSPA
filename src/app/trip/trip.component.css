@@ -4,10 +4,10 @@ img {
   }
   
   .main-image {
-    width:100vw;
-    height: 120vh;
+    max-width: 100%;
     overflow: hidden;
-  }
+    filter: brightness(80%);
+}
   
   div {
     text-align: center;
@@ -126,11 +126,18 @@ mat-form-field {
   position: relative;
   top:10%;
   margin-bottom: 60px;
+  border: 2px solid lightgreen;
+  border-radius: 15px;
 }
 
 .recommendation p {
   padding: 40px 20px 40px 20px;
   text-align: justify;
-  font-size: 30px;
+  font-size: 25px;
+  line-height: 35px;
   font-size: bold;
+}
+
+div .recommendation {
+  margin: 0 auto;
 }
