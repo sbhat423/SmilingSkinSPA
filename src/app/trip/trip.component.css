@@ -67,6 +67,10 @@ div {
   .main-image-wrap {
     max-height: 350px;
   }
+
+  .recommendation {
+    top: 0%;
+  }
 }
 
 .second-block {
@@ -140,7 +144,7 @@ mat-form-field {
 .recommendation {
   width: 80%;
   position: relative;
-  top:10%;
+  top: 10%;
   margin-bottom: 60px;
   border: 2px solid lightgreen;
   border-radius: 15px;
