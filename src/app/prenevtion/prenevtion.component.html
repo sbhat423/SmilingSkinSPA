@@ -74,17 +74,13 @@
         <p></p>
           <h2>CURRENT RISK LEVEL</h2>
           <mat-spinner *ngIf="disabled" style="display:block; margin-left:auto; margin-right:auto;"></mat-spinner>
-          <img *ngIf="dangerlevel == '1' && !disabled" src='../../assets/img/level1.jpeg'
-            style="width: 350px; height:225px">
-          <img *ngIf="dangerlevel == '2' && !disabled" src='../../assets/img/level2.jpeg'
-            style="width: 350px; height:225px">
-          <img *ngIf="dangerlevel == '3' && !disabled" src='../../assets/img/level3.jpeg'
-            style="width: 350px; height:225px">
-          <img *ngIf="dangerlevel == '4' && !disabled" src='../../assets/img/level4.jpeg'
-            style="width: 350px; height:225px">
-          <img *ngIf="dangerlevel == '5' && !disabled" src='../../assets/img/level5.jpeg'
-            style="width: 350px; height:225px">
-       
+          <div class="dangerlevel-image-wrap">
+            <img *ngIf="dangerlevel == '1' && !disabled" src='../../assets/img/level1.jpeg'>
+            <img *ngIf="dangerlevel == '2' && !disabled" src='../../assets/img/level2.jpeg'>
+            <img *ngIf="dangerlevel == '3' && !disabled" src='../../assets/img/level3.jpeg'>
+            <img *ngIf="dangerlevel == '4' && !disabled" src='../../assets/img/level4.jpeg'>
+            <img *ngIf="dangerlevel == '5' && !disabled" src='../../assets/img/level5.jpeg'>
+          </div>
           <mat-slider class='example-margin' [disabled]='disabled' [invert]='invert' [max]='max' [min]='min' [step]='step'
             [thumbLabel]='thumbLabel' [tickInterval]='tickInterval' [(ngModel)]='value' [vertical]='vertical'
             (valueChange)="getReportValue()">

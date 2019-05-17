@@ -23,6 +23,11 @@ div {
     z-index: 10;
 }
 
+.dangerlevel-image-wrap img{
+    width: 350px;
+    max-width: 100%;
+}
+
 @media all and (max-width: 1500px){
     .main-slogan {
         color: white;
