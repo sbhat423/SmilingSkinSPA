@@ -28,6 +28,11 @@ div {
     max-width: 100%;
 }
 
+.question-img {
+    width: 60%;
+    height: 85%;
+}
+
 @media all and (max-width: 1500px){
     .main-slogan {
         color: white;
@@ -70,6 +75,10 @@ div {
   
     .recommendation {
       top: 0%;
+    }
+
+    .question-img {
+        width: 80%;
     }
 }
 
@@ -239,9 +248,4 @@ div {
 
 .grey-block p,ul {
     text-align: justify;
-}
-
-.question-img {
-    width: 60%;
-    height: 85%;
 }
