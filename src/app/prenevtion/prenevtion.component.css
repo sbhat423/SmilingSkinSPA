@@ -33,6 +33,10 @@ div {
     height: 85%;
 }
 
+.prevention-tool-wrap {
+    margin: auto;
+}
+
 @media all and (max-width: 1500px){
     .main-slogan {
         color: white;
@@ -41,6 +45,12 @@ div {
         font-weight: 900;
         font-size: calc(30px + 1vw);
         z-index: 10;
+    }
+}
+
+@media all and (max-width: 1279px) {
+    .recommendation-wrap {
+        margin: auto;
     }
 }
   
@@ -195,29 +205,25 @@ div {
 
 .example-h2 {
     margin: 10px;
-  }
+}
   
-  .example-section {
+.example-section {
     display: flex;
     align-content: center;
     align-items: center;
     height: 60px;
-  }
+}
   
-  /* .example-margin {
-    margin: 10px;
-  } */
-  
-  .mat-slider-horizontal {
+.mat-slider-horizontal {
     width: 300px;
     max-width: 100%;
-  }
+}
   
-  .mat-slider-vertical {
+.mat-slider-vertical {
     height: 300px;
-  }
+}
 
-  .up a mat-icon{
+.up a mat-icon{
     position: absolute;
     top: 90%;
     left: 95%;
