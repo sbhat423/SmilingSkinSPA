@@ -73,6 +73,12 @@ div {
     }
 }
 
+@media all and (max-width: 450px){
+    .recommendation-title {
+        font-size: 3vw;
+    }
+}
+
 .second-block {
     font-weight: bold;
     font-size: xx-large;
@@ -189,12 +195,13 @@ div {
     height: 60px;
   }
   
-  .example-margin {
+  /* .example-margin {
     margin: 10px;
-  }
+  } */
   
   .mat-slider-horizontal {
     width: 300px;
+    max-width: 100%;
   }
   
   .mat-slider-vertical {
