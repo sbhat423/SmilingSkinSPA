@@ -50,6 +50,12 @@ div {
   }
 }
 
+@media all and (max-width: 800px) {
+  .main-image-wrap {
+    max-height: 340px;
+  }
+}
+
 @media all and (max-width: 700px) {
   .main-slogan {
       color: white;
@@ -60,7 +66,7 @@ div {
   }
 
   .main-image-wrap {
-    max-height: 350px;
+    max-height: 380px;
   }
 
   .recommendation {

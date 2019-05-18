@@ -32,7 +32,7 @@ div {
         font-size: calc(30px + 1vw);
         z-index: 10;
     }
-}
+  }
   
 @media all and (max-width: 1200px) {
     .main-image-wrap {
@@ -49,6 +49,12 @@ div {
       max-height: 400px;
     }
 }
+
+@media all and (max-width: 800px) {
+    .main-image-wrap {
+      max-height: 340px;
+    }
+}
   
 @media all and (max-width: 700px) {
     .main-slogan {
@@ -60,7 +66,7 @@ div {
     }
   
     .main-image-wrap {
-      max-height: 350px;
+      max-height: 380px;
     }
 }
 
@@ -204,8 +210,6 @@ div {
 
 .grey-block {
     background-color: #efefef;
-    padding-top: 10px;
-    padding-bottom: 10px;
 }
 
 .blue-block {
