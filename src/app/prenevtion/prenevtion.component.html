@@ -2,11 +2,11 @@
   <div class="main-image-wrap">
     <img src='../../assets/img/prevention.jpg' class="main-image" />
   </div>
-  <p class="main-slogan">SPF RECOMMENDATION</p>
+  <p id="current-risk" class="main-slogan">SPF RECOMMENDATION</p>
 </div>
 <div>
   <p class="second-block"><br>RECOMMENDATIONS BASED ON THE CURRENT RISK LEVEL</p>
-  <p>If you are unsure what skin type you have, we suggest you to check your skin type with our <a routerLink="/skin-type">Quiz</a>. Don't worry, it's just 3 simple questions.</p>
+  <p>If you are unsure what skin type you have, we suggest you to check your skin type with our <a href="/skin-type#quiz">Quiz</a>. Don't worry, it's just 3 simple questions.</p>
 </div>
 <div>
   <div class="parameters" style="display: inline-block">
@@ -101,7 +101,7 @@
             <h1>RECOMMENDATION</h1>
           </div>
           <p><br><br></p>
-          <h2>We will recommend you to put on SPF {{spf_rec}} sunscreen to reduce the risk
+          <h2>We will recommend you to put on SPF <span style="color:red">{{spf_rec}}</span> sunscreen to reduce the risk
             level to low</h2>
         <p><br></p>
       </mat-card>
