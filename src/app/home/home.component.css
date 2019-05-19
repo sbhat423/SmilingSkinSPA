@@ -55,6 +55,21 @@ div {
     text-decoration: none;
 }
 
+.sub-heading-text {
+    font-size: 1em;
+    max-height: 3em;
+    line-height: 1em;
+    overflow: hidden;
+    /* white-space: nowrap;
+    text-overflow: ellipsis; */
+}
+
+/* .sub-heading-text:hover {
+    overflow: visible;
+    white-space: normal;
+    height: auto;
+} */
+
 @media all and (max-width: 1300px){
     .sub-slogan {
         color: white;
@@ -146,6 +161,7 @@ div {
 .sub-heading {
     font-weight: bold;
     font-size: x-large;
+    white-space: nowrap;
 }
 
 .block2 div {
