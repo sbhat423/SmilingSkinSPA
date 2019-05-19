@@ -16,7 +16,7 @@ export class PrenevtionComponent implements OnInit {
   activities = 'Picnic,Barbecue';
   uv: string;
   dangerlevel: string;
-  spf_rec = '';
+  spf_rec: number;
   defaultFlag = true;
 
   autoTicks = false;

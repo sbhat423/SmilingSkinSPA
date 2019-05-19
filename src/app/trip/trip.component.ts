@@ -16,7 +16,7 @@ minDate = new Date();
 maxDate = new Date();
 location = 'Alpine National Park';
 destination: TravelLocation[];
-spf_rec: string;
+spf_rec: number;
 disabled = false;
 formattedDate: string;
 readableDate: string;
