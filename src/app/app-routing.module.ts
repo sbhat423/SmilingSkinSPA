@@ -17,6 +17,7 @@ import { PrenevtionComponent } from './prenevtion/prenevtion.component';
 import { TripComponent } from './trip/trip.component';
 import { MapComponent } from './map/map.component';
 import { SkinTypeComponent } from './skin-type/skin-type.component';
+import { ReferencesComponent } from './references/references.component';
 
 const routes: Routes = [
   { path: 'news', component: NewsComponent},
@@ -64,6 +65,7 @@ const routes: Routes = [
   { path: 'trip', component: TripComponent},
   { path: 'map', component: MapComponent },
   { path: 'skin-type', component: SkinTypeComponent},
+  { path: 'references', component: ReferencesComponent},
   { path: '', redirectTo: 'home', pathMatch: 'full'},
   { path: '**', component: Error404Component}
 ];

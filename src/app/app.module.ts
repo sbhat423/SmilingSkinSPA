@@ -50,6 +50,7 @@ import { GestureConfig } from '@angular/material';
 import { TripComponent } from './trip/trip.component';
 import { MapComponent } from './map/map.component';
 import { SkinTypeComponent } from './skin-type/skin-type.component';
+import { ReferencesComponent } from './references/references.component';
 
 
 @NgModule({
@@ -73,7 +74,8 @@ import { SkinTypeComponent } from './skin-type/skin-type.component';
     PrenevtionComponent,
     TripComponent,
     MapComponent,
-    SkinTypeComponent
+    SkinTypeComponent,
+    ReferencesComponent
   ],
   imports: [
     BrowserModule,

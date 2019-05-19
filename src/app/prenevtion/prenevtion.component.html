@@ -101,8 +101,13 @@
             <h1>RECOMMENDATION</h1>
           </div>
           <p><br><br></p>
-          <h2>We will recommend you to put on SPF <span style="color:red">{{spf_rec}}</span> sunscreen to reduce the risk
-            level to low</h2>
+          <h2 *ngIf="spf_rec>0">
+            We will recommend you to put on SPF <span style="color:red">{{spf_rec}}</span> sunscreen to reduce the risk
+            level to low
+          </h2>
+          <h2 *ngIf="spf_rec==0">
+            No action is needed as you are at low risk, but we would recommend you to put on some sunscreen.
+          </h2>
         <p><br></p>
       </mat-card>
       </div>

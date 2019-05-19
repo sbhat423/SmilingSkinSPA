@@ -25,7 +25,7 @@
                 <mat-option value="Healesville Sanctuary">Healesville Sanctuary</mat-option>
                 <mat-option value="High Country">High Country</mat-option>
                 <mat-option value="Macedon">Macedon</mat-option>
-                <mat-option value="Melbourne City">Melbourn City</mat-option>
+                <mat-option value="Melbourne City">Melbourne City</mat-option>
                 <mat-option value="Mount Dandenong">Mount Dandenong</mat-option>
                 <mat-option value="Peninsula">Peninsula</mat-option>
                 <mat-option value="Phillip Island">Phillip Island</mat-option>
@@ -88,8 +88,11 @@
       <div fxFlex.sm=100% fxFlex.gt-md=50% fxLayout="column">
         <p class="second-block" style="margin-bottom: 15px;">How to Prepare</p>
         <div class="recommendation">
-          <p><b>
-            We will recommend you to put on SPF <span style="color:red">{{spf_rec}}</span> sunscreen and reapply every two hours, if you are travelling to {{location}} on {{readableDate}}.</b>
+          <p *ngIf="spf_rec>0">
+            <b>We will recommend you to put on SPF <span style="color:red">{{spf_rec}}</span> sunscreen and reapply every two hours if you are travelling to {{location}} on {{readableDate}}.</b>
+          </p>
+          <p *ngIf="spf_rec==0">
+            <b>No sunscreen needed, but we'd recommend you to put on some if you are travelling to {{location}} on {{readableDate}}.</b>
           </p>
         </div>
         <p><br></p>
