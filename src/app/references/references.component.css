@@ -1,0 +1,85 @@
+.main-image-wrap {
+    max-height: 500px;
+    overflow: hidden;
+  }
+  
+.main-image {
+    width: 100%;
+    filter: brightness(60%);
+}
+
+div {
+    text-align: center;
+}
+
+.main-slogan {
+    color: white;
+    position: absolute;
+    top: 280px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 900;
+    font-size: 300%;
+    z-index: 10;
+}
+
+@media all and (max-width: 1500px){
+    .main-slogan {
+        color: white;
+        position: absolute;
+        top: 21vw;
+        font-weight: 900;
+        font-size: calc(30px + 1vw);
+        z-index: 10;
+    }
+}
+  
+@media all and (max-width: 1200px) {
+    .main-image-wrap {
+      max-height: 450px;
+    }
+}
+  
+@media all and (max-width: 1000px) {
+    .main-slogan {
+      top: 23vw;
+    }
+  
+    .main-image-wrap {
+      max-height: 400px;
+    }
+}
+
+@media all and (max-width: 800px) {
+    .main-image-wrap {
+      max-height: 340px;
+    }
+}
+  
+@media all and (max-width: 700px) {
+    .main-slogan {
+        color: white;
+        position: absolute;
+        top: 35vw;
+        font-weight: 900;
+        z-index: 10;
+    }
+  
+    .main-image-wrap {
+      max-height: 380px;
+    }
+}
+
+.second-block {
+    font-weight: bold;
+    font-size: xx-large;
+    color: black;
+}
+
+.content-text {
+    text-align: left;
+    font-size:16px;
+    font-family: Arial;
+    line-height: 22.35px;
+    padding: 40px;
+}
