@@ -3,8 +3,7 @@
 </mat-card>
 -->
 <mat-card>
-    <p></p>
-    <div fxLayout="row wrap" ngClass.lt-md="mobile-footer">
+    <div class="footer-text-wrap" fxLayout="row wrap" ngClass.lt-md="mobile-footer">
         <div fxFlex.lt-md=100% fxFlex.gt-sm=33.33% fxLayout="column">
             <a routerLink="/home">Home</a>
             <a routerLink="/compare">Skin Cancer Statistics</a>
@@ -15,11 +14,14 @@
             <a routerLink="/prevention">SPF Recommendation</a>
             <a routerLink="/map">Find Nearby Clinics</a>
             <a routerLink="/trip">Plan Your Trip</a>
+            <a routerLink="/references">References</a>
         </div>
         <div fxFlex.lt-md=100% fxFlex.gt-sm=33.33% fxLayout="column">
-            <div fxHide.gt-sm="true" fxFlex=100%><p></p></div>
-            <a><b>Made by VectorFive @ 2019</b></a>
+            <div fxHide.gt-sm="true" fxFlex=100%><br></div>
+            <a class="team-text"><b>Made by VectorFive @ 2019</b></a>
+            <br>
+            <a routerLink="/disclaimer">Disclaimer of Liability</a>
         </div>
+        <p class="disclaimer" fxFlex.lt-md=100% fxFlex.gt-sm=100%><b>Disclaimer:</b> We provide information to the best of our knowledge. If you are experiencing any health issues, please seek medical advice from a qualified health professional. Read our full <a routerLink="/disclaimer">Disclaimer of Liability</a>.</p>
     </div>
-    <p></p>
 </mat-card>

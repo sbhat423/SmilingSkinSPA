@@ -51,6 +51,7 @@ import { TripComponent } from './trip/trip.component';
 import { MapComponent } from './map/map.component';
 import { SkinTypeComponent } from './skin-type/skin-type.component';
 import { ReferencesComponent } from './references/references.component';
+import { DisclaimerComponent } from './disclaimer/disclaimer.component';
 
 
 @NgModule({
@@ -75,7 +76,8 @@ import { ReferencesComponent } from './references/references.component';
     TripComponent,
     MapComponent,
     SkinTypeComponent,
-    ReferencesComponent
+    ReferencesComponent,
+    DisclaimerComponent
   ],
   imports: [
     BrowserModule,
