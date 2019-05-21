@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit {
   }
 
   fetchCurrentData() {
-    console.log('fetch current data');
+    console.log('fetch weather data');
     this.weatherService.getWeatherData().subscribe(
       data => {
         this.icon = data['currently']['icon'];
@@ -51,7 +51,7 @@ export class HomeComponent implements OnInit {
   }
 
   storeWeatherData() {
-    console.log('store data');
+    console.log('store weather data');
     this.weatherService.getWeatherData().subscribe(
       data => {
         this.hourlyData = data['hourly']['data'];

@@ -27,7 +27,8 @@ export class PrenevtionComponent implements OnInit {
   showTicks = true;
   step = 1;
   thumbLabel = true;
-  value = 0;
+  current_value = 0;
+  selected_value = 0;
   vertical = false;
 
   constructor(private http: HttpClient, private weatherService: WeatherService) { }
@@ -46,14 +47,15 @@ export class PrenevtionComponent implements OnInit {
       data => {
         this.uv = data['currently']['uvIndex'];
     console.log('uv', this.uv);
-    this.value = Number(this.uv);
-    console.log('value', this.value);
+    this.current_value = Number(this.uv);
+    this.selected_value = Number(this.uv);
+    console.log('value', this.current_value);
     });
   }
 
   getReportValuePre() {
     this.disabled = true;
-    this.uv = this.value.toString();
+    this.uv = this.selected_value.toString();
     console.log(this.uv, this.spf, this.skinType, this.duration, this.fabric, this.activities);
     this.http.get('https://x6hc4g61ok.execute-api.ap-southeast-2.amazonaws.com/production/activity', {
       params: {
@@ -81,7 +83,7 @@ export class PrenevtionComponent implements OnInit {
   getReportValue() {
     this.defaultFlag = false;
     this.disabled = true;
-    this.uv = this.value.toString();
+    this.uv = this.selected_value.toString();
     console.log(this.uv, this.spf, this.skinType, this.duration, this.fabric, this.activities);
     this.http.get('https://x6hc4g61ok.execute-api.ap-southeast-2.amazonaws.com/production/activity', {
       params: {

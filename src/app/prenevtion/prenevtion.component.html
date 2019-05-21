@@ -6,7 +6,7 @@
 </div>
 <div>
   <p class="second-block"><br>RECOMMENDATIONS BASED ON THE CURRENT RISK LEVEL</p>
-  <p class="quiz">If you are unsure what skin type you have, we suggest you to check your skin type with our <a href="/skin-type#quiz">Quiz</a>. Don't worry, it's just 3 simple questions.</p>
+  <p class="quiz">If you are unsure what skin type you have, we suggest you to check your skin type with just 3 simple questions from our <a href="/skin-type#quiz">Quiz</a>.</p>
 </div>
 <div>
   <div class="parameters" style="display: inline-block">
@@ -83,12 +83,15 @@
             <img *ngIf="dangerlevel == '5' && !disabled" src='../../assets/img/level5.jpeg'>
           </div>
           <mat-slider class='example-margin' [disabled]='disabled' [invert]='invert' [max]='max' [min]='min' [step]='step'
-            [thumbLabel]='thumbLabel' [tickInterval]='tickInterval' [(ngModel)]='value' [vertical]='vertical'
+            [thumbLabel]='thumbLabel' [tickInterval]='tickInterval' [(ngModel)]='selected_value' [vertical]='vertical'
             (valueChange)="getReportValue()">
           </mat-slider>
-          <p>UV Index: {{value}}</p>
+          <!-- <p><b *ngIf="current_value == selected_value">Current UV Index: {{current_value}}</b></p>
+          <p><b *ngIf="current_value != selected_value">Selected UV Index: {{selected_value}}</b></p> -->
+          <p>Current UV Index: {{current_value}}</p>
+          <p>Selected UV Index: {{selected_value}}</p>
           <p *ngIf="dangerlevel == '1'">Low: You have 0-10% chance to Burn under the Sun.</p>
-          <p *ngIf="dangerlevel == '2'">Median: You have 10-20% chance to Burn under the Sun.</p>
+          <p *ngIf="dangerlevel == '2'">Medium: You have 10-20% chance to Burn under the Sun.</p>
           <p *ngIf="dangerlevel == '3'">High: You have 20-30% chance to Burn under the Sun.</p>
           <p *ngIf="dangerlevel == '4'">Very high: You have 30-40% chance to Burn under the Sun.</p>
           <p *ngIf="dangerlevel == '5'">Extremely high: You have greater than 40% chance to Burn under the Sun.</p>
