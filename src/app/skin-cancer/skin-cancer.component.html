@@ -1,25 +1,18 @@
-<!-- <div class="main-image">
-  <mat-card>
-    <img src="../../assets/img/skin-page.jpg"/>
-  </mat-card>
-</div> -->
 <div>
   <div class="main-image-wrap">
     <img src='../../assets/img/skin-page.jpg' class="main-image" />
   </div>
   <p class="main-slogan">WHAT IS SKIN CANCER</p>
 </div>
-<!-- <mat-form-field>
-  <mat-label>Favorite food</mat-label>
-  <mat-select>
-    <mat-option routerLink="/skin-cancer/cancer" value="Skin Cancer">Skin Cancer</mat-option>
-    <mat-option routerLink="/skin-cancer/types" value="Types">Types</mat-option>
-    <mat-option routerLink="/skin-cancer/causes" value="Causes">Causes</mat-option>
-    <mat-option routerLink="/skin-cancer/symptoms" value="Symptoms">Symptoms</mat-option>
-    <mat-option routerLink="/skin-cancer/diagnosis" value="Diagnosis">Diagnosis</mat-option>
-    <mat-option routerLink="/skin-cancer/treatment" value="Treatment">Treatment</mat-option>
-  </mat-select>
-</mat-form-field> -->
+<button class="menu-button" mat-raised-button [matMenuTriggerFor]="menu">Menu</button>
+<mat-menu #menu="matMenu">
+  <button class="button-wrap" mat-menu-item routerLink="/skin-cancer/cancer" routerLinkActive="active">Skin Cancer</button>
+  <button class="button-wrap" mat-menu-item routerLink="/skin-cancer/types" routerLinkActive="active">Types</button>
+  <button class="button-wrap" mat-menu-item routerLink="/skin-cancer/causes" routerLinkActive="active">Causes</button>
+  <button class="button-wrap" mat-menu-item routerLink="/skin-cancer/symptoms" routerLinkActive="active">Symptoms</button>
+  <button class="button-wrap" mat-menu-item routerLink="/skin-cancer/diagnosis" routerLinkActive="active">Diagnosis</button>
+  <button class="button-wrap" mat-menu-item routerLink="/skin-cancer/treatment" routerLinkActive="active">Treatment</button>
+</mat-menu>
 <div fxLayout fxLayout.lt-md="column">
   <div fxHide.lt-md="true" class="sub-nav" fxFlex=25%>
     <mat-card class="mat-elevation-z8">
