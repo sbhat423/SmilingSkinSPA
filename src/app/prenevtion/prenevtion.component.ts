@@ -41,6 +41,10 @@ export class PrenevtionComponent implements OnInit {
     }, 500);
   }
 
+  backToTop(){
+    document.getElementsByTagName('mat-sidenav-content')[0].scrollTo(0, 0);
+  }
+
   fetchCurrentData() {
     console.log('fetch current data');
     this.weatherService.getWeatherData().subscribe(

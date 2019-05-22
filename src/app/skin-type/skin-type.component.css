@@ -23,6 +23,43 @@ div {
     z-index: 10;
 }
 
+.back-to-top {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    bottom: 45px;
+    right: 45px;
+    background: #3f51b5;
+    text-align: center;
+    line-height: 50px;
+    z-index: 1;
+    opacity: 0.5;
+}
+
+.back-to-top:hover {
+    opacity: initial;
+}
+
+.up-arrow {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 12px;
+    color: white;
+}
+
+/* .back-to-top {
+    position: sticky;
+    width: 50px;
+    height: 50px;
+    bottom: 45px;
+    right: 45px;
+    background: #3f51b5;
+    text-align: center;
+    line-height: 50px;
+    display: inline-block;
+    margin-bottom: 10px;
+} */
+
 @media all and (max-width: 1500px){
     .main-slogan {
         color: white;
@@ -131,14 +168,6 @@ div {
     padding: 0px;
 }
 
-.up a mat-icon{
-    position: absolute;
-    top: 80%;
-    left: 1%;
-    font: 200%;
-    position: fixed;
-}
-
 .sub-nav mat-card {
     position: absolute;
     top: 40%;
@@ -183,35 +212,25 @@ div {
 
 .example-h2 {
     margin: 10px;
-  }
+}
   
-  .example-section {
+.example-section {
     display: flex;
     align-content: center;
     align-items: center;
     height: 60px;
-  }
+}
   
-  .example-margin {
+.example-margin {
     margin: 10px;
-  }
+}
   
-  .mat-slider-horizontal {
+.mat-slider-horizontal {
     width: 300px;
-  }
+}
   
-  .mat-slider-vertical {
+.mat-slider-vertical {
     height: 300px;
-  }
-
-  .up a mat-icon{
-    position: absolute;
-    top: 90%;
-    left: 95%;
-    font: 200%;
-    position: fixed;
-    z-index: 999;
-    color: black;
 }
 
 .grey-block {

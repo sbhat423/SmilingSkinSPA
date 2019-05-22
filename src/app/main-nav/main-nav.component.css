@@ -63,6 +63,7 @@ button {
   }
   .mat-toolbar .hamburger {
     display: inline;
+    padding-right: 16px;
   }
   .mat-toolbar .buttons-topbar {
     display: none;

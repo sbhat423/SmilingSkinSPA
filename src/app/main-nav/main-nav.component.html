@@ -2,15 +2,13 @@
   <mat-sidenav #drawer class="sidenav" fixedInViewport="true">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="/home">Home</a>
-      <a mat-list-item routerLink="/compare">Skin Cancer Statistics</a>
-      <a mat-list-item routerLink="/skin-cancer">What is Skin Cancer</a>
-      <a mat-list-item routerLink="/skin-type">Check Your Skin Type</a>
-      <a mat-list-item routerLink="/prevention">SPF Recommendation</a>
-      <a mat-list-item routerLink="/map">Find Nearby Clinics</a>
-      <a mat-list-item routerLink="/trip">Plan Your Trip</a>
-      <a mat-list-item routerLink="/references">References</a>
-      <a mat-list-item routerLink="/disclaimer">Disclaimer of Liability</a>
+      <a mat-list-item routerLink="/home" mat-list-item (click)="drawer.close()">Home</a>
+      <a mat-list-item routerLink="/compare" mat-list-item (click)="drawer.close()">Skin Cancer Statistics</a>
+      <a mat-list-item routerLink="/skin-cancer" mat-list-item (click)="drawer.close()">What is Skin Cancer</a>
+      <a mat-list-item routerLink="/skin-type" mat-list-item (click)="drawer.close()">Check Your Skin Type</a>
+      <a mat-list-item routerLink="/prevention" mat-list-item (click)="drawer.close()">SPF Recommendation</a>
+      <a mat-list-item routerLink="/map" mat-list-item (click)="drawer.close()">Find Nearby Clinics</a>
+      <a mat-list-item routerLink="/trip" mat-list-item (click)="drawer.close()">Plan Your Trip</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>

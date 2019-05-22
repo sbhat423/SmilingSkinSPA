@@ -5,7 +5,7 @@
   <p class="main-slogan">WHAT IS SKIN CANCER</p>
 </div>
 <button class="menu-button" mat-raised-button [matMenuTriggerFor]="menu">Menu</button>
-<mat-menu #menu="matMenu">
+<mat-menu #menu="matMenu" yPosition="below">
   <button class="button-wrap" mat-menu-item routerLink="/skin-cancer/cancer" routerLinkActive="active">Skin Cancer</button>
   <button class="button-wrap" mat-menu-item routerLink="/skin-cancer/types" routerLinkActive="active">Types</button>
   <button class="button-wrap" mat-menu-item routerLink="/skin-cancer/causes" routerLinkActive="active">Causes</button>

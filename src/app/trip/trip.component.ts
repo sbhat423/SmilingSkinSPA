@@ -27,9 +27,14 @@ readableDate: string;
     private http: HttpClient) { }
 
   ngOnInit() {
+    document.getElementsByTagName('mat-sidenav-content')[0].scrollTo(0, 0);
     this.getTravelData();
     this.maxDate.setDate(this.minDate.getDate() + 6);
     this.getResult();
+  }
+
+  backToTop(){
+    document.getElementsByTagName('mat-sidenav-content')[0].scrollTo(0, 0);
   }
 
   getTravelData() {

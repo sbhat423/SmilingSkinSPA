@@ -4,13 +4,25 @@ mat-card {
     padding: 20px;
 }
 
-mat-card p {
+mat-card-content p {
     text-align: justify;
     text-justify: inter-word;
 }
 
+.page-nav{
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 ul li {
-    text-align: justify;
+    text-align: left;
 }
 
 p {

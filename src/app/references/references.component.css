@@ -74,6 +74,8 @@ div {
     font-weight: bold;
     font-size: xx-large;
     color: black;
+    margin-top: 0%;
+    margin-bottom: 0%;
 }
 
 .content-text {
@@ -82,4 +84,13 @@ div {
     font-family: Arial;
     line-height: 22.35px;
     padding: 40px;
+}
+
+a {
+    text-decoration: none;
+    word-wrap: break-word;
+}
+
+a:hover {
+    text-decoration: underline;
 }
