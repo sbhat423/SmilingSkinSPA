@@ -35,6 +35,10 @@ export class HomeComponent implements OnInit {
     //  }, 600000);
   }
 
+  backToTop(){
+    document.getElementsByTagName('mat-sidenav-content')[0].scrollTo(0, 0);
+  }
+
   fetchCurrentData() {
     console.log('fetch weather data');
     this.weatherService.getWeatherData().subscribe(

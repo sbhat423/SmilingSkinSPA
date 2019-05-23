@@ -19,4 +19,7 @@ export class CompareComponent implements OnInit {
     }, 7000);
   }
 
+  backToTop(){
+    document.getElementsByTagName('mat-sidenav-content')[0].scrollTo(0, 0);
+  }
 }

@@ -1,8 +1,7 @@
 <div>
     <div class="main-image-wrap">
-        <img src='../../assets/img/homepage.jpg' class="main-image"/>
+        <img src='../../assets/img/homepage-new.jpg' class="main-image"/>
     </div>
-    <img src='../../assets/img/homepage-mobile.jpg' class="main-image-mobile"/>
     <div fxHide.lt-md="true" class="sub-nav">
         <p matTooltip="weather summary" *ngIf="this.icon == 'clear-night'"><i class="wi wi-night-clear"></i>&nbsp;Clear Night</p>
         <p matTooltip="weather summary" *ngIf="this.icon == 'clear-day'"><i class="wi wi-day-sunny"></i>&nbsp;Clear Day</p>
@@ -19,11 +18,15 @@
         <p matTooltip="cloud cover %"><i class="wi wi-cloud"></i>&nbsp;&nbsp;&nbsp;{{this.cloudCover}}%</p>
         <p matTooltip="uv index"><i class="wi wi-day-sunny"></i>&nbsp;UV:&nbsp;&nbsp;&nbsp;{{this.uvIndex}}</p>
     </div>
-    <p class="sub-slogan">A Skin Cancer Free Future</p>
-    <p class="main-slogan">SUN PROTECTION FOR EVERYONE</p>
+    <p class="main-slogan">
+        <span class="sub-slogan">A Skin Cancer Free Future</span>
+        <br>
+        <span class="top">SUN PROTECTION</span>
+        <span class="bottom"> FOR EVERYONE</span>
+    </p>
     <button class="read-more mat-elevation-z8">
         <a href="home#features">
-            Learn More
+            Learn More!
         </a>
     </button>
 </div>
@@ -48,7 +51,13 @@
     </div> 
 </div>
 <div>
-    <p id="features" class="second-block">CREATING A SKIN CANCER FREE FUTURE</p>
+    <p id="features" class="second-block">OUR GOAL</p>
+    <p class="content-text">We believed that the international student community should be aware of the dangers of skin cancer. 
+        Some of them could have just flowed in from another country or maybe planning a trip to "hotspots" in Australia.
+        Most of them don't know how damaging the UV rays can be in Australia, especially during the Summer seasons. 
+        Therefore, we want to prepare them to defend themselves against the Sun by providing the necessary tools to avoid getting skin cancer.
+        That's why, we are committed to helping raise awareness of skin cancer among them.
+    </p>
 </div>
 <div  fxLayout="row wrap" class="block2">
     <div fxFlex.xs=100% fxFlex.gt-xs=50%  fxFlex.gt-md=25% fxLayout="column">
@@ -62,7 +71,7 @@
         <a routerLink="/prevention"><mat-icon class="circle-icon md ">healing</mat-icon></a>
         <div>
             <p class="sub-heading">Prevention</p>
-            <p class="sub-heading-text">Check your current risk level of getting burns under the sun and our recommendations to avoid it.</p>
+            <p class="sub-heading-text">Check your current risk level of getting burned under the sun and our recommendations to avoid it.</p>
         </div>
     </div>
     <div fxFlex.xs=100% fxFlex.gt-xs=50%  fxFlex.gt-md=25% fxLayout="column">
@@ -80,3 +89,4 @@
         </div>
     </div>
 </div>
+<a [routerLink]="" (click)=backToTop() class="back-to-top"><mat-icon class="up-arrow">arrow_upwards</mat-icon></a>

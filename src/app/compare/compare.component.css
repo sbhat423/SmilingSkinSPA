@@ -22,7 +22,11 @@
 .second-block {
     font-weight: bold;
     font-size: xx-large;
-    text-align: left;
+}
+
+.world-map {
+    height: 827px;
+    width: 1000px;
 }
 
 @media all and (max-width: 1500px){
@@ -41,7 +45,14 @@
       max-height: 450px;
     }
 }
-  
+
+@media all and (max-width: 1022px) {
+    .world-map {
+        width: 500px;
+        height: 1627px;
+    }
+}
+
 @media all and (max-width: 1000px) {
     .main-slogan {
       top: 23vw;
@@ -64,6 +75,7 @@
     }
 }
 
+
 @media all and (max-width: 700px) {
     .main-slogan {
         color: white;
@@ -75,6 +87,39 @@
   
     .main-image-wrap {
       max-height: 380px;
+    }
+}
+
+@media all and (max-width: 630px) {
+    .main-slogan {
+        color: white;
+        position: absolute;
+        top: 35vw;
+        font-weight: 900;
+        z-index: 10;
+    }
+  
+    .main-image-wrap {
+      max-height: 380px;
+    }
+
+    .world-map {
+        width: 500px;
+        height: 1627px;
+    }
+}
+
+@media all and (max-width: 550px) {
+    .world-map {
+        width: 400px;
+        height: 1627px;
+    }
+}
+
+@media all and (max-width: 430px) {
+    .world-map {
+        width: 300px;
+        height: 1627px;
     }
 }
 
@@ -92,11 +137,6 @@
 .container img {
     width: 100%;
     height: auto;
-}
-
-iframe {
-    min-height: 900px;
-    min-width: 1000px;
 }
 
 div {
@@ -168,7 +208,7 @@ div {
     text-align: left;
     font-size:15px;
     line-height: 22.35px;
-    padding: 0px 40px 0px 10px;
+    padding: 0px 40px 0px 40px;
 }
 
 .content-text-item {
@@ -180,12 +220,35 @@ div {
 
 .example-h2 {
     margin: 10px;
-  }
+}
   
-  .example-section {
+.example-section {
     display: flex;
     align-content: center;
     align-items: center;
     height: 60px;
-  }
+}
 
+.back-to-top {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 30px;
+    background: #3f51b5;
+    text-align: center;
+    line-height: 50px;
+    z-index: 1;
+    opacity: 0.5;
+}
+  
+.back-to-top:hover {
+    opacity: initial;
+}
+  
+.up-arrow {
+    font-size: 24px;
+    font-weight: bold;
+    padding: 18px;
+    color: white;
+}

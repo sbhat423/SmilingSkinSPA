@@ -9,8 +9,12 @@ mat-card-content .info {
     text-justify: inter-word;
 }
 
-.page-nav{
+.page-nav {
     text-align: center;
+}
+
+.top, .next {
+    white-space: nowrap;
 }
 
 a {
