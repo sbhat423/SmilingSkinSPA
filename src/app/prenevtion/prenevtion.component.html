@@ -84,10 +84,14 @@
           </div>
           <mat-slider class='example-margin' [disabled]='disabled' [invert]='invert' [max]='max' [min]='min' [step]='step'
             [thumbLabel]='thumbLabel' [tickInterval]='tickInterval' [(ngModel)]='selected_value' [vertical]='vertical'
-            (valueChange)="getReportValue()">
+            (valueChange)="getReportValue()" matTooltip="Select a UV index" matTooltipPosition="right">
           </mat-slider>
-          <p [ngStyle]="{'font-weight': (current_value == selected_value) ? 'bold' : 'normal'}">Current UV Index: {{current_value}}</p>
-          <p [ngStyle]="{'font-weight': (current_value != selected_value) ? 'bold' : 'normal'}">Chosen UV Index: {{selected_value}}</p>
+          <p [ngStyle]="{'font-weight': (current_value == selected_value) ? 'bold' : 'normal'}">
+            <span matTooltip="Based on the current weather" matTooltipPosition="right" matTooltipHideDelay="500">Current UV Index: {{current_value}}</span>
+          </p>
+          <p [ngStyle]="{'font-weight': (current_value != selected_value) ? 'bold' : 'normal'}">
+            <span matTooltip="Based on your selection" matTooltipPosition="right" matTooltipHideDelay="500" >Chosen UV Index: {{selected_value}}</span>
+          </p>
           <b>
             <p *ngIf="dangerlevel == '1'"><span style="color:green">Low</span>: You have 0-10% chance to Burn under the Sun.</p>
             <p *ngIf="dangerlevel == '2'"><span style="color:rgb(70, 167, 199)">Medium</span>: You have 10-20% chance to Burn under the Sun.</p>

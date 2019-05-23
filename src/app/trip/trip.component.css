@@ -47,6 +47,10 @@ div {
   color: white;
 }
 
+mat-form-field {
+  padding: 0px;
+}
+
 @media all and (max-width: 1500px){
   .main-slogan {
       color: white;
@@ -71,6 +75,13 @@ div {
 
   .main-image-wrap {
     max-height: 400px;
+  }
+}
+
+@media all and (max-width: 960px) {
+  mat-form-field {
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 
@@ -150,10 +161,6 @@ div {
 .frame {
   border-radius: 5%;
   border-color: red;
-}
-
-mat-form-field {
-  padding: 20px;
 }
 
 .img-container {
