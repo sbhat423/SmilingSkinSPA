@@ -24,6 +24,11 @@
     font-size: xx-large;
 }
 
+.world-map-wrap {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 .world-map {
     height: 827px;
     width: 1000px;
