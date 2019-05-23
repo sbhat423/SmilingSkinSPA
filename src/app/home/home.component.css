@@ -136,6 +136,12 @@ div {
     }
 }
 
+@media all and (max-width: 600px) {
+    .content-text {
+        padding: 0px 40px 40px 40px;
+    }
+}
+
 @media all and (max-width: 420px) {
     .main-slogan {
         top: 30vw;
