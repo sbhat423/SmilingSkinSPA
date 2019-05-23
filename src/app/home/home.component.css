@@ -73,7 +73,7 @@ div {
 
 .sub-nav-mobile {
     padding: 20px;
-    z-index: 999;
+    z-index: 998;
     border: 0px;
 }
 
@@ -157,7 +157,7 @@ div {
     .content-text {
         padding: 0px 40px 40px 40px;
     }
-    
+
     .sub-nav-mobile p {
         margin-left: 20px;
     }
