@@ -85,6 +85,14 @@ a:hover {
     margin-bottom: 0px;
 }
 
+.skin-type {
+    white-space: nowrap;
+}
+
+/* .check-your {
+    white-space: nowrap;
+} */
+
 @media all and (max-width: 1500px){
     .main-slogan {
         color: white;
@@ -139,6 +147,12 @@ a:hover {
 
     .content-text-disclaimer {
         padding: 40px 40px 40px 40px;
+    }
+}
+
+@media all and (max-width: 420px) {
+    .main-slogan {
+        font-size: calc(25px + 1vw);
     }
 }
 

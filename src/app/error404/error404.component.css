@@ -68,3 +68,9 @@ div {
       max-height: 450px;
     }
 }
+
+@media all and (max-width: 420px) {
+  .main-slogan {
+      font-size: calc(25px + 1vw);
+  }
+}

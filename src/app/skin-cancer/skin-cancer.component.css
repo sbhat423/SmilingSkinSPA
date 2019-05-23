@@ -89,6 +89,11 @@
     }
 }
 
+@media all and (max-width: 420px) {
+    .main-slogan {
+        font-size: calc(25px + 1vw);
+    }
+}
 
 mat-card {
     margin: 20px 20px 20px 20px;

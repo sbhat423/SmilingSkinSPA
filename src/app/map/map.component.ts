@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./map.component.css']
 })
 export class MapComponent implements OnInit {
+  pageLoaded = true;
 
   constructor() { }
 
@@ -13,7 +14,13 @@ export class MapComponent implements OnInit {
     document.getElementsByTagName('mat-sidenav-content')[0].scrollTo(0, 0);
   }
 
-  backToTop(){
+  ngAfterViewInit() {
+    setTimeout(() => {
+      this.pageLoaded = false;
+    }, 1000);
+  }
+
+  backToTop() {
     document.getElementsByTagName('mat-sidenav-content')[0].scrollTo(0, 0);
   }
 }

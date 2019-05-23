@@ -87,10 +87,10 @@
             (valueChange)="getReportValue()" matTooltip="Select a UV index" matTooltipPosition="right">
           </mat-slider>
           <p [ngStyle]="{'font-weight': (current_value == selected_value) ? 'bold' : 'normal'}">
-            <span matTooltip="Based on the current weather" matTooltipPosition="right" matTooltipHideDelay="500">Current UV Index: {{current_value}}</span>
+            <span matTooltip="Based on the current weather" matTooltipPosition="right" matTooltipHideDelay="500">Current UV Index <span class="current-weather">(Local Weather): {{current_value}}</span></span>
           </p>
           <p [ngStyle]="{'font-weight': (current_value != selected_value) ? 'bold' : 'normal'}">
-            <span matTooltip="Based on your selection" matTooltipPosition="right" matTooltipHideDelay="500" >Chosen UV Index: {{selected_value}}</span>
+            <span matTooltip="Based on your selection" matTooltipPosition="right" matTooltipHideDelay="500" >Chosen UV Index <span class="selected-weather">(Your Selection): {{selected_value}}</span></span>
           </p>
           <b>
             <p *ngIf="dangerlevel == '1'"><span style="color:green">Low</span>: You have 0-10% chance to Burn under the Sun.</p>

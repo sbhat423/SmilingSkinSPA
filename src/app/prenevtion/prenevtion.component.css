@@ -74,6 +74,10 @@ a:hover {
     text-decoration: underline;
 }
 
+.current-weather, .selected-weather {
+    white-space: nowrap;
+}
+
 @media all and (max-width: 1500px){
     .main-slogan {
         color: white;
@@ -138,6 +142,12 @@ a:hover {
 @media all and (max-width: 450px){
     .recommendation-title {
         font-size: 3vw;
+    }
+}
+
+@media all and (max-width: 420px) {
+    .main-slogan {
+        font-size: calc(25px + 1vw);
     }
 }
 

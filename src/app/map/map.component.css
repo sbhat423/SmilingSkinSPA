@@ -46,7 +46,11 @@ div {
     padding: 18px;
     color: white;
 }
-  
+
+.loading {
+    margin: auto;
+}
+
 @media all and (max-width: 1500px){
     .main-slogan {
         color: white;
@@ -91,6 +95,12 @@ div {
   
     .main-image-wrap {
       max-height: 380px;
+    }
+}
+
+@media all and (max-width: 420px) {
+    .main-slogan {
+        font-size: calc(25px + 1vw);
     }
 }
 
