@@ -110,10 +110,32 @@
           <p><br><br></p>
           <h2 *ngIf="spf_rec>0">
             We will recommend you to put on SPF <span style="color:red">{{spf_rec}}</span> sunscreen to reduce the risk
-            level to low
+            level to low. 
+            The current UV index is <span style="color:red">{{selected_value}}</span>. We suggest you to take the following actions:
+            <ul>
+              <li *ngIf="selected_value>0">Apply sunscreen</li>
+              <li *ngIf="selected_value>0">Wear sunglasses</li>
+              <li *ngIf="selected_value>2">Put on some shirt and hat</li>
+              <li *ngIf="selected_value==3 || selected_value==4 || selected_value==5">Find shade during Midday</li>
+              <li *ngIf="selected_value>5">Find shade</li>
+              <li *ngIf="selected_value==6 || selected_value==7">Limit the sun between 10am - 5pm</li>
+              <li *ngIf="selected_value>7">Avoid the sun between 10am - 5pm</li>
+              <li *ngIf="selected_value==11">Stay indoors</li>
+            </ul>
           </h2>
           <h2 *ngIf="spf_rec==0">
             No action is needed as you are at low risk, but we would recommend you to put on some sunscreen.
+            The current UV index is <span style="color:red">{{selected_value}}</span>. <span *ngIf="spf_rec>0">We suggest you to take the following actions:</span>
+            <ul>
+              <li *ngIf="selected_value>0">Apply sunscreen</li>
+              <li *ngIf="selected_value>0">Wear sunglasses</li>
+              <li *ngIf="selected_value>2">Put on some shirt and hat</li>
+              <li *ngIf="selected_value==3 || selected_value==4 || selected_value==5">Find shade during Midday</li>
+              <li *ngIf="selected_value>5">Find shade</li>
+              <li *ngIf="selected_value==6 || selected_value==7">Limit the sun between 10am - 5pm</li>
+              <li *ngIf="selected_value>7">Avoid the sun between 10am - 5pm</li>
+              <li *ngIf="selected_value==11">Stay indoors</li>
+            </ul>
           </h2>
         <p><br></p>
       </mat-card>
